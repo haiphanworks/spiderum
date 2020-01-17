@@ -1,0 +1,70 @@
+<div class="sp-navbar is-scrolled">
+
+    <div class="sp-navbar-top">
+        <div class="container">
+            <div class="sp-navbar-top-inner">
+                <div class="sp-navbar-item">
+                    <a class="sp-navbar-logo" href="/">
+                        <img src="/assets/images/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="sp-navbar-item sp-navbar-messages end">
+                    <div class="sp-navbar-item-button">
+                        <i class="fal fa-envelope"></i>
+                    </div>
+                </div>
+                <div class="sp-navbar-item sp-navbar-notifications">
+                    <div class="sp-navbar-item-button">
+                        <i class="fal fa-bell"></i>
+                    </div>
+                </div>
+                <div class="sp-navbar-item sp-navbar-user">
+                    <figure class="image sp-navbar-avatar">
+                        <img class="is-rounded" src="/assets/images/avatar.jpg">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {%- if page.layout == 'post' -%}
+    <div class="sp-navbar-bottom sp-navbar-post">{% else %}<div class="sp-navbar-bottom">
+            {%- endif -%}
+
+            <div class="container">
+                <div class="sp-navbar-bottom-inner">
+
+                    {%- if page.layout == 'post' -%}
+
+                    {%- include navbar-post.html -%}
+
+                    {% else %}
+
+                    <div class="sp-navbar-bottom-nav left" style="opacity: .5;">
+                        <i class="fal fa-angle-left"></i>
+                    </div>
+                    <ul class="sp-navbar-bottom-menu">
+                        <li class="sp-navbar-bottom-menu-item">Quan điểm - Tranh luận</li>
+                        <li class="sp-navbar-bottom-menu-item">Truyền cảm hứng</li>
+                        <li class="sp-navbar-bottom-menu-item">Science2Vn</li>
+                        <li class="sp-navbar-bottom-menu-item">Game</li>
+                        <li class="sp-navbar-bottom-menu-item">Comic</li>
+                        <li class="sp-navbar-bottom-menu-item">Phim</li>
+                        <li class="sp-navbar-bottom-menu-item">Sách</li>
+                        <li class="sp-navbar-bottom-menu-item">Du lịch - Ẩm thực</li>
+                        <li class="sp-navbar-bottom-menu-item">Truyện trò - Tâm sự</li>
+                        <li class="sp-navbar-bottom-menu-item">Kỹ năng</li>
+                        <li class="sp-navbar-bottom-menu-item">Sách</li>
+                        <li class="sp-navbar-bottom-menu-item">Sách</li>
+                    </ul>
+                    <div class="sp-navbar-bottom-nav right">
+                        <i class="fal fa-angle-right"></i>
+                    </div>
+
+                    {%- endif -%}
+
+                </div>
+            </div>
+        </div>
+
+    </div>

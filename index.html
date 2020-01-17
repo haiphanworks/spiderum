@@ -1,0 +1,247 @@
+---
+layout: default
+title: Trang chủ
+---
+
+<div class="container">
+
+    <div class="sp-section" id="sp-trending-today">
+        <div class="sp-heading">
+            <span>Nổi bật hôm nay</span>
+        </div>
+        <div class="sp-trending-today-wrapper">
+            {% for i in (1..4) %}
+            <a href="/single.html">
+                <div class="sp-trending-today-item"
+                    style="background-image: url('https://pl.scdn.co/images/pl/default/7b492aef4ecce709fb52680b33b12369ba0e7ea2')">
+                    <div class="sp-trending-today-item-inner">
+                        <div class="sp-trending-today-item-info-category">Kỹ năng</div>
+                        <h3 class="sp-trending-today-item-info-title">Làm thế nào để phóng tơ nhện cho chuẩn xác...</h3>
+                        <div class="sp-trending-today-item-info-user">
+                            <img src="/assets/images/avatar.jpg" alt="Peter Parker"
+                                class="sp-trending-today-item-info-user-image">
+                            <span class="sp-trending-today-item-info-user-name">Peter Parker</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="sp-section sp-ads-homepage-top">
+        <div class="sp-ads"></div>
+    </div>
+
+    <div class="columns">
+
+        <div class="column is-two-thirds">
+
+            <div class="sp-section" id="sp-feed">
+                <div class="sp-heading">
+                    <span>Dành cho bạn</span>
+                </div>
+                <div class="sp-feed-filter">
+                    <div class="sp-feed-filter-item sp-feed-filter-sort">
+                        <div class="dropdown is-hoverable">
+                            <div class="dropdown-trigger">
+                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                                    <span class="icon is-small">
+                                        <i class="fas fa-fire" aria-hidden="true"></i>
+                                    </span>
+                                    <span class="sp-smallcaps">Thịnh hành</span>
+                                    <span class="icon is-small">
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                                <div class="dropdown-content">
+                                    <a href="#" class="dropdown-item is-active">
+                                        <span class="icon is-small">
+                                            <i class="fas fa-fire" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="sp-smallcaps"> Thịnh hành</span>
+                                    </a>
+                                    <a class="dropdown-item">
+                                        <span class="icon is-small">
+                                            <i class="far fa-sparkles" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="sp-smallcaps"> Mới nhất</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="icon is-small">
+                                            <i class="far fa-heartbeat" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="sp-smallcaps"> Sôi nổi</span>
+                                    </a>
+                                    <a href="#" class="dropdown-item">
+                                        <span class="icon is-small">
+                                            <i class="far fa-crown" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="sp-smallcaps"> Hàng đầu</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sp-feed-filter-item sp-feed-filter-view">
+                        <!-- <div class="sp-feed-filter-label">View</div> -->
+                        <a href="#"><i class="fal fa-th-large"></i></a>
+                        <a href="#"><i class="fal fa-bars"></i></a>
+                        <a href="#" class="is-active"><i class="fal fa-align-justify"></i></a>
+                    </div>
+                </div>
+                <div class="sp-feed is-small">
+                    {% for i in (1..10) %}
+                    <div class="sp-feed-card">
+                        <!-- FEED CARD: MEDIA -->
+                        <a class="sp-feed-card-media" href="/single.html">
+                            <figure class="image">
+                                <img src="/assets/images/banner-01.jpg">
+                            </figure>
+                        </a>
+                        <!-- FEED CARD: CONTENT -->
+                        <div class="sp-feed-card-content">
+                            <!-- FEED CARD: CONTENT - POST -->
+                            <a class="sp-feed-card-post" href="/single.html">
+                                <h3 class="sp-feed-card-post-title">Câu chuyện về cuộc phiêu lưu đến một vũ trụ song
+                                    song và hành trình làm lại cuộc đời</h3>
+                                <p class="sp-feed-card-post-description">As pretty much everyone would agree, the
+                                    newest Spider-Man movie is fantastic. But will it be enough to convince Hollywood —
+                                    and audiences, for that matter — of the endless potential for animated storytelling?
+                                    <span class="sp-feed-card-post-readtime">8</span>
+                                </p>
+                            </a>
+                            <!-- FEED CARD: CONTENT - INFO -->
+                            <div class="sp-feed-card-info">
+                                <div class="sp-feed-card-info-image">
+                                    <img src="/assets/images/avatar.jpg" alt="">
+                                </div>
+                                <div class="sp-feed-card-info-meta">
+                                    <div class="sp-feed-card-info-author">
+                                        <a href="#">Peter Parker</a> trong <a href="#">Truyền cảm hứng</a>
+                                    </div>
+                                    <div class="sp-feed-card-info-post">
+                                        <div class="sp-feed-card-info-post-time">
+                                            <time datetime="2020-1-5">5 phút trước</time>
+                                        </div>
+                                        <div class="sp-feed-card-info-post-read">
+                                            <i class="fal fa-eye"></i>
+                                            <span>842</span>
+                                        </div>
+                                        <div class="sp-feed-card-info-post-comments">
+                                            <i class="fal fa-comment-lines"></i>
+                                            <span>4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sp-feed-card-actions">
+                                <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
+                                    <i class="fal fa-ellipsis-h"></i>
+                                </div>
+                                <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
+                                    <i class="fal fa-bookmark"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="column">
+
+            <div class="sp-sidebar">
+
+                <div class="sp-sidebar-widget">
+                    <div class="sp-heading">Bài viết của tháng</div>
+                    <div class="sp-feed is-list">
+                        {% for i in (1..5) %}
+                        <div class="sp-feed-card">
+                            <!-- FEED CARD: CONTENT -->
+                            <div class="sp-feed-card-content">
+                                <!-- FEED CARD: CONTENT - POST -->
+                                <div class="sp-feed-card-post">
+                                    <h3 class="sp-feed-card-post-title"><a href="/single.html">Hướng dẫn tự thiết kế và
+                                            may trang phục siêu anh
+                                            hùng tại nhà</a></h3>
+                                    </p>
+                                </div>
+                                <!-- FEED CARD: CONTENT - INFO -->
+                                <div class="sp-feed-card-info">
+                                    <div class="sp-feed-card-info-meta">
+                                        <div class="sp-feed-card-info-author">
+                                            <a href="#">Peter Parker</a> trong <a href="#">Truyền cảm hứng</a>
+                                        </div>
+                                        <div class="sp-feed-card-info-post">
+                                            <div class="sp-feed-card-info-post-time">
+                                                <time datetime="2020-1-5">5 phút trước</time>
+                                            </div>
+                                            <div class="sp-feed-card-info-post-read">
+                                                <i class="fal fa-eye"></i>
+                                                <span>842</span>
+                                            </div>
+                                            <div class="sp-feed-card-info-post-comments">
+                                                <i class="fal fa-comment-lines"></i>
+                                                <span>4</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sp-feed-card-actions">
+                                    <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
+                                        <i class="fal fa-ellipsis-h"></i>
+                                    </div>
+                                    <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
+                                        <i class="fal fa-bookmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="sp-sidebar-widget">
+                    <div class="sp-heading">Tag nổi bật</div>
+                    <div class="sp-tag-list-wrapper">
+                        <ul class="sp-tag-list tags is-uppercase">
+                            <li class="tag sp-tag"><a>Quan điểm</a></li>
+                            <li class="tag sp-tag"><a>Tranh luận</a></li>
+                            <li class="tag sp-tag"><a>Truyền cảm hứng</a></li>
+                            <li class="tag sp-tag"><a>Tâm lý học</a></li>
+                            <li class="tag sp-tag"><a>Tình yêu</a></li>
+                            <li class="tag sp-tag"><a>Sách</a></li>
+                            <li class="tag sp-tag"><a>Cuộc sống</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sp-sidebar-sticky">
+
+                    <div class="sp-sidebar-ads sp-ads"></div>
+
+                    <div class="sp-sidebar-footer">
+                        <ul class="sp-sidebar-footer-links">
+                            <li><a href="#" class="sp-link">Về Spidergin</a></li>
+                            <li><a href="#" class="sp-link">Chuyên mục</a></li>
+                            <li><a href="#" class="sp-link">Điều khoản sử dụng</a></li>
+                            <li><a href="#" class="sp-link">Thư ngỏ</a></li>
+                            <li><a href="#" class="sp-link">Fanpage</a></li>
+                        </ul>
+                        <div class="sp-sidebar-footer-copyright">&copy; 2020 Công ty TNHH Felizz.</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
