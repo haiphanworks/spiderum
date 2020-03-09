@@ -5,27 +5,133 @@ title: Trang chủ
 
 <div class="container">
 
-    <div class="sp-section" id="sp-trending-today">
-        <div class="sp-heading">
-            <span>Nổi bật hôm nay</span>
+    <!-- ADS: TOP -->
+    <div class="sp-section sp-ads-top">
+        <div class="columns">
+            <div class="column is-two-thirds">
+                <div class="sp-ads-top-left">
+                    <div class="sp-ads"></div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="sp-ads-top-right">
+                    <div class="sp-ads"></div>
+                </div>
+            </div>
         </div>
-        <div class="sp-trending-today-wrapper">
-            {% for i in (1..4) %}
-            <a href="/single.html">
-                <div class="sp-trending-today-item"
-                    style="background-image: url('https://pl.scdn.co/images/pl/default/7b492aef4ecce709fb52680b33b12369ba0e7ea2')">
-                    <div class="sp-trending-today-item-inner">
-                        <div class="sp-trending-today-item-info-category">Kỹ năng</div>
-                        <h3 class="sp-trending-today-item-info-title">Làm thế nào để phóng tơ nhện cho chuẩn xác...</h3>
-                        <div class="sp-trending-today-item-info-user">
-                            <img src="/assets/images/avatar.jpg" alt="Peter Parker"
-                                class="sp-trending-today-item-info-user-image">
-                            <span class="sp-trending-today-item-info-user-name">Peter Parker</span>
-                        </div>
+    </div>
+
+    <!-- CURATED SECTION -->
+    <div class="columns">
+        <div class="column is-two-thirds">
+            <!-- TRENDING TODAY -->
+            <div class="sp-section sp-trending-today">
+                <div class="sp-section-heading"><span>Hàng đầu hôm nay</span></div>
+                <div class="sp-section-content">
+                    <!-- TRENDING TODAY -- POST -->
+                    {%- include components/post.html
+                            class="sp-trending-today__item"
+                            size="is-xlarge"
+                            image="https://media.giphy.com/media/4ah0lvvBvUIvHBaKdw/source.gif"
+                            imageRatio="is-2by1"
+                            title="Câu chuyện về cuộc phiêu lưu đến vũ trụ song song"
+                            description=" Có gì đó bất thường đang xảy ra, khiến ranh giới giữa các vũ trụ song song bị
+                            mờ nhạt dần. Thông qua đó, các Người Nhện của nhiều vũ trụ khác nhau có dịp tụ họp và cùng
+                            nhau chiến đấu trước những âm mưu bí ẩn đe doạ sự an toàn của đa vũ trụ."
+                            readtime="7"
+                            category="Truyền cảm hứng"
+                            author="Peter Parker"
+                            created="3 giờ trước"
+                            liked="289"
+                            views="2142"
+                            comments="67"
+                            bookmark="yes"
+                            share="yes"
+                            subseparator="yes" -%}
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <!-- EDITORS'S PICKS -->
+            <div class="sp-section sp-editors-picks">
+                <div class="sp-section-heading"><span>Editor's picks</span></div>
+                <div class="sp-section-content sp-editors-picks__wrapper">
+                    <!-- EDITOR'S PICKS -- POST -->
+                    {%- include components/post.html
+                            class="sp-editors-picks__item"
+                            size="is-large"
+                            image="https://media.giphy.com/media/1qErVv5GVUac8uqBJU/source.gif"
+                            imageRatio="is-16by9"
+                            title="Vâng, lại một biểu hiện nữa của lươn lẹo hoặc lưu manh"
+                            category="Quan điểm - Tranh luận"
+                            author="Peter Parker"
+                            created="3 giờ trước"
+                            liked="50"
+                            views="3142"
+                            comments="8"
+                            bookmark="yes"
+                            share="yes"
+                            subseparator="yes" -%}
+
+                    <div class="sp-card-wrapper sp-editors-picks__extra">
+                        <!-- EDITOR'S PICKS: EXTRA -- POST 01 -->
+                        {%- include components/post.html
+                            size="is-small"
+                            image="https://media.giphy.com/media/2yrq81q2dDyZOqMI1Q/giphy.gif"
+                            imageRatio="is-1by1"
+                            title="20 Channel Youtube về Khoa Học mình thấy hay ho"
+                            author="Peter Parker"
+                            authorCategory="Trò chuyện - Tâm sự"
+                            authorImage="No"
+                            created="3 giờ trước"
+                            liked="50"
+                            views="201"
+                            comments="6" -%}
+                        <!-- EDITOR'S PICKS: EXTRA -- POST 02 -->
+                        {%- include components/post.html
+                            size="is-small"
+                            image="https://media.giphy.com/media/c6EIV53g7OD6Gy9Qu9/giphy.gif"
+                            imageRatio="is-1by1"
+                            title="Người và Ta - Hội chứng Rối loạn Đa nhân cách"
+                            author="Peter Parker"
+                            authorCategory="Science2Vn"
+                            authorImage="No"
+                            created="1 ngày trước"
+                            liked="34"
+                            views="249"
+                            comments="2" -%}
                     </div>
                 </div>
-            </a>
-            {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- TRENDING CAROUSEL -->
+    <div class="sp-section" id="sp-trending-carousel">
+        <div class="sp-section-heading">
+            <span>Nổi bật hôm nay</span>
+        </div>
+        <div class="sp-trending-carousel-wrapper">
+            {%- include components/carousel-item.html
+                image="https://media.giphy.com/media/1mhobVG3XtGJWjTg91/giphy.gif"
+                category="Kỹ năng"
+                title="Làm thế nào để phóng tơ nhện cho chính xác ..."
+                author="Peter Parker" -%}
+            {%- include components/carousel-item.html
+                image="https://media.giphy.com/media/2yrY0uGSMwHeNkh6Fa/giphy.gif"
+                category="Trò chuyện - Tâm sự"
+                title="Tôi đã suýt chết dưới tay Green Goblin như thế nào"
+                author="Peter Parker" -%}
+            {%- include components/carousel-item.html
+                image="https://media.giphy.com/media/mMC3zB8JcwjyMMDaZC/giphy.gif"
+                category="Du lịch - Ẩm thực"
+                title="Ghé thăm bảo tàng Spider-man tại New York"
+                author="Peter Parker" -%}
+            {%- include components/carousel-item.html
+                image="https://media.giphy.com/media/39vbFAxFparE8mmUw6/giphy.gif"
+                category="Âm nhạc"
+                title="Ban nhạc nữ mới nổi The Mary Janes ra mắt album đầu tay"
+                author="Peter Parker" -%}
         </div>
     </div>
 
@@ -33,209 +139,150 @@ title: Trang chủ
         <div class="sp-ads"></div>
     </div>
 
+    <div class="sp-section sp-mobile-donate is-hidden-desktop">
+        <div class="sp-widget-boxed">
+            <div class="sp-widget-content content">
+                <p>Bạn yêu thích cộng đồng Spiderum và muốn nó trở nên lớn mạnh hơn?</p>
+                <button class="button is-info is-fullwidth">
+                    <span class="icon">
+                        <i class="fas fa-sparkles"></i>
+                    </span>
+                    <span class="is-uppercase has-text-weight-semibold">Ủng hộ</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <div class="columns">
 
         <div class="column is-two-thirds">
 
             <div class="sp-section" id="sp-feed">
-                <div class="sp-heading">
+                <div class="sp-section-heading">
                     <span>Dành cho bạn</span>
                 </div>
-                <div class="sp-feed-filter">
-                    <div class="sp-feed-filter-item sp-feed-filter-sort">
-                        <div class="dropdown is-hoverable">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span class="icon is-small">
-                                        <i class="fas fa-fire" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="sp-smallcaps">Thịnh hành</span>
-                                    <span class="icon is-small">
-                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <a href="#" class="dropdown-item is-active">
-                                        <span class="icon is-small">
-                                            <i class="fas fa-fire" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sp-smallcaps"> Thịnh hành</span>
-                                    </a>
-                                    <a class="dropdown-item">
-                                        <span class="icon is-small">
-                                            <i class="far fa-sparkles" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sp-smallcaps"> Mới nhất</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item">
-                                        <span class="icon is-small">
-                                            <i class="far fa-heartbeat" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sp-smallcaps"> Sôi nổi</span>
-                                    </a>
-                                    <a href="#" class="dropdown-item">
-                                        <span class="icon is-small">
-                                            <i class="far fa-crown" aria-hidden="true"></i>
-                                        </span>
-                                        <span class="sp-smallcaps"> Hàng đầu</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sp-feed-filter-item sp-feed-filter-view">
-                        <!-- <div class="sp-feed-filter-label">View</div> -->
-                        <a href="#"><i class="fal fa-th-large"></i></a>
-                        <a href="#"><i class="fal fa-bars"></i></a>
-                        <a href="#" class="is-active"><i class="fal fa-align-justify"></i></a>
-                    </div>
-                </div>
-                <div class="sp-feed is-small">
-                    {% for i in (1..10) %}
-                    <div class="sp-feed-card">
-                        <!-- FEED CARD: MEDIA -->
-                        <a class="sp-feed-card-media" href="/single.html">
-                            <figure class="image">
-                                <img src="/assets/images/banner-01.jpg">
-                            </figure>
-                        </a>
-                        <!-- FEED CARD: CONTENT -->
-                        <div class="sp-feed-card-content">
-                            <!-- FEED CARD: CONTENT - POST -->
-                            <a class="sp-feed-card-post" href="/single.html">
-                                <h3 class="sp-feed-card-post-title">Câu chuyện về cuộc phiêu lưu đến một vũ trụ song
-                                    song và hành trình làm lại cuộc đời</h3>
-                                <p class="sp-feed-card-post-description">As pretty much everyone would agree, the
-                                    newest Spider-Man movie is fantastic. But will it be enough to convince Hollywood —
-                                    and audiences, for that matter — of the endless potential for animated storytelling?
-                                    <span class="sp-feed-card-post-readtime">8</span>
-                                </p>
+
+                <div class="sp-section-content">
+                    <div class="sp-feed-filter">
+                        <div class="sp-feed-filter-sort">
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-sort-item is-active hot">
+                                <span class="icon"><i class="fas fa-fire"></i></span>
+                                <span>Thịnh hành</span>
                             </a>
-                            <!-- FEED CARD: CONTENT - INFO -->
-                            <div class="sp-feed-card-info">
-                                <div class="sp-feed-card-info-image">
-                                    <img src="/assets/images/avatar.jpg" alt="">
-                                </div>
-                                <div class="sp-feed-card-info-meta">
-                                    <div class="sp-feed-card-info-author">
-                                        <a href="#">Peter Parker</a> trong <a href="#">Truyền cảm hứng</a>
-                                    </div>
-                                    <div class="sp-feed-card-info-post">
-                                        <div class="sp-feed-card-info-post-time">
-                                            <time datetime="2020-1-5">5 phút trước</time>
-                                        </div>
-                                        <div class="sp-feed-card-info-post-read">
-                                            <i class="fal fa-eye"></i>
-                                            <span>842</span>
-                                        </div>
-                                        <div class="sp-feed-card-info-post-comments">
-                                            <i class="fal fa-comment-lines"></i>
-                                            <span>4</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sp-feed-card-actions">
-                                <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
-                                    <i class="fal fa-ellipsis-h"></i>
-                                </div>
-                                <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
-                                    <i class="fal fa-bookmark"></i>
-                                </div>
-                            </div>
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-sort-item new">
+                                <span class="icon"><i class="fas fa-star"></i></span>
+                                <span>Mới</span>
+                            </a>
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-sort-item active">
+                                <span class="icon"><i class="fas fa-heart-rate"></i></span>
+                                <span>Sôi nổi</span>
+                            </a>
+                        </div>
+                        <div class="sp-feed-filter-view">
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-view-item">
+                                <span class="icon"><i class="fas fa-square"></i></span>
+                            </a>
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-view-item is-active">
+                                <span class="icon"><i class="fas fa-bars"></i></span>
+                            </a>
+                            <a href="#" class="sp-feed-filter-item sp-feed-filter-view-item">
+                                <span class="icon"><i class="fas fa-align-justify"></i></span>
+                            </a>
                         </div>
                     </div>
-                    {% endfor %}
-                </div>
-            </div>
-
-        </div>
-
-        <div class="column">
-
-            <div class="sp-sidebar">
-
-                <div class="sp-sidebar-widget">
-                    <div class="sp-heading">Bài viết của tháng</div>
-                    <div class="sp-feed is-list">
-                        {% for i in (1..5) %}
-                        <div class="sp-feed-card">
-                            <!-- FEED CARD: CONTENT -->
-                            <div class="sp-feed-card-content">
-                                <!-- FEED CARD: CONTENT - POST -->
-                                <div class="sp-feed-card-post">
-                                    <h3 class="sp-feed-card-post-title"><a href="/single.html">Hướng dẫn tự thiết kế và
-                                            may trang phục siêu anh
-                                            hùng tại nhà</a></h3>
-                                    </p>
-                                </div>
-                                <!-- FEED CARD: CONTENT - INFO -->
-                                <div class="sp-feed-card-info">
-                                    <div class="sp-feed-card-info-meta">
-                                        <div class="sp-feed-card-info-author">
-                                            <a href="#">Peter Parker</a> trong <a href="#">Truyền cảm hứng</a>
-                                        </div>
-                                        <div class="sp-feed-card-info-post">
-                                            <div class="sp-feed-card-info-post-time">
-                                                <time datetime="2020-1-5">5 phút trước</time>
-                                            </div>
-                                            <div class="sp-feed-card-info-post-read">
-                                                <i class="fal fa-eye"></i>
-                                                <span>842</span>
-                                            </div>
-                                            <div class="sp-feed-card-info-post-comments">
-                                                <i class="fal fa-comment-lines"></i>
-                                                <span>4</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="sp-feed-card-actions">
-                                    <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
-                                        <i class="fal fa-ellipsis-h"></i>
-                                    </div>
-                                    <div class="sp-feed-card-actions-item sp-feed-card-actions-bookmark">
-                                        <i class="fal fa-bookmark"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="sp-card-gallery has-separator sp-feed-wrapper">
+                        {% for i in (1..10) %}
+                        {%- include components/post.html
+                            size="is-medium"
+                            image="https://media.giphy.com/media/fHug2izN1QQHQNq6dc/giphy.gif"
+                            imageRatio="is-4by3"
+                            title="Et sadipscing diam dolore voluptua kasd. Dolor labore labore ipsum elitr sadipscing"
+                            description="Diam ipsum sanctus et voluptua sit et tempor at diam sanctus, invidunt labore rebum dolores voluptua rebum sanctus justo ipsum, sea lorem voluptua tempor dolore et nonumy accusam sed, amet."
+                            author="Peter Parker"
+                            authorCategory="Sadipscing clita"
+                            created="3 giờ trước"
+                            liked="50"
+                            views="201"
+                            comments="6"
+                            bookmark="yes"
+                            share="yes"
+                            subseparator="yes" -%}
                         {% endfor %}
                     </div>
                 </div>
 
-                <div class="sp-sidebar-widget">
-                    <div class="sp-heading">Tag nổi bật</div>
-                    <div class="sp-tag-list-wrapper">
-                        <ul class="sp-tag-list tags is-uppercase">
-                            <li class="tag sp-tag"><a>Quan điểm</a></li>
-                            <li class="tag sp-tag"><a>Tranh luận</a></li>
-                            <li class="tag sp-tag"><a>Truyền cảm hứng</a></li>
-                            <li class="tag sp-tag"><a>Tâm lý học</a></li>
-                            <li class="tag sp-tag"><a>Tình yêu</a></li>
-                            <li class="tag sp-tag"><a>Sách</a></li>
-                            <li class="tag sp-tag"><a>Cuộc sống</a></li>
-                        </ul>
+
+            </div>
+
+        </div>
+
+        <div class="column is-hidden-touch">
+
+            <div class="sp-sidebar">
+
+                <div class="sp-sidebar-widget sp-widget-boxed">
+                    <div class="sp-widget-content content">
+                        <p>Bạn yêu thích cộng đồng Spiderum và muốn nó trở nên lớn mạnh hơn?</p>
+                        <button class="button is-info is-fullwidth">
+                            <span class="icon">
+                                <i class="fas fa-sparkles"></i>
+                            </span>
+                            <span class="is-uppercase has-text-weight-semibold">Ủng hộ</span>
+                        </button>
                     </div>
                 </div>
 
-                <div class="sp-sidebar-sticky">
-
-                    <div class="sp-sidebar-ads sp-ads"></div>
-
-                    <div class="sp-sidebar-footer">
-                        <ul class="sp-sidebar-footer-links">
-                            <li><a href="#" class="sp-link">Về Spidergin</a></li>
-                            <li><a href="#" class="sp-link">Chuyên mục</a></li>
-                            <li><a href="#" class="sp-link">Điều khoản sử dụng</a></li>
-                            <li><a href="#" class="sp-link">Thư ngỏ</a></li>
-                            <li><a href="#" class="sp-link">Fanpage</a></li>
-                        </ul>
-                        <div class="sp-sidebar-footer-copyright">&copy; 2020 Công ty TNHH Felizz.</div>
+                <div class="sp-sidebar-widget sp-widget-boxed">
+                    <div class="sp-section-heading sp-widget-heading">Chuyên mục nổi bật</div>
+                    <div class="sp-widget-content">
+                        .sp-suggested-category
                     </div>
+                </div>
 
+                <div class="sp-sidebar-widget sp-widget-boxed">
+                    <div class="sp-section-heading sp-widget-heading">Bài viết của tháng</div>
+                    <div class="sp-widget-content">
+                        .sp-suggested-category
+                    </div>
+                </div>
+
+                <div class="sp-sidebar-widget sp-widget-boxed">
+                    <div class="sp-section-heading sp-widget-heading">Tag nổi bật</div>
+                    <div class="sp-widget-content">
+                        <div class="sp-tag-list-wrapper">
+                            <ul class="sp-tag-list tags is-uppercase">
+                                <li class="tag sp-tag"><a>Quan điểm</a></li>
+                                <li class="tag sp-tag"><a>Tranh luận</a></li>
+                                <li class="tag sp-tag"><a>Truyền cảm hứng</a></li>
+                                <li class="tag sp-tag"><a>Tâm lý học</a></li>
+                                <li class="tag sp-tag"><a>Tình yêu</a></li>
+                                <li class="tag sp-tag"><a>Sách</a></li>
+                                <li class="tag sp-tag"><a>Cuộc sống</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sp-ads-sidebar">
+                    <div class="sp-ads"></div>
+                </div>
+
+                <div class="sp-sidebar-widget sp-widget-boxed">
+                    <div class="sp-section-heading sp-widget-heading">Liên kết</div>
+                    <div class="sp-widget-content">
+                        .sp-sidebar-links
+                    </div>
+                </div>
+
+                <div class="sp-sidebar-footer">
+                    <ul class="sp-sidebar-footer-links">
+                        <li><a href="#" class="sp-link">Về Spidergin</a></li>
+                        <li><a href="#" class="sp-link">Chuyên mục</a></li>
+                        <li><a href="#" class="sp-link">Điều khoản sử dụng</a></li>
+                        <li><a href="#" class="sp-link">Thư ngỏ</a></li>
+                        <li><a href="#" class="sp-link">Fanpage</a></li>
+                    </ul>
+                    <div class="sp-sidebar-footer-copyright">&copy; 2020 Công ty TNHH Felizz.</div>
                 </div>
 
             </div>

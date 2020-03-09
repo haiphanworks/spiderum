@@ -2,8 +2,9 @@
     position: relative;
     display: block;
     width: 100%;
-    background-color: rgba(var(--primary), .1);
-    color: rgba(var(--primary), 1);
+    background-color: rgba(var(--border), .5);
+    color: rgba(var(--text), .5);
+    border: 1px solid rgba(var(--border), 1);
     padding-top: 75%;
     border-radius: 4px;
 
@@ -14,18 +15,39 @@
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 500;
     }
 }
 
 
 .sp-ads-homepage-top {
+    .sp-ads {
+        height: 8rem;
+        padding-top: unset;
+    }
+
     @include breakpoint(md) {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+.sp-ads-top-left {
+    .sp-ads {
+        height: 8rem;
+        padding-top: unset;
+    }
+}
+
+.sp-ads-top-right {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
     }
 
     .sp-ads {
-        padding-top: 15%;
+        height: 8rem;
+        padding-top: unset;
     }
 }

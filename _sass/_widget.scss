@@ -1,0 +1,24 @@
+.sp-widget-boxed {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: white;
+    border: 1px solid rgba(var(--border), 1);
+    border-radius: var(--border-radius);
+    @include boxshadow;
+
+    .sp-widget-heading {
+        margin: 0;
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+        border-bottom: 1px solid rgba(var(--border), 1);
+
+        +.sp-widget-content {
+            padding-top: .75rem;
+        }
+    }
+
+    .sp-widget-content {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}

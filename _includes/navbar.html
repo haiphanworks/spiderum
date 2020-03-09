@@ -1,70 +1,160 @@
-<div class="sp-navbar is-scrolled">
+<div class="sp-loading-bar"></div>
+
+<div class="sp-navbar">
 
     <div class="sp-navbar-top">
-        <div class="container">
-            <div class="sp-navbar-top-inner">
-                <div class="sp-navbar-item">
-                    <a class="sp-navbar-logo" href="/">
-                        <img src="/assets/images/logo.png" alt="">
-                    </a>
-                </div>
-                <div class="sp-navbar-item sp-navbar-messages end">
-                    <div class="sp-navbar-item-button">
-                        <i class="fal fa-envelope"></i>
-                    </div>
-                </div>
-                <div class="sp-navbar-item sp-navbar-notifications">
-                    <div class="sp-navbar-item-button">
-                        <i class="fal fa-bell"></i>
-                    </div>
-                </div>
-                <div class="sp-navbar-item sp-navbar-user">
-                    <figure class="image sp-navbar-avatar">
-                        <img class="is-rounded" src="/assets/images/avatar.jpg">
-                    </figure>
+        <div class="container sp-navbar-top-inner">
+
+            <div class="sp-navbar-item">
+                <a class="sp-navbar-logo" href="/">
+                    <img src="/assets/images/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="sp-navbar-item sp-navbar-tags">
+                <a class="sp-navbar-tags-item">Kraven trở lại</a>
+                <a class="sp-navbar-tags-item">Norman Osborn nhận giải Nobel Hoà Bình</a>
+            </div>
+
+            <div class="sp-navbar-item sp-navbar-separator"></div>
+
+            <div class="sp-navbar-item sp-navbar-messages end">
+                <div class="sp-navbar-toggle">
+                    <i class="far fa-envelope"></i>
                 </div>
             </div>
+
+            <div class="sp-navbar-item sp-navbar-notifications">
+                <div class="sp-navbar-toggle">
+                    <i class="far fa-bell"></i>
+                </div>
+            </div>
+
+            <div class="sp-navbar-item sp-navbar-user">
+                <figure class="image sp-navbar-user-avatar">
+                    <img class="is-rounded" src="/assets/images/avatar.jpg">
+                </figure>
+            </div>
+
+            <div class="sp-navbar-item sp-navbar-new">
+                <button class="button is-rounded is-primary">
+                    <span class="icon"><i class="far fa-plus"></i></span>
+                    <span class="text">Bài viết mới</span>
+                </button>
+            </div>
+
+
         </div>
     </div>
 
-    {%- if page.layout == 'post' -%}
-    <div class="sp-navbar-bottom sp-navbar-post">{% else %}<div class="sp-navbar-bottom">
-            {%- endif -%}
 
-            <div class="container">
-                <div class="sp-navbar-bottom-inner">
+    <div class="sp-navbar-bottom">
+        <div class="container sp-navbar-bottom-inner">
 
-                    {%- if page.layout == 'post' -%}
+            <div class="sp-navbar-following">
 
-                    {%- include navbar-post.html -%}
+                <div class="sp-navbar-following-button">
+                    <span class="text">Đang theo dõi</span>
+                    <span class="icon"><i class="far fa-angle-down"></i></span>
+                </div>
 
-                    {% else %}
-
-                    <div class="sp-navbar-bottom-nav left" style="opacity: .5;">
-                        <i class="fal fa-angle-left"></i>
-                    </div>
-                    <ul class="sp-navbar-bottom-menu">
-                        <li class="sp-navbar-bottom-menu-item">Quan điểm - Tranh luận</li>
-                        <li class="sp-navbar-bottom-menu-item">Truyền cảm hứng</li>
-                        <li class="sp-navbar-bottom-menu-item">Science2Vn</li>
-                        <li class="sp-navbar-bottom-menu-item">Game</li>
-                        <li class="sp-navbar-bottom-menu-item">Comic</li>
-                        <li class="sp-navbar-bottom-menu-item">Phim</li>
-                        <li class="sp-navbar-bottom-menu-item">Sách</li>
-                        <li class="sp-navbar-bottom-menu-item">Du lịch - Ẩm thực</li>
-                        <li class="sp-navbar-bottom-menu-item">Truyện trò - Tâm sự</li>
-                        <li class="sp-navbar-bottom-menu-item">Kỹ năng</li>
-                        <li class="sp-navbar-bottom-menu-item">Sách</li>
-                        <li class="sp-navbar-bottom-menu-item">Sách</li>
+                <div class="sp-navbar-following-menu">
+                    <ul>
+                        <li class="sp-navbar-following-menu-item has-new-post">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Quan điểm - tranh luận</div>
+                            </a>
+                        </li>
+                        <li class="sp-navbar-following-menu-item">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Truyền cảm hứng</div>
+                            </a>
+                        </li>
+                        <li class="sp-navbar-following-menu-item">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Science2VN</div>
+                            </a>
+                        </li>
+                        <li class="sp-navbar-following-menu-item">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Khoa học - công nghệ</div>
+                            </a>
+                        </li>
+                        <li class="sp-navbar-following-menu-item">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Games</div>
+                            </a>
+                        </li>
+                        <li class="sp-navbar-following-menu-item">
+                            <a href="#">
+                                <div class="sp-navbar-following-menu-item-image">
+                                    <img src="/assets/images/banner-01.jpg">
+                                </div>
+                                <div class="sp-navbar-following-menu-item-label">Du lịch - Ẩm thực</div>
+                            </a>
+                        </li>
                     </ul>
-                    <div class="sp-navbar-bottom-nav right">
-                        <i class="fal fa-angle-right"></i>
-                    </div>
+                </div>
 
-                    {%- endif -%}
+            </div>
 
+            <div class="sp-navbar-category">
+                <div class="sp-navbar-category-menu-nav left">
+                    <i class="far fa-angle-left"></i>
+                </div>
+                <ul class="sp-navbar-category-menu">
+                    <li>Quan điểm - tranh luận</li>
+                    <li>Truyền cảm hứng</li>
+                    <li>Science2VN</li>
+                    <li>Khoa học- công nghệ</li>
+                    <li>Games</li>
+                    <li>Comics</li>
+                    <li>Phim</li>
+                    <li>Sách</li>
+                    <li>Du lịch - Ẩm thực </li>
+                    <li>Chuyện trò - Tâm sự</li>
+                    <li>Thể thao</li>
+                    <li>Otakulture</li>
+                    <li>Sáng tác</li>
+                    <li>Sự kiện Spiderum</li>
+                    <li>English Zone</li>
+                </ul>
+                <div class="sp-navbar-category-menu-nav right">
+                    <i class="far fa-angle-left"></i>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
+
+
+</div>
+
+<div class="sp-section" id="sp-top-notification">
+    <div class="container">
+        <div class="sp-section-heading sp-top-notification-title">Thông báo</div>
+        <div class="sp-top-notification-content">Thử nghiệm ứng dụng di động Spiderum 2.0 trên nền tảng Android và iOS
+        </div>
+        <div class="sp-top-notification-interactions">
+            <div class="sp-top-notification-cta">THAM GIA NGAY</div>
+            <div class="sp-top-notification-close">
+                <i class="far fa-times"></i>
+            </div>
+        </div>
+    </div>
+</div>

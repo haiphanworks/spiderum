@@ -1,0 +1,67 @@
+{% assign whitespace = " " %}
+<div class="{{ include.class }} sp-card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
+    <div class="sp-card-image">
+        <figure class="image {{ include.imageRatio }}">
+            <img src="{{ include.image }}">
+        </figure>
+    </div>
+    <div class="sp-card-content">
+        {%- if include.category -%}
+        <div class="sp-card-content__category">
+            <h5>{{ include.category }}</h5>
+        </div>
+        {%- endif -%}
+        <div class="sp-card-content__title">
+            <h1>{{ include.title }}</h1>
+        </div>
+        {%- if include.description -%}
+        <div class="sp-card-content__description">
+            {{ include.description }}
+            {%- if include.readtime -%}
+            <span class="sp-card-content__read-time">{{ include.readtime }}</span>
+            {%- endif -%}
+        </div>
+        {%- endif -%}
+        <div class="sp-card-author">
+            {%- if include.authorImage=="No" -%}
+            {%- else -%}
+            <div class="sp-card-author__image">
+                <figure class="image is-1by1">
+                    <img src="/assets/images/avatar.jpg" class="is-rounded">
+                </figure>
+            </div>
+            {%- endif -%}
+            <div class="sp-card-author__content">
+                <div class="main">
+                    <span class="author-name">{{ include.author }}</span>
+                    {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
+                    <span class="category">{{ include.authorCategory }}</span>
+                    {%- endif -%}
+                </div>
+                <div class="sub">
+                    {%- if include.created -%}
+                    <span class="sub-item created">{{ include.created }}</span>
+                    {%- endif -%}
+                    {%- if include.liked -%}
+                    <span class="sub-item liked">{{ include.liked }}</span>
+                    {%- endif -%}
+                    {%- if include.subseparator -%}
+                    <span class="sub-item separator"></span>
+                    {%- endif -%}
+                    {%- if include.views -%}
+                    <span class="sub-item views">{{ include.views }}</span>
+                    {%- endif -%}
+                    {%- if include.comments -%}
+                    <span class="sub-item comments">{{ include.comments }}</span>
+                    {%- endif -%}
+                    {%- if include.bookmark -%}
+                    <span class="sub-item bookmark"></span>
+                    {%- endif -%}
+                    {%- if include.share -%}
+                    <span class="sub-item share"></span>
+                    {%- endif -%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
