@@ -1,22 +1,33 @@
 .sp-navbar {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 9999;
 
+    width: 100%;
+
     background-color: white;
-    box-shadow: 0 0 10px 0 rgba(var(--border), 1);
     border-bottom: 1px solid rgba(var(--border), 1);
 
-    display: none;
+    @include boxshadow;
 
-    @include breakpoint(md) {
-        display: block;
+    transition: all .25s ease;
+
+    &.is-scrolldown {
+        top: -4.5rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+
+        @include breakpoint(md) {
+            padding: 0;
+        }
     }
 
     .sp-navbar-top {
         display: flex;
-
-        padding: 1rem 0;
+        height: 4.5rem;
+        transition: all .25s ease;
 
         &-inner {
             display: flex;
@@ -39,11 +50,20 @@
     }
 
     .sp-navbar-logo {
+        display: flex;
         line-height: 0;
+        width: 3rem;
+        overflow: hidden;
 
         img {
             display: block;
             height: 3rem;
+            object-fit: cover;
+            object-position: left center;
+        }
+
+        @include breakpoint(md) {
+            width: unset;
         }
     }
 
@@ -56,6 +76,7 @@
     }
 
     .sp-navbar-item {
+        flex-shrink: 0;
         margin-left: .5rem;
 
         &:first-child {
@@ -68,10 +89,14 @@
     }
 
     .sp-navbar-tags {
-        display: flex;
+        display: none;
         align-items: center;
 
         margin-left: 2rem;
+
+        @include breakpoint(md) {
+            display: flex;
+        }
 
         &-item {
             display: flex;
@@ -152,7 +177,6 @@
             font-weight: 500;
 
             overflow: hidden;
-            overflow-x: auto;
 
             &-nav {
                 position: relative;
@@ -318,6 +342,37 @@
 
 }
 
+.sp-navbar-placeholder {
+    background-color: rgba(var(--border), 1);
+}
+
+.sp-loading-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: rgba(var(--border), 1);
+    background-image: repeating-linear-gradient(to right, rgba(var(--primary), 1) 0%, rgba(var(--primary), .1) 50%, rgba(var(--primary), 1) 100%);
+    background-size: 200% auto;
+    background-position: 0 100%;
+    animation: GradientLoadingBar 2s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes GradientLoadingBar {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
 
 
 #sp-top-notification {

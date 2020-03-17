@@ -22,3 +22,48 @@
         padding-bottom: 1rem;
     }
 }
+
+
+
+// SIDEBAR: LINKS
+
+.sp-sidebar-links {
+    li {
+        padding-top: .75rem;
+        padding-bottom: .75rem;
+
+        +li {
+            border-top: 1px solid rgba(var(--border), .75);
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+
+// SIDEBAR: FOOTER
+
+.sp-sidebar-footer {
+    font-size: .8rem;
+
+    .sp-sidebar-footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        li {
+            &:not(:last-child) {
+                &:after {
+                    content: '\00a0\00a0·\00a0\00a0';
+                    color: rgba(var(--text), .5);
+                }
+            }
+        }
+    }
+}

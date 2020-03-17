@@ -1,115 +1,187 @@
 .sp-card-gallery {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1rem;
 
     &.has-separator {
-        .sp-card {
+        >.sp-card {
             &:not(:first-child) {
-                padding-top: 1.5rem;
+                padding-top: 1rem;
                 border-top: 1px solid rgba(var(--border), 1);
+            }
+        }
+    }
+
+    &.is-xlarge,
+    &.is-large {
+        grid-gap: 1.5rem;
+
+        &.has-separator {
+            >.sp-card {
+                &:not(:first-child) {
+                    padding-top: 1.5rem;
+                    border-top: 1px solid rgba(var(--border), 1);
+                }
             }
         }
     }
 }
 
+.sp-card-gallery.is-xlarge>.sp-card,
+.sp-card.is-xlarge {
+    flex-direction: column;
+
+    .sp-card-image {
+        figure.image {
+            padding-top: 50%;
+        }
+
+        +.sp-card-content {
+            margin-top: 1.5rem;
+        }
+    }
+
+    .sp-card-content {
+        &__title {
+            * {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .sp-card-author {
+        margin-top: .5rem;
+    }
+
+}
+
+.sp-card-gallery.is-large>.sp-card,
+.sp-card.is-large {
+    flex-direction: column;
+
+    .sp-card-image {
+        figure.image {
+            padding-top: 60%;
+        }
+    }
+
+    .sp-card-content {
+        &__title {
+            * {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.sp-card-gallery.is-medium>.sp-card,
+.sp-card.is-medium {
+    flex-direction: row;
+
+    .sp-card-image {
+        width: 25%;
+
+        flex-shrink: 0;
+
+        figure.image {
+            padding-top: 75%;
+        }
+
+        +.sp-card-content {
+            margin-top: 0;
+            margin-left: 1.5rem;
+        }
+    }
+
+    .sp-card-content {
+        &__title {
+            * {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .sp-card-author {
+        margin-top: 0;
+    }
+}
+
+.sp-card-gallery.is-small>.sp-card,
+.sp-card.is-small {
+    flex-direction: row;
+
+    .sp-card-image {
+        width: 6rem;
+        height: 6rem;
+
+        flex-shrink: 0;
+
+        figure.image {
+            padding-top: unset;
+        }
+
+        +.sp-card-content {
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    .sp-card-content {
+        &__title {
+            * {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__description {
+            display: none;
+        }
+    }
+
+    .sp-card-author {
+        margin-top: 0;
+    }
+}
+
+.sp-card-gallery.is-xsmall>.sp-card,
+.sp-card.is-xsmall {
+    flex-direction: row;
+
+    .sp-card-image {
+        width: 5rem;
+        height: 5rem;
+
+        flex-shrink: 0;
+
+        figure.image {
+            padding-top: unset;
+        }
+
+        +.sp-card-content {
+            margin-top: 0;
+            margin-left: 1rem;
+        }
+    }
+
+    .sp-card-content {
+        &__title {
+            * {
+                font-size: 1.1rem;
+            }
+        }
+
+        &__description {
+            display: none;
+        }
+    }
+
+    .sp-card-author {
+        margin-top: 0;
+    }
+}
+
 .sp-card {
     display: flex;
-
-    &.is-xlarge {
-        flex-direction: column;
-
-        .sp-card-image {
-            +.sp-card-content {
-                margin-top: 1.5rem;
-            }
-        }
-
-        .sp-card-content {
-            &__title {
-                * {
-                    font-size: 2rem;
-                }
-            }
-        }
-
-        .sp-card-author {
-            margin-top: .5rem;
-        }
-    }
-
-    &.is-large {
-        flex-direction: column;
-
-        .sp-card-content {
-            &__title {
-                * {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-    }
-
-    &.is-medium {
-        flex-direction: row;
-
-        .sp-card-image {
-            width: 25%;
-
-            flex-shrink: 0;
-
-            +.sp-card-content {
-                margin-top: 0;
-                margin-left: 1.5rem;
-            }
-        }
-
-        .sp-card-content {
-            &__title {
-                * {
-                    font-size: 1.2rem;
-                }
-            }
-        }
-
-        .sp-card-author {
-            margin-top: 0;
-        }
-    }
-
-    &.is-small {
-        flex-direction: row;
-
-        .sp-card-image {
-            width: 6rem;
-            height: 6rem;
-
-            flex-shrink: 0;
-
-            +.sp-card-content {
-                margin-top: 0;
-                margin-left: 1rem;
-            }
-        }
-
-        .sp-card-content {
-            &__title {
-                * {
-                    font-size: 1.1rem;
-                }
-            }
-        }
-
-        .sp-card-author {
-            margin-top: 0;
-        }
-    }
-
-    &-wrapper {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 1rem;
-    }
 }
 
 .sp-card-image {
@@ -124,12 +196,20 @@
         border-radius: var(--border-radius);
         overflow-x: auto;
         height: 100%;
+        padding-top: 60%;
     }
 
     img {
         display: block;
         object-fit: cover;
         height: 100%;
+        width: 100%;
+
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     +.sp-card-content {
@@ -139,7 +219,7 @@
 
 .sp-card-content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-gap: .5rem;
     width: 100%;
 
@@ -202,6 +282,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            flex-wrap: wrap;
 
             .sub-item {
                 display: inline-flex;
@@ -211,6 +292,7 @@
                 }
 
                 &.separator {
+                    // display: none;
                     margin-left: auto;
                 }
 
@@ -219,12 +301,27 @@
                     @include fontawesome(regular);
                 }
 
+                &.created {
+                    white-space: nowrap;
+                    // width: 100%;
+
+                    // @include breakpoint(md) {
+                    //     width: unset;
+                    // }
+                }
+
                 &.liked {
+                    // margin-left: 0;
+
                     &:after {
                         content: '\f004';
                         font-weight: 900;
                         margin-right: .25rem;
                     }
+
+                    // @include breakpoint(md) {
+                    //     margin-left: .75rem;
+                    // }
                 }
 
                 &.views {
@@ -242,6 +339,12 @@
                 }
 
                 &.bookmark {
+                    display: none;
+
+                    @include breakpoint(md) {
+                        display: inline-flex;
+                    }
+
                     &:after {
                         content: '\f02e';
                     }
@@ -255,6 +358,12 @@
                 }
 
                 &.share {
+                    display: none;
+
+                    @include breakpoint(md) {
+                        display: inline-flex;
+                    }
+
                     &:after {
                         content: '\f1e0';
                     }
