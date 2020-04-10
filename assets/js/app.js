@@ -1,58 +1,31 @@
-$('.sp-feed-filter-view-item').click(function (e) {
-    e.preventDefault();
-    $(this).siblings().removeClass('is-active');
-    $(this).addClass('is-active');
-});
-
-$('.sp-feed-filter-sort-item').click(function (e) {
-    e.preventDefault();
-    $(this).siblings().removeClass('is-active');
-    $(this).addClass('is-active');
-});
-
-$('.sp-feed-filter-view-small').click(function (e) {
-    e.preventDefault();
-    $('.sp-card-gallery.sp-feed-wrapper').removeClass('is-medium').removeClass('is-large').addClass('is-small');
-});
-
-
-$('.sp-feed-filter-view-medium').click(function (e) {
-    e.preventDefault();
-    $('.sp-card-gallery.sp-feed-wrapper').removeClass('is-small').removeClass('is-medium').addClass('is-medium');
-});
-
-
-$('.sp-feed-filter-view-large').click(function (e) {
-    e.preventDefault();
-    $('.sp-card-gallery.sp-feed-wrapper').removeClass('is-medium').removeClass('is-small').addClass('is-large');
-});
-
-
+// On Load
 
 window.onload = function () {
-    feedCarouselWidthFunction();
-    navbarHeightFunction();
+    navbarPlaceholder();
 }
 
 
-window.onresize = function () {
-    feedCarouselWidthFunction();
+// On Scroll
+
+window.onscroll = function () {
+    navbarPlaceholder();
 }
 
 
-function feedCarouselWidthFunction() {
-    var colMainWidth = $('.sp-column.is-main').width();
-    var feedCarouselWidth = 'calc(' + colMainWidth + 'px + 1rem - 1px)';
-    $('.sp-feed-carousel-wrapper').css('max-width', feedCarouselWidth);
-}
+// Navbar Toggle
+
+$('.toggle').click(function (e) {
+    e.preventDefault();
+    if ($(this).hasClass('is-active')) {
+        $(this).removeClass('is-active');
+    } else {
+        $('.navbar-toggle').removeClass('is-active');
+        $(this).addClass('is-active');
+    }
+});
 
 
-
-function navbarHeightFunction() {
-    navbarHeight = $('.sp-navbar').outerHeight(true);
-    $('.sp-navbar-placeholder').css('height', navbarHeight);
-
-}
+// Navbar Scroll
 
 $(document).ready(function () {
     var previousScroll = 0;
@@ -74,14 +47,23 @@ $(document).ready(function () {
     });
 
     function hideNav() {
-        $(".sp-navbar").removeClass("is-scrollup").removeClass("is-scrolltop").addClass("is-scrolldown");
+        $(".navbar").removeClass("is-scrollup").removeClass("is-scrolltop").addClass("is-scrolldown").addClass("is-scrolling");
+        $('.navbar-toggle').removeClass('is-active');
     }
 
     function showNav() {
-        $(".sp-navbar").removeClass("is-scrolldown").removeClass("is-scrolltop").addClass("is-scrollup").addClass("is-scrolling");
+        $(".navbar").removeClass("is-scrolldown").removeClass("is-scrolltop").addClass("is-scrollup").addClass("is-scrolling");
     }
 
     function showTopNav() {
-        $(".sp-navbar").removeClass("is-scrolldown").removeClass("is-scrollup").removeClass("is-scrolling").addClass("is-scrolltop");
+        $(".navbar").removeClass("is-scrolldown").removeClass("is-scrollup").removeClass("is-scrolling").addClass("is-scrolltop");
     }
 });
+
+
+// Navbar Placeholder
+
+function navbarPlaceholder() {
+    var navbarPlaceholder = $('.navbar').outerHeight(true);
+    $('.navbar-placeholder').css('height', `${navbarPlaceholder}px`);
+}

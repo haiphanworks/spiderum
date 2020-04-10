@@ -1,0 +1,91 @@
+.comments {
+    >.comment {
+        &:not(:first-child) {
+            margin-top: 1rem;
+        }
+
+        .comments {
+            padding: 1rem 0 0 1.5rem;
+        }
+    }
+}
+
+.comment {
+    position: relative;
+    display: block;
+
+    .avatar {
+        float: left;
+        display: block;
+        flex-shrink: 0;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+        border: 1px solid rgba(var(--border), 1);
+        background-color: rgba(var(--gray-200), 1);
+
+        img {
+            display: block;
+        }
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+
+        .author {
+            font-weight: bold;
+        }
+
+        .metadata {
+            color: rgba(var(--gray-600), .75);
+            font-size: .835rem;
+        }
+
+        .content {
+            margin-top: .5rem;
+
+            &[data-reply-to] {
+                &:before {
+                    content: '— Trả lời 'attr(data-reply-to);
+                    font-size: .835rem;
+                    color: rgba(var(--gray-600), .75);
+
+                }
+            }
+
+            &.content-body {
+                >*+* {
+                    margin-top: .5rem;
+                }
+            }
+
+            .quote {
+                padding: .25rem 0 .25rem .75rem;
+                border-left: 5px solid rgba(var(--border), 1);
+
+                &:hover {
+                    background-color: rgba(var(--border), .5);
+                }
+            }
+        }
+
+        .actions {
+            margin-top: .5rem;
+            color: rgba(var(--gray-600), .75);
+            font-size: .835rem;
+
+            a {
+                cursor: pointer;
+
+                &:hover {
+                    color: rgba(var(--gray-800), .75);
+                }
+            }
+
+            >*+* {
+                margin-left: .5rem;
+            }
+        }
+    }
+}

@@ -1,167 +1,229 @@
-<!-- <div class="sp-loading-bar"></div> -->
+<nav class="navbar bg-white">
 
-<div class="sp-navbar">
+    <div class="navbar-section navbar-top">
+        <div class="navbar-container">
 
-    <div class="sp-navbar-top">
-        <div class="container sp-navbar-top-inner">
+            <!-- Navbar Brand -->
+            <a href="/" class="navbar-item navbar-brand">
+                <div class="navbar-logo">
+                    <img src="/assets/images/logo.png" alt="Spiderum" class="h-12">
+                </div>
+                <h1 class="navbar-title hidden sm:block ml-2">
+                    <img src="/assets/images/logo-title.png" alt="Spiderum" class="h-12">
+                </h1>
+            </a>
 
-            <div class="sp-navbar-item">
-                <a class="sp-navbar-logo" href="/">
-                    <img src="/assets/images/logo.png" alt="">
-                </a>
+            <!-- Navbar Trending -->
+            <div class="navbar-item navbar-trending hidden lg:flex">
+                <div class="navbar-trending-icon">
+                    <img src="/assets/icons/navbar-trending.svg" class="block w-4">
+                </div>
+                <a class="navbar-trending-item">Đại dịch COVID-19</a>
+                <a class="navbar-trending-item">Animal Crossing: New Horizons</a>
             </div>
 
-            <div class="sp-navbar-item sp-navbar-tags is-hidden-touch">
-                <a class="sp-navbar-tags-item">Kraven trở lại</a>
-                <a class="sp-navbar-tags-item">Norman Osborn nhận giải Nobel Hoà Bình</a>
-            </div>
+            <!-- Navbar Separator -->
+            <div class="navbar-separator ml-auto"></div>
 
-            <div class="sp-navbar-item sp-navbar-separator"></div>
-
-            <div class="sp-navbar-item sp-navbar-search">
-                <div class="sp-navbar-toggle">
+            <!-- Navbar Search -->
+            <div class="is-logged-in navbar-item navbar-search">
+                <div class="navbar-toggle toggle">
                     <i class="far fa-search"></i>
                 </div>
             </div>
-            <div class="sp-navbar-item sp-navbar-messages">
-                <div class="sp-navbar-toggle">
+
+            <!-- Navbar Messages -->
+            <div class="is-logged-in navbar-item navbar-messages">
+                <div class="navbar-toggle toggle">
                     <i class="far fa-envelope"></i>
+                    <span class="notifications">2</span>
+                </div>
+                <div class="navbar-dropdown">
+                    <div class="navbar-dropdown-inner">
+                        <div class="navbar-dropdown-head">
+                            <div class="navbar-dropdown-title">Tin nhắn</div>
+                            <div class="navbar-dropdown-cta">
+                                <span class="icon"><i class="fa far fa-edit"></i></span>
+                            </div>
+                        </div>
+                        <div class="navbar-dropdown-content">
+                            <div class="navbar-dropdown-empty">
+                                <p>Không có tin nhắn nào.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="sp-navbar-item sp-navbar-notifications">
-                <div class="sp-navbar-toggle">
+            <!-- Navbar Notifications -->
+            <div class="is-logged-in navbar-item navbar-notifications">
+                <div class="navbar-toggle toggle">
                     <i class="far fa-bell"></i>
+                    <span class="notifications">5</span>
+                </div>
+                <div class="navbar-dropdown">
+                    <div class="navbar-dropdown-inner">
+                        <div class="navbar-dropdown-head">
+                            <div class="navbar-dropdown-title">Thông báo</div>
+                            <div class="navbar-dropdown-cta">
+                                <span class="icon"><i class="fa far fas fa-ellipsis-h"></i></span>
+                            </div>
+                        </div>
+                        <div class="navbar-dropdown-content">
+                            {% for i in (1..10) %}
+                            <div class="navbar-dropdown-item">
+                                <div class="navbar-dropdown-media img-container">
+                                    <img src="">
+                                </div>
+                                <div class="navbar-dropdown-content">
+                                    <p><span class="font-bold text-gray-700">Nàng Hầu Gái</span> đã tiếp tục câu chuyện
+                                        trong phòng chơi
+                                        <span class="font-bold text-gray-700">Pico Của Tôi</span>.</p>
+                                    <p class="time text-xs font-bold text-gray-500">1 giờ trước</p>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            <a href="/" class="navbar-dropdown-more">
+                                Hiển thị thêm
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="sp-navbar-item sp-navbar-user">
-                <figure class="image sp-navbar-user-avatar">
-                    <img class="is-rounded" src="/assets/images/avatar.jpg">
-                </figure>
+            <!-- Navbar User -->
+            <div class="is-logged-in navbar-item navbar-user">
+                <div class="navbar-toggle toggle img-container">
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="navbar-dropdown">
+                    <div class="navbar-dropdown-inner">
+                        <div class="navbar-dropdown-content py-2">
+                            <div class="navbar-dropdown-item navbar-user-detail">
+                                <div class="navbar-user-avatar img-container">
+                                    <img src="">
+                                </div>
+                                <div class="navbar-user-info">
+                                    <h3 class="displayname">Phan Thanh Hải</h3>
+                                    <div class="username">@hai-phan</div>
+                                    <a href="/personal" class="profile">
+                                        <span class="text">spiderum.me/hai-phan</span>
+                                        <span class="icon"><i class="fa far fa-external-link-alt"></i></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="navbar-dropdown-separator"></div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-sticky-note"></i></span>
+                                    <span class="text">Bài viết của bạn</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-comments-alt fa-flip-horizontal"></i></span>
+                                    <span class="text">Bình luận của bạn</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-pen-alt"></i></span>
+                                    <span class="text">Nháp của bạn</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-copy"></i></span>
+                                    <span class="text">Yêu cầu sao chép</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-separator"></div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-comment-alt fa-flip-horizontal"></i></span>
+                                    <span class="text">Tùy chỉnh thông báo</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-cog"></i></span>
+                                    <span class="text">Tùy chỉnh tài khoản</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-lock-alt"></i></span>
+                                    <span class="text">Mật khẩu & Liên hệ</span>
+                                </a>
+                            </div>
+                            <div class="navbar-dropdown-separator"></div>
+                            <div class="navbar-dropdown-item">
+                                <a href="/user-profile">
+                                    <span class="icon"><i class="far fa-sign-out"></i></span>
+                                    <span class="text">Đăng xuất</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="sp-navbar-item sp-navbar-new is-hidden-touch">
-                <button class="button is-rounded is-primary">
-                    <span class="icon"><i class="far fa-plus"></i></span>
-                    <span class="text">Bài viết mới</span>
-                </button>
+            <!-- Navbar New -->
+            <div class="is-logged-in navbar-item navbar-new hidden lg:flex">
+                <a class="flex items-center justify-center bg-primary hover:bg-primary-dark
+                h-10 w-10 lg:w-auto lg:px-6 text-white rounded-full">
+                    <span class="icon block lg:hidden"><i class="far fa-plus"></i></span>
+                    <span class="text hidden lg:block">Bài viết mới</span>
+                </a>
             </div>
 
+            <!-- Navbar Logged Out -->
+            <div class="is-logged-out navbar-item navbar-signin">
+                <div class="flex align-center justify-center">
+                    <a href="modal/global/navbar-signin.html" rel="modal:open" id="navbar-signin"
+                        class="button flex
+                     items-center justify-center bg-gray-200 hover:bg-blue-100 lg:bg-transparent lg:hover:bg-gray-200 text-primary lg:text-gray-600 rounded-full h-10 w-10 lg:w-auto px-4">
+                        <span class="icon inline-block lg:hidden"><i class="far fa-sign-in"></i></span>
+                        <span class="text hidden lg:inline">Đăng nhập</span>
+                    </a>
+                    <a href="/register" id="navbar-signup"
+                        class="button hidden lg:flex  items-center bg-ui hover:bg-ui-hover text-white rounded-full">
+                        <span class="text">Đăng ký</span>
+                    </a>
+                </div>
+            </div>
 
         </div>
     </div>
 
+    <div class="navbar-section navbar-bottom">
+        <div class="navbar-container">
 
-    <div class="sp-navbar-bottom">
-        <div class="container sp-navbar-bottom-inner">
-
-            <div class="sp-navbar-following">
-
-                <div class="sp-navbar-following-button">
-                    <span class="text">Đang theo dõi</span>
+            <div class="navbar-following">
+                <div class="navbar-following--button toggle">
+                    <span class="text mr-2">Đang theo dõi</span>
                     <span class="icon"><i class="far fa-angle-down"></i></span>
                 </div>
-
-                <div class="sp-navbar-following-menu">
-                    <ul>
-                        <li class="sp-navbar-following-menu-item has-new-post">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Quan điểm - tranh luận</div>
-                            </a>
-                        </li>
-                        <li class="sp-navbar-following-menu-item">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Truyền cảm hứng</div>
-                            </a>
-                        </li>
-                        <li class="sp-navbar-following-menu-item">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Science2VN</div>
-                            </a>
-                        </li>
-                        <li class="sp-navbar-following-menu-item">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Khoa học - công nghệ</div>
-                            </a>
-                        </li>
-                        <li class="sp-navbar-following-menu-item">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Games</div>
-                            </a>
-                        </li>
-                        <li class="sp-navbar-following-menu-item">
-                            <a href="#">
-                                <div class="sp-navbar-following-menu-item-image">
-                                    <img src="/assets/images/banner-01.jpg">
-                                </div>
-                                <div class="sp-navbar-following-menu-item-label">Du lịch - Ẩm thực</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
+                <div class="navbar-dropdown"></div>
             </div>
 
-            <div class="sp-navbar-category">
-                <div class="sp-navbar-category-menu-nav left">
-                    <i class="far fa-angle-left"></i>
+            <div class="navbar-categories">
+                <div class="navbar-categories--nav left">
+                    <span class="icon"><i class="far fa-angle-left"></i></span>
                 </div>
-                <ul class="sp-navbar-category-menu">
-                    <li>Quan điểm - tranh luận</li>
-                    <li>Truyền cảm hứng</li>
-                    <li>Science2VN</li>
-                    <li>Khoa học- công nghệ</li>
-                    <li>Games</li>
-                    <li>Comics</li>
-                    <li>Phim</li>
-                    <li>Sách</li>
-                    <li>Du lịch - Ẩm thực </li>
-                    <li>Chuyện trò - Tâm sự</li>
-                    <li>Thể thao</li>
-                    <li>Otakulture</li>
-                    <li>Sáng tác</li>
-                    <li>Sự kiện Spiderum</li>
-                    <li>English Zone</li>
+                <ul class="navbar-categories--menu">
+                    {% for item in site.data.settings.categories %}
+                    <li><a href="/category">{{ item.title }}</a></li>
+                    {% endfor %}
                 </ul>
-                <div class="sp-navbar-category-menu-nav right">
-                    <i class="far fa-angle-left"></i>
+                <div class="navbar-categories--nav right">
+                    <span class="icon"><i class="far fa-angle-right"></i></span>
                 </div>
             </div>
 
         </div>
     </div>
 
+</nav>
 
-</div>
-
-<div class="sp-navbar-placeholder"></div>
-
-<div class="sp-section" id="sp-top-notification">
-    <div class="container">
-        <div class="sp-section-heading sp-top-notification-title">Thông báo</div>
-        <div class="sp-top-notification-content">Thử nghiệm ứng dụng di động Spiderum 2.0 trên nền tảng Android và iOS
-        </div>
-        <div class="sp-top-notification-interactions">
-            <div class="sp-top-notification-cta">THAM GIA NGAY</div>
-            <div class="sp-top-notification-close">
-                <i class="far fa-times"></i>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="navbar-placeholder"></div>

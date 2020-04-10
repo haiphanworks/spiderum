@@ -1,4 +1,4 @@
-.sp-footer {
+.footer {
     background-color: white;
 
     box-shadow: 0 0 10px 0 rgba(var(--border), 1);
@@ -8,6 +8,7 @@
     padding: 1.5rem 1rem;
 
     @include breakpoint(md) {
+        margin-top: 4rem;
         padding: 2rem 1rem;
     }
 

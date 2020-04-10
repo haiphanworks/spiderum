@@ -1,0 +1,27 @@
+---
+layout: default
+title: Chuyên mục
+slug: categories
+---
+
+<div class="container:lg mx-auto p-4 xl:px-0">
+    <div class="columns">
+        <div class="column">
+
+            <div class="category-gallery">
+                {% for item in site.data.settings.categories %}
+                <div class="category" style="background-image: url({{ item.image }})">
+                    <div class="category-inner">
+                        <h1 class="font-bold text-xl">{{ item.title }}</h1>
+                        <div class="text-sm">100 Bài viết</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+        <div class="column">
+            <h1 class="font-bold text-xl">Chuyên mục</h1>
+        </div>
+    </div>
+</div>

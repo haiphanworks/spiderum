@@ -1,10 +1,9 @@
 ---
 layout: default
 title: Trang chủ
-slug: home
 ---
 
-<div class="container:lg mx-auto">
+<div class="container">
     <!-- ADS: TOP -->
     <div class="section ads-top">
         <div class="columns">
@@ -33,6 +32,7 @@ slug: home
                     <!-- TRENDING TODAY -- POST -->
                     {%- include components/post.html
 					class="trending-today__item" size="is-xlarge"
+					image="https://media.giphy.com/media/4ah0lvvBvUIvHBaKdw/source.gif"
 					imageRatio="is-2by1" title="Câu chuyện về cuộc phiêu lưu đến
 					vũ trụ song song" description=" Có gì đó bất thường đang xảy
 					ra, khiến ranh giới giữa các vũ trụ song song bị mờ nhạt
@@ -55,6 +55,7 @@ slug: home
                     <!-- EDITOR'S PICKS -- POST -->
                     {%- include components/post.html
 					class="editors-picks__item" size="is-large"
+					image="https://media.giphy.com/media/1qErVv5GVUac8uqBJU/source.gif"
 					imageRatio="is-16by9" title="Vâng, lại một biểu hiện nữa của
 					lươn lẹo hoặc lưu manh" category="Quan điểm - Tranh luận"
 					author="Peter Parker" created="3 giờ trước" liked="50"
@@ -64,6 +65,7 @@ slug: home
                     <div class="card-gallery editors-picks__extra">
                         <!-- EDITOR'S PICKS: EXTRA -- POST 01 -->
                         {%- include components/post.html size="is-small"
+						image="https://media.giphy.com/media/2yrq81q2dDyZOqMI1Q/giphy.gif"
 						imageRatio="is-1by1" title="20 Channel Youtube về Khoa
 						Học mình thấy hay ho" author="Peter Parker"
 						authorCategory="Trò chuyện - Tâm sự" authorImage="No"
@@ -71,6 +73,7 @@ slug: home
 						comments="6" -%}
                         <!-- EDITOR'S PICKS: EXTRA -- POST 02 -->
                         {%- include components/post.html size="is-small"
+						image="https://media.giphy.com/media/c6EIV53g7OD6Gy9Qu9/giphy.gif"
 						imageRatio="is-1by1" title="Người và Ta - Hội chứng Rối
 						loạn Đa nhân cách" author="Peter Parker"
 						authorCategory="Science2Vn" authorImage="No" created="1
@@ -92,15 +95,19 @@ slug: home
             </div>
             <div class="trending-carousel-wrapper">
                 {%- include components/carousel-item.html
+			image="https://media.giphy.com/media/1mhobVG3XtGJWjTg91/giphy.gif"
 			category="Kỹ năng" title="Làm thế nào để phóng tơ nhện cho chính xác
 			..." author="Peter Parker" -%} {%- include
 			components/carousel-item.html
+			image="https://media.giphy.com/media/2yrY0uGSMwHeNkh6Fa/giphy.gif"
 			category="Trò chuyện - Tâm sự" title="Tôi đã suýt chết dưới tay
 			Green Goblin như thế nào" author="Peter Parker" -%} {%- include
 			components/carousel-item.html
+			image="https://media.giphy.com/media/mMC3zB8JcwjyMMDaZC/giphy.gif"
 			category="Du lịch - Ẩm thực" title="Ghé thăm bảo tàng Spider-man tại
 			New York" author="Peter Parker" -%} {%- include
 			components/carousel-item.html
+			image="https://media.giphy.com/media/39vbFAxFparE8mmUw6/giphy.gif"
 			category="Âm nhạc" title="Ban nhạc nữ mới nổi The Mary Janes ra mắt
 			album đầu tay" author="Peter Parker" -%}
             </div>
@@ -189,6 +196,7 @@ slug: home
                                     {% for i in (1..5) %}
                                     {%- include components/post.html
                                             category="Category"
+                                    image="https://media.giphy.com/media/fHug2izN1QQHQNq6dc/giphy.gif"
                                     title="Et sadipscing diam dolore voluptua kasd"
                                     author="Peter Parker"
                                     created="3 giờ trước" liked="50" views="201"
@@ -198,6 +206,7 @@ slug: home
                             </div>
                         </div>
                         {% for i in (1..5) %} {%- include components/post.html
+                        image="https://media.giphy.com/media/fHug2izN1QQHQNq6dc/giphy.gif"
                         title="Et sadipscing diam dolore
 						voluptua kasd. Dolor labore labore ipsum elitr
 						sadipscing" description="Diam ipsum sanctus et voluptua

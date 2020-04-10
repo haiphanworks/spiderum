@@ -1,0 +1,38 @@
+.widgets {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-width: 0;
+    grid-gap: 1rem;
+}
+
+.widget\:boxed {
+    background-color: rgba(var(--white), 1);
+    @include shadow border: 1px solid rgba(var(--border), 1);
+    border-radius: .25rem;
+
+    .widget-head {
+        padding: .75rem 1rem;
+        border-bottom: 1px solid rgba(var(--border), 1);
+
+        .section-title {
+            margin: 0;
+        }
+    }
+
+    .widget-body {
+        padding: 1rem;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                &:not(:last-child) {
+                    padding-bottom: .5rem;
+                    margin-bottom: .5rem;
+                    border-bottom: 1px solid rgba(var(--border), 1);
+                }
+            }
+        }
+    }
+}

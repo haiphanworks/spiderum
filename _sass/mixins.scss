@@ -1,11 +1,9 @@
-// BREAKPOINTS
-
 //// SCREEN SIZE
-$viewport-xs: 768px;
-$viewport-sm: 769px;
-$viewport-md: 1024px;
-$viewport-lg: 1216px;
-$viewport-xl: 1408px;
+$viewport-xs: 639px;
+$viewport-sm: 640px;
+$viewport-md: 768px;
+$viewport-lg: 1024px;
+$viewport-xl: 1280px;
 
 @mixin breakpoint($class) {
     @if $class==xs {
@@ -42,7 +40,6 @@ $viewport-xl: 1408px;
         @warn "Breakpoint mixin supports: xs, sm, md, lg, xl";
     }
 }
-
 
 
 // FONTAWESOME

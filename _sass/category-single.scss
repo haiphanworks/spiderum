@@ -1,0 +1,109 @@
+.category-head {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.category-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    min-height: 20rem;
+    background-size: cover;
+    background-position: center center;
+    -webkit-mask-image: linear-gradient(180deg, hsla(0, 0%, 0%, 1), transparent);
+    mask-image: linear-gradient(180deg, hsla(0, 0%, 0%, 1), transparent);
+}
+
+.category-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding-top: 15rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(var(--border), 1);
+
+    .title {
+        color: rgba(var(--gray-900), .75);
+    }
+}
+
+.category-currated {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(var(--border), 1);
+
+    .category-currated__others {
+        margin-top: 1.5rem;
+    }
+
+    .category-currated__others {
+        grid-template-columns: 1fr;
+
+        @include breakpoint(lg) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .card {
+            flex-direction: row;
+
+            @include breakpoint(lg) {
+                flex-direction: column;
+            }
+
+            .card-image {
+                width: 25%;
+                max-width: 6rem;
+
+                flex-shrink: 0;
+
+                @include breakpoint(lg) {
+                    width: 100%;
+                    max-width: unset;
+                }
+
+                figure.image {
+                    padding-top: 100%;
+
+                    @include breakpoint(md) {
+                        padding-top: 60%;
+                    }
+                }
+
+                +.card-content {
+                    margin-top: 0;
+                    margin-left: 1rem;
+
+                    @include breakpoint(md) {
+                        margin-top: 1rem;
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .card-content {
+                &__title {
+                    font-size: 1.1rem;
+
+                    * {
+                        font-size: inherit;
+                    }
+
+                    @include breakpoint(md) {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                &__description {
+                    display: none;
+                }
+            }
+
+            .card-author {
+                margin-top: 0;
+            }
+        }
+    }
+}

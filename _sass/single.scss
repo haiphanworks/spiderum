@@ -1,10 +1,10 @@
-.sp-post-category {
+.post-category {
     display: flex;
     height: 3.5rem;
 
     background-color: #222;
 
-    .sp-post-category-title {
+    .post-category-title {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -18,7 +18,7 @@
     }
 }
 
-.sp-post-section {
+.post-section {
     width: 100%;
     max-width: 980px;
 
@@ -40,7 +40,7 @@
 
 // COVER
 
-.sp-post-cover {
+.post-cover {
     text-align: center;
 
     figcaption {
@@ -57,7 +57,7 @@
 
 // TITLE
 
-.sp-post-title {
+.post-title {
     h1 {
         font-family: var(--font-family-serif);
         font-weight: 500;
@@ -73,7 +73,7 @@
 
 // DESCRIPTION
 
-.sp-post-description {
+.post-description {
     font-family: var(--font-family-sans-serif);
     font-size: 1.5rem;
     font-weight: 500;
@@ -83,13 +83,13 @@
 
 // META
 
-.sp-post-meta {
+.post-meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.sp-post-meta-actions {
+.post-meta-actions {
     display: grid;
     grid-auto-flow: column;
     grid-gap: 1em;
@@ -98,7 +98,7 @@
     font-size: 1rem;
 
 
-    .sp-post-meta-actions-item {
+    .post-meta-actions-item {
         color: rgba(var(--text), .5);
 
         &:hover {
@@ -110,7 +110,7 @@
 
 // POST
 
-.sp-post-content {
+.post-content {
     width: 100%;
 
     font-family: var(--font-family-serif);
@@ -118,7 +118,7 @@
     font-weight: 500;
 }
 
-.sp-post-image {
+.post-image {
     margin-top: 2em;
     margin-bottom: 2em;
 
@@ -192,7 +192,7 @@
     }
 }
 
-.sp-post-image-caption {
+.post-image-caption {
     margin-top: .8rem;
     font-family: var(--font-family-sans-serif);
     font-size: .8rem;
@@ -200,12 +200,12 @@
     text-align: center;
 }
 
-.sp-post-after {
+.post-after {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    .sp-post-after-post {
+    .post-after-post {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -216,7 +216,7 @@
             content: '\00a0\00a0·\00a0';
         }
 
-        .sp-post-after-post-item {
+        .post-after-post-item {
             display: flex;
             align-items: center;
 
@@ -242,7 +242,7 @@
             }
         }
 
-        .sp-post-after-post-like {
+        .post-after-post-like {
             &:after {
                 content: '\00a0ủng hộ'
             }
@@ -256,20 +256,20 @@
             }
         }
 
-        .sp-post-after-post-view {
+        .post-after-post-view {
             &:after {
                 content: '\00a0lượt xem'
             }
         }
     }
 
-    .sp-post-after-actions {
+    .post-after-actions {
         display: grid;
         grid-auto-flow: column;
         grid-gap: 1em;
         align-items: center;
 
-        .sp-post-after-actions-item {
+        .post-after-actions-item {
             color: rgba(var(--text), .5);
 
             &:hover {
@@ -282,8 +282,8 @@
 
 // AUTHOR
 
-.sp-post-author {
-    .sp-post-author-wrapper {
+.post-author {
+    .post-author-wrapper {
         display: grid;
         grid-gap: 1.5rem;
 

@@ -1,37 +1,37 @@
 {% assign whitespace = " " %}
-<div class="{{ include.class }} sp-card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
-    <div class="sp-card-image">
+<div class="{{ include.class }} card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
+    <div class="card-image img-container">
         <figure class="image {{ include.imageRatio }}">
             <img src="{{ include.image }}">
         </figure>
     </div>
-    <div class="sp-card-content">
+    <div class="card-content">
         {%- if include.category -%}
-        <div class="sp-card-content__category">
+        <div class="card-content__category">
             <h5>{{ include.category }}</h5>
         </div>
         {%- endif -%}
-        <div class="sp-card-content__title">
+        <div class="card-content__title">
             <h1>{{ include.title }}</h1>
         </div>
         {%- if include.description -%}
-        <div class="sp-card-content__description">
+        <div class="card-content__description">
             {{ include.description }}
             {%- if include.readtime -%}
-            <span class="sp-card-content__read-time">{{ include.readtime }}</span>
+            <span class="card-content__read-time">{{ include.readtime }}</span>
             {%- endif -%}
         </div>
         {%- endif -%}
-        <div class="sp-card-author">
+        <div class="card-author">
             {%- if include.authorImage=="No" -%}
             {%- else -%}
-            <div class="sp-card-author__image">
+            <div class="card-author__image">
                 <figure class="image is-1by1">
-                    <img src="/assets/images/avatar.jpg" class="is-rounded">
+                    <img src="">
                 </figure>
             </div>
             {%- endif -%}
-            <div class="sp-card-author__content">
+            <div class="card-author__content">
                 <div class="main">
                     <span class="author-name">{{ include.author }}</span>
                     {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
