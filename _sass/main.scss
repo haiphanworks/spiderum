@@ -6,17 +6,11 @@
 :root {
     --font-size: 14px;
 
-    --primary-lightest: 234, 245, 251;
-    --primary-lighter: 172, 215, 239;
-    --primary-light: 110, 185, 226;
-    --primary: 48, 155, 214;
-    --primary-dark: 34, 109, 150;
-    --primary-darker: 29, 93, 128;
-    --primary-darkest: 19, 62, 86;
-
     --background: 249, 251, 253;
 
     --border: 227, 235, 246;
+
+    --border-radius: .25rem;
 
     --navbar-height: 4.5rem;
 }
@@ -27,12 +21,14 @@ html {
 
 body {
     background-color: rgba(var(--background), 1);
-    color: rgba(var(--gray-800), .75);
+    color: rgba(var(--gray-600), 1);
 }
 
 // COMPONENTS
 @import 'navbar';
+@import 'ads';
 @import 'card';
+@import 'buttons';
 @import 'feed-carousel';
 @import 'widget';
 @import 'comments';

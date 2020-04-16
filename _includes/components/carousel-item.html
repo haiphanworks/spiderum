@@ -1,14 +1,12 @@
-<a href="/single.html">
-    <div class="sp-trending-carousel-item" style="background-image: url('{{ include.image }}')">
-        <div class="sp-trending-carousel-item-inner">
-            <div class="sp-trending-carousel-item-info-category">{{ include.category }}</div>
-            <h3 class="sp-trending-carousel-item-info-title">{{ include.title }}
-            </h3>
-            <div class="sp-trending-carousel-item-info-user">
-                <img src="/assets/images/avatar.jpg" alt="{{ include.author }}"
-                    class="sp-trending-carousel-item-info-user-image">
-                <span class="sp-trending-carousel-item-info-user-name">{{ include.author }}</span>
-            </div>
-        </div>
+<div class="item">
+    <a class="image" style="background-image: url('{{ include.image }}')"></a>
+    <div class="content">
+        <a href="/category" class="category">{{ include.category }}</a>
+        <a href="/single" class="title">{{ include.title }}
+        </a>
+        <a class="author">
+            <img src="/assets/images/avatar.jpg" alt="{{ include.author }}" class="image">
+            <span class="username">{{ include.author }}</span>
+        </a>
     </div>
-</a>
+</div>

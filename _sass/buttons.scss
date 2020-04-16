@@ -1,0 +1,25 @@
+.button {
+    align-items: center;
+    justify-content: center;
+
+    height: 2.5rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    border-radius: .25rem;
+
+    cursor: pointer;
+
+    &:not(.hidden, .flex) {
+        display: inline-flex;
+    }
+
+    &.rounded-full {
+        border-radius: 1.25rem;
+    }
+
+    span.text {
+        white-space: nowrap;
+    }
+}

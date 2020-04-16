@@ -1,18 +1,10 @@
 .feed-carousel {
-    margin-top: 1rem;
+    position: relative;
 
-    +.card {
-        border-top: 0 !important;
-    }
-
-    .widget-content {
-        position: relative;
-    }
-
-    .feed-carousel-nav {
+    .nav {
         display: none;
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             display: initial;
         }
 
@@ -35,7 +27,7 @@
             }
 
             &:hover {
-                border-color: rgba(var(--primary), 0.25);
+                background-color: rgba(var(--gray-200), 1);
             }
         }
 
@@ -46,7 +38,7 @@
         }
     }
 
-    .feed-carousel-wrapper {
+    .wrapper {
         display: flex;
         display: flex;
         overflow: hidden;
@@ -56,33 +48,20 @@
     }
 
     .card {
-        flex-direction: column;
-        flex-shrink: 0;
-        width: 18rem;
-        border: 1px solid rgba(var(--border), 11);
-        border-radius: var(--border-radius);
+        width: 17.5rem;
+
+        >.content {
+            .category {
+                font-size: .835rem;
+            }
+
+            .title {
+                font-size: 1.125rem;
+            }
+        }
 
         +.card {
             margin-left: 1rem;
-        }
-
-        .card-image {
-            figure.image {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                padding-top: 75%;
-            }
-        }
-
-        .card-content {
-            margin-top: 0;
-            padding: 1rem;
-
-            .card-content__title {
-                h1 {
-                    font-size: 1.2rem;
-                }
-            }
         }
     }
 }

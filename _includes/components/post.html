@@ -1,37 +1,33 @@
 {% assign whitespace = " " %}
 <div class="{{ include.class }} card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
-    <div class="card-image img-container">
-        <figure class="image {{ include.imageRatio }}">
-            <img src="{{ include.image }}">
-        </figure>
+    <div class="image img-container">
+        <img src="{{ include.image }}">
     </div>
-    <div class="card-content">
+    <div class="content">
         {%- if include.category -%}
-        <div class="card-content__category">
+        <div class="category">
             <h5>{{ include.category }}</h5>
         </div>
         {%- endif -%}
-        <div class="card-content__title">
+        <div class="title">
             <h1>{{ include.title }}</h1>
         </div>
         {%- if include.description -%}
-        <div class="card-content__description">
+        <div class="description">
             {{ include.description }}
             {%- if include.readtime -%}
-            <span class="card-content__read-time">{{ include.readtime }}</span>
+            <span class="read-time">{{ include.readtime }}</span>
             {%- endif -%}
         </div>
         {%- endif -%}
-        <div class="card-author">
+        <div class="author">
             {%- if include.authorImage=="No" -%}
             {%- else -%}
-            <div class="card-author__image">
-                <figure class="image is-1by1">
-                    <img src="">
-                </figure>
+            <div class="image">
+                <img src="">
             </div>
             {%- endif -%}
-            <div class="card-author__content">
+            <div class="content">
                 <div class="main">
                     <span class="author-name">{{ include.author }}</span>
                     {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
@@ -40,25 +36,28 @@
                 </div>
                 <div class="sub">
                     {%- if include.created -%}
-                    <span class="sub-item created">{{ include.created }}</span>
+                    <span class="item created">{{ include.created }}</span>
                     {%- endif -%}
-                    {%- if include.liked -%}
-                    <span class="sub-item liked">{{ include.liked }}</span>
+                    {%- if include.upvote -%}
+                    <span class="item upvote">{{ include.upvote }}</span>
+                    {%- endif -%}
+                    {%- if include.downvote -%}
+                    <span class="item downvote">{{ include.downvote }}</span>
                     {%- endif -%}
                     {%- if include.subseparator -%}
-                    <span class="sub-item separator"></span>
+                    <span class="item separator"></span>
                     {%- endif -%}
                     {%- if include.views -%}
-                    <span class="sub-item views">{{ include.views }}</span>
+                    <span class="item views">{{ include.views }}</span>
                     {%- endif -%}
                     {%- if include.comments -%}
-                    <span class="sub-item comments">{{ include.comments }}</span>
+                    <span class="item comments">{{ include.comments }}</span>
                     {%- endif -%}
                     {%- if include.bookmark -%}
-                    <span class="sub-item bookmark"></span>
+                    <span class="item bookmark"></span>
                     {%- endif -%}
                     {%- if include.share -%}
-                    <span class="sub-item share"></span>
+                    <span class="item share"></span>
                     {%- endif -%}
                 </div>
             </div>

@@ -67,7 +67,7 @@
                 figure.image {
                     padding-top: 100%;
 
-                    @include breakpoint(md) {
+                    @include breakpoint(lg) {
                         padding-top: 60%;
                     }
                 }
@@ -76,7 +76,7 @@
                     margin-top: 0;
                     margin-left: 1rem;
 
-                    @include breakpoint(md) {
+                    @include breakpoint(lg) {
                         margin-top: 1rem;
                         margin-left: 0;
                     }
@@ -91,7 +91,7 @@
                         font-size: inherit;
                     }
 
-                    @include breakpoint(md) {
+                    @include breakpoint(lg) {
                         font-size: 1.2rem;
                     }
                 }

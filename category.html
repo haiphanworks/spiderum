@@ -34,36 +34,37 @@ slug: category
 
 <section class="category-main px-4">
     <div class="container:lg mx-auto">
-        <div class="category-currated">
-            <div class="section-title">Bài viết hàng đầu</div>
-            {%- include components/post.html
+        <div class="section">
+            <div class="title">Bài viết hàng đầu</div>
+            <div class="category-currated">
+                {%- include components/post.html
                 class="category-currated__top"
-                size="is-xlarge is-horizontal"
+                size="is-xlarge card:horizontal"
                 imageRatio="is-2by1" title="Tempor lorem dolor sit ipsum dolore diam, justo takimata elitr"
                 description="Justo sed voluptua justo kasd et, elitr invidunt eirmod no ea et eirmod invidunt voluptua nonumy, elitr ut invidunt invidunt sea aliquyam no. Clita erat lorem stet justo clita, ut justo ipsum sed sadipscing amet sanctus ut. Sed voluptua tempor duo ipsum et accusam duo erat. Labore sadipscing rebum sadipscing." readtime="7"
                 author="Peter Parker" created="3
-                giờ trước" liked="289" views="2142" comments="67"
+                giờ trước" upvote="187" downvote="26" views="2142" comments="67"
                 bookmark="yes" share="yes" subseparator="yes" -%}
-            <div class="category-currated__others card-gallery is-large">
-                {% for i in (1..4) %}
-                {%- include components/post.html
+                <div class="category-currated__others card-gallery is-large">
+                    {% for i in (1..4) %}
+                    {%- include components/post.html
                 imageRatio="is-16by9" title="Vero et ea diam eirmod at ea, duo eirmod et"
                 description="Clita erat lorem
                 stet justo clita, ut justo ipsum sed sadipscing amet sanctus ut. Sed voluptua tempor duo
                 ipsum et accusam duo erat. Labore sadipscing rebum sadipscing." readtime="7"
-                author="Peter Parker" created="3 giờ trước" liked="50"
+                author="Peter Parker" created="3 giờ trước" upvote="187" downvote="26"
                 views="3142" comments="8"
                 subseparator="yes" -%}
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
 
         </div>
 
-
         <div class="columns mt-4">
             <div class="column">
                 <div class="category-posts">
-                    <div class="section-title">Bài viết trong chuyên mục</div>
+                    <div class="title">Bài viết trong chuyên mục</div>
                     <div class="feed-filter">
                         <div class="feed-filter-sort">
                             <a href="#" class="feed-filter-item feed-filter-sort-item is-active hot">
@@ -101,7 +102,7 @@ slug: category
 						dolores voluptua rebum sanctus justo ipsum, sea lorem
 						voluptua tempor dolore et nonumy accusam sed, amet."
 						author="Peter Parker" authorCategory="Sadipscing clita"
-						created="3 giờ trước" liked="50" views="201"
+						created="3 giờ trước" upvote="187" downvote="26" views="201"
 						comments="6" bookmark="yes" share="yes"
                         subseparator="yes" -%} {% endfor %}
                     </div>
@@ -113,7 +114,7 @@ slug: category
 
                     <div class="widget widget:boxed">
                         <div class="widget-head">
-                            <div class="section-title">Nội dung cho phép</div>
+                            <div class="title">Nội dung cho phép</div>
                         </div>
                         <div class="widget-body">
                             <p>Các nội dung thể hiện góc nhìn, quan điểm đa chiều về các vấn đề kinh tế, văn hoá – xã
@@ -124,7 +125,7 @@ slug: category
 
                     <div class="widget widget:boxed">
                         <div class="widget-head">
-                            <div class="section-title">Quy định</div>
+                            <div class="title">Quy định</div>
                         </div>
                         <div class="widget-body">
                             <ul>

@@ -29,7 +29,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin-top: 2rem;
 
         padding-left: 160px;
@@ -64,7 +64,7 @@
         font-size: 2.5rem;
         line-height: 1.2;
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             font-size: 3rem;
         }
     }
@@ -124,28 +124,28 @@
 
     &.is-extended {
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             margin-right: -160px;
             margin-left: -160px;
         }
     }
 
     &.is-float {
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             max-width: 490px;
             margin-left: 2em;
             margin-right: 2em;
         }
 
         &.is-float-left {
-            @include breakpoint(md) {
+            @include breakpoint(lg) {
                 float: left;
                 margin-left: -160px;
             }
         }
 
         &.is-float-right {
-            @include breakpoint(md) {
+            @include breakpoint(lg) {
                 float: right;
                 margin-right: -160px;
             }
@@ -224,7 +224,7 @@
                 content: '\00a0mô tả';
                 display: none;
 
-                @include breakpoint(md) {
+                @include breakpoint(lg) {
                     display: inline;
                 }
             }
@@ -236,7 +236,7 @@
                 font-size: 1rem;
                 margin-right: .2rem;
 
-                @include breakpoint(md) {
+                @include breakpoint(lg) {
                     // display: none;
                 }
             }
@@ -250,7 +250,7 @@
             i.far,
             i.fas,
             i.fal {
-                @include breakpoint(md) {
+                @include breakpoint(lg) {
                     display: inline-block;
                 }
             }

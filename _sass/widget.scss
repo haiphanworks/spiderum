@@ -7,14 +7,15 @@
 
 .widget\:boxed {
     background-color: rgba(var(--white), 1);
-    @include shadow border: 1px solid rgba(var(--border), 1);
+    @include shadow;
+    border: 1px solid rgba(var(--border), 1);
     border-radius: .25rem;
 
     .widget-head {
         padding: .75rem 1rem;
         border-bottom: 1px solid rgba(var(--border), 1);
 
-        .section-title {
+        .title {
             margin: 0;
         }
     }
@@ -31,6 +32,28 @@
                     padding-bottom: .5rem;
                     margin-bottom: .5rem;
                     border-bottom: 1px solid rgba(var(--border), 1);
+                }
+            }
+        }
+    }
+}
+
+
+// SIDEBAR: FOOTER
+
+.sidebar-footer {
+    font-size: .8rem;
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+
+        li {
+            &:not(:last-child) {
+                &:after {
+                    content: '\00a0\00a0·\00a0\00a0';
+                    color: rgba(var(--text), .5);
                 }
             }
         }
