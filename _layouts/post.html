@@ -2,104 +2,80 @@
 layout: default
 ---
 
-<div class="post-cover">
-    <figure class="image">
-        <img src="https://kenh14cdn.com/2019/11/30/e-web01-1575057268415890506822.jpg" alt="">
-        <figcaption>Photos: <a href="#">@onitsukatigerjp</a></figcaption>
+<article class="post">
+
+    <figure class="cover image img-container">
+        <img class="img" src="https://kenh14cdn.com/2019/11/30/e-web01-1575057268415890506822.jpg">
+        <div class="img-caption">Photos: <a href="#">@onitsukatigerjp</a></div>
     </figure>
-</div>
 
-<div class="post-section post-title">
-    <h1>Câu chuyện của Onitsuka Tiger - đôi bata vượt xa quy chuẩn giày thể thao, trở thành đôi giày "bất tử" với
-        tín đồ thời trang toàn cầu</h1>
-</div>
+    <section class="title">
+        <h1>Câu chuyện của Onitsuka Tiger - đôi bata vượt xa quy chuẩn giày thể thao, trở thành đôi giày "bất tử" với
+            tín đồ thời trang toàn cầu</h1>
+    </section>
 
-<div class="post-section post-description">
-    <p>Chắc chắn ai trong chúng ta cũng đều thấy quan mắt với những đường kẻ sọc màu mè vắt vẻo bên nhau trên đôi
-        giày mang tên Onitsuka Tiger. Ấy thế nhưng, câu chuyện thú vị ẩn sau đôi giày này thì lại rất nhiều người
-        chưa rõ.</p>
-</div>
+    <section class="description">
+        <p>Chắc chắn ai trong chúng ta cũng đều thấy quan mắt với những đường kẻ sọc màu mè vắt vẻo bên nhau trên đôi
+            giày mang tên Onitsuka Tiger. Ấy thế nhưng, câu chuyện thú vị ẩn sau đôi giày này thì lại rất nhiều người
+            chưa rõ.</p>
+    </section>
 
-<div class="post-section post-meta">
-    <div class="post-meta-author block-author is-small">
-        <div class="block-author-image">
-            <img src="/assets/images/avatar.jpg" alt="">
-        </div>
-        <div class="block-author-meta">
-            <div class="block-author-meta-name">
-                <a href="#">Peter Parker</a>
+    <section class="meta">
+        <div class="author">
+            <div class="image img-container">
+                <img src="">
             </div>
-            <div class="block-author-meta-post">
-                <div class="block-author-meta-post-item block-author-meta-post-time">
-                    <time datetime="2020-1-5">5 phút trước</time>
-                </div>
-                <div class="block-author-meta-post-item block-author-meta-post-readtime">
-                    <i class="fal fa-clock"></i>
-                    <span>8</span>
+            <div class="content">
+                <div class="main"><a class="author-name">Danielle R. Gallegos</a></div>
+                <div class="sub">
+                    <div class="item date">2 ngày trước</div>
+                    <div class="item readtime">8 phút trước</div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="post-meta-actions">
-        <div class="post-meta-actions-item post-meta-actions-bookmark">
-            <i class="fab fa-twitter"></i>
+        <div class="share">
+            <a class="item facebook"><span class="icon"><i class="fab fa-facebook"></i></span></a>
+            <a class="item twitter"><span class="icon"><i class="fab fa-twitter"></i></span></a>
+            <a class="item bookmark"><span class="icon"><i class="far fa-bookmark"></i></span></a>
         </div>
-        <div class="post-meta-actions-item post-meta-actions-bookmark">
-            <i class="fab fa-facebook"></i>
-        </div>
-        <div class="post-meta-actions-item post-meta-actions-bookmark">
-            <i class="fal fa-bookmark"></i>
-        </div>
-    </div>
+    </section>
+
+    <section class="section content paragraphs">
+        {{ content }}
+    </section>
+
+    <!-- POST:TAG -->
+    <section class="tags">
+        <a class="tag">Huyền trang</a>
+        <a class="tag">Lịch sử</a>
+        <a class="tag">Huyền thoại</Huyền>
+    </section>
+
+</article>
+
+<div class="container:sm mx-auto">
+    <div class="qcao h-32"></div>
 </div>
 
-<div class="post-section post-content content">
-    {{ content }}
-</div>
-
-<div class="post-section post-tags">
-    <ul class="post-tags-list tags is-uppercase">
-        <li class="tag tag"><a>Thời trang</a></li>
-        <li class="tag tag"><a>Lịch sử</a></li>
-        <li class="tag tag"><a>Huyền thoại</a></li>
-    </ul>
-</div>
-
-<div class="post-section post-after">
-    <div class="post-after-post">
-        <a class="post-after-post-item post-after-post-like">
-            <i class="fal fa-heart"></i>
-            <span>10</span>
-        </a>
-        <a class="post-after-post-item post-after-post-view">
-            <i class="fal fa-eye"></i>
-            <span>10</span>
-        </a>
-    </div>
-    <div class="post-after-actions">
-        <a class="post-after-actions-item post-after-actions-bookmark">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <a class="post-after-actions-item post-after-actions-bookmark">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a class="post-after-actions-item post-after-actions-bookmark">
-            <i class="fal fa-bookmark"></i>
-        </a>
-        <a class="post-after-actions-item post-after-actions-bookmark">
-            <i class="fal fa-ellipsis-h"></i>
-        </a>
-    </div>
-</div>
-
-
-
-<div class="container:sm mx-auto mt-12">
-
-    <div class="post-comments">
-        <div class="comments">
-            {%- include components/comment.html -%}
+<section class="post:comments container:sm sm:mx-auto mt-6">
+    <div class="comment-form">
+        <span class="editor" contenteditable></span>
+        <div class="actions">
+            <div class="action emoji">
+                <div class="emoji-toggle toggle">
+                    <span class="icon"><i class="far fa-smile"></i></span>
+                </div>
+            </div>
+            <div class="action submit">
+                <span class="icon"><i class="far fa-paper-plane"></i></span>
+            </div>
         </div>
     </div>
-
-</div>
+    <div class="comments">
+        {%- include components/comment.html -%}
+    </div>
+    <a class="comment-more text-smallcaps">
+        <span class="icon"><i class="far fa-spinner fa-spin"></i></span>
+        <span class="text">Tải thêm bình luận (5)</span>
+    </a>
+</section>

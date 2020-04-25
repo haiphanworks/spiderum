@@ -85,6 +85,16 @@ img[src=''] {
     background-color: rgba(var(--gray-100), 1);
 }
 
+.img-caption {
+    margin-top: .5rem;
+    font-size: .835rem;
+    color: rgba(var(--gray-500), 1);
+
+    a {
+        border-bottom: .05em solid currentColor;
+    }
+}
+
 // COLUMNS
 
 .columns {
@@ -105,14 +115,12 @@ img[src=''] {
     }
 
     .column\:spacer {
-        display: grid;
         grid-template-columns: 1fr;
         min-width: 0;
         grid-gap: 1.5rem;
     }
 
     .column\:sidebar {
-        display: grid;
         grid-template-columns: 1fr;
         min-width: 0;
         grid-gap: 1.5rem;
@@ -162,35 +170,19 @@ span.text {
     }
 }
 
+
 // SHADOW
+
+.shadow\:sp {
+    box-shadow: 0 10px 15px -3px rgba(var(--blue-500), .05),
+        0 4px 6px -2px rgba(var(--blue-500), .025) !important;
+}
+
 @mixin shadow {
-    box-shadow: -1px -1px 4px 0 rgba(255, 255, 255, 0.5),
-        1px 1px 4px 0 rgba(var(--primary), 0.25);
+    box-shadow: 0 10px 15px -3px rgba(var(--blue-500), .05),
+        0 4px 6px -2px rgba(var(--blue-500), .025) !important;
 }
 
-// IMAGE
-
-figure.image {
-    position: relative;
-    display: block;
-    width: 100%;
-
-    img {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    &.is-1by1 {
-        padding-top: 100%;
-    }
-}
 
 // SMALLCAPS
 
@@ -279,6 +271,7 @@ figure.image {
 
         border: 1px solid rgba(var(--border), 1);
 
+        @include shadow;
 
         @include breakpoint(lg) {
             height: 12rem;
@@ -358,9 +351,13 @@ figure.image {
 
                 .image {
                     display: block;
-                    width: 1.5rem;
-                    height: 1.5rem;
+                    flex-shrink: 0;
+                    width: 2rem;
+                    height: 2rem;
+                    background-color: rgba(var(--gray-200), 1);
+                    border: 1px solid rgba(var(--border), 1);
                     border-radius: 50%;
+                    @include shadow;
                 }
 
                 .username {
@@ -411,12 +408,15 @@ figure.image {
 }
 
 
-
-
-
-
+// FEED: FILTER
 
 .feed-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 1.5rem;
+
     .filter {
         display: flex;
 
@@ -435,11 +435,12 @@ figure.image {
             &.is-active {
                 border: 1px solid rgba(var(--border), 1);
                 background-color: rgba(var(--white), 1);
+                @include shadow;
             }
 
             &:hover,
             &.is-active {
-                color: rgba(var(--blue-600), 1);
+                color: rgba(var(--blue-500), 1);
             }
         }
 
@@ -449,5 +450,79 @@ figure.image {
                 padding: 0;
             }
         }
+    }
+}
+
+
+
+// TOP ANNOUNCEMENT
+
+.top-announcement {
+    position: relative;
+    padding: 1rem;
+    background-color: rgba(var(--gray-300), 1);
+    @include shadow;
+
+    .container\:lg {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+        font-size: 0.835rem;
+        font-weight: bold;
+        color: rgba(var(--gray-700), 1);
+
+        @include breakpoint(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: .835rem;
+
+        &:hover {
+            color: rgba(var(--gray-700), 1);
+        }
+    }
+
+    @include breakpoint(lg) {
+        .container\:lg {
+            flex-direction: row;
+        }
+
+        .title::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 2.5rem;
+            margin-right: 1rem;
+            margin-left: 1rem;
+            background-color: currentColor;
+        }
+    }
+}
+
+
+
+// HOME: EDITORS' PICKS
+
+.editors-picks {
+    .editors-picks__others {
+        border-top: 1px solid rgba(var(--border), 1);
+        padding-top: 1rem;
+        margin-top: 1.5rem;
     }
 }

@@ -89,3 +89,54 @@
         }
     }
 }
+
+
+.comment-form {
+    position: relative;
+    display: flex;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(var(--border), 1);
+
+    .editor {
+        width: 100%;
+        max-height: 15rem;
+
+        &:empty:before {
+            content: 'Hãy chia sẻ cảm nghĩ của bạn về bài viết';
+            transition: all .1s ease;
+        }
+
+        &:hover {
+            &:empty:before {
+                color: rgba(var(--gray-400), 1);
+            }
+        }
+    }
+
+    .actions {
+        display: flex;
+
+        >*:not(:first-child) {
+            margin-left: .5rem;
+        }
+
+        .action {
+            >* {
+
+                &:hover,
+                &.is-active {
+                    color: rgba(var(--blue-500), 1);
+                }
+            }
+        }
+    }
+}
+
+.comment-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1rem;
+    border-top: 1px solid rgba(var(--border), 1);
+    cursor: pointer;
+}

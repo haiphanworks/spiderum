@@ -7,11 +7,11 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
-    border-radius: .25rem;
+    border-radius: var(--border-radius);
 
     cursor: pointer;
 
-    &:not(.hidden, .flex) {
+    &:not(.hidden):not(.flex) {
         display: inline-flex;
     }
 

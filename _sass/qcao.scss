@@ -1,0 +1,20 @@
+.qcao {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 8rem;
+    background-color: rgba(var(--gray-200), 1);
+    color: rgba(var(--gray-600), 1);
+    border: 1px solid rgba(var(--border), 1);
+    border-radius: var(--border-radius);
+    @include shadow;
+
+    &:before {
+        content: 'ADS';
+        text-transform: uppercase;
+        font-size: .835rem;
+        font-weight: bold;
+    }
+}

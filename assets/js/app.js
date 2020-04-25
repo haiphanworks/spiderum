@@ -67,3 +67,15 @@ function navbarPlaceholder() {
     var navbarPlaceholder = $('.navbar').outerHeight(true);
     $('.navbar-placeholder').css('height', `${navbarPlaceholder}px`);
 }
+
+
+// Feed Filter
+
+$('.filter\\:view .item').click(function (e) {
+    e.preventDefault();
+    view = $(this).data('view');
+    console.log(view);
+    $(this).parent().children().removeClass('is-active');
+    $(this).addClass('is-active');
+    $('.feed-wrapper').removeClass('is-small').removeClass('is-medium').removeClass('is-large').addClass(`is-${view}`)
+});

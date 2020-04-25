@@ -1,17 +1,14 @@
 // CORE
+@import 'fonts';
 @import 'mixins';
 @import 'layout';
 @import 'colors';
 
 :root {
     --font-size: 14px;
-
     --background: 249, 251, 253;
-
     --border: 227, 235, 246;
-
-    --border-radius: .25rem;
-
+    --border-radius: .5rem;
     --navbar-height: 4.5rem;
 }
 
@@ -21,16 +18,25 @@ html {
 
 body {
     background-color: rgba(var(--background), 1);
+
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: normal;
     color: rgba(var(--gray-600), 1);
+}
+
+* {
+    outline: none;
 }
 
 // COMPONENTS
 @import 'navbar';
-@import 'ads';
+@import 'qcao';
 @import 'card';
 @import 'buttons';
 @import 'feed-carousel';
 @import 'widget';
+@import 'post';
 @import 'comments';
 @import 'footer';
 
@@ -38,4 +44,4 @@ body {
 // PAGE
 @import 'category-gallery';
 @import 'category-single';
-@import 'single';
+// @import 'single';
