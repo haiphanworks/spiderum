@@ -8,6 +8,19 @@
             padding: 1rem 0 0 1.5rem;
         }
     }
+
+    .comment-more {
+        display: block;
+        padding: .5rem 0;
+        border-top: 1px solid rgba(var(--border), 1);
+        font-size: .75rem;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: rgba(var(--gray-700), 1);
+        }
+    }
 }
 
 .comment {
@@ -22,6 +35,7 @@
         height: 3rem;
         margin-right: 1rem;
         border: 1px solid rgba(var(--border), 1);
+        border-radius: 50%;
         background-color: rgba(var(--gray-200), 1);
 
         img {
@@ -71,6 +85,8 @@
         }
 
         .actions {
+            display: flex;
+            align-items: center;
             margin-top: .5rem;
             color: rgba(var(--gray-600), .75);
             font-size: .835rem;
@@ -84,7 +100,7 @@
             }
 
             >*+* {
-                margin-left: .5rem;
+                margin-left: 1rem;
             }
         }
     }
@@ -97,19 +113,25 @@
     padding: 1rem 0;
     border-bottom: 1px solid rgba(var(--border), 1);
 
+    .avatar {
+        display: block;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        background-color: rgba(var(--gray-200), 1);
+        border: 1px solid rgba(var(--border), 1);
+        border-radius: 50%;
+        @include shadow;
+    }
+
     .editor {
         width: 100%;
         max-height: 15rem;
 
         &:empty:before {
             content: 'Hãy chia sẻ cảm nghĩ của bạn về bài viết';
-            transition: all .1s ease;
-        }
-
-        &:hover {
-            &:empty:before {
-                color: rgba(var(--gray-400), 1);
-            }
+            color: rgba(var(--gray-400), 1);
         }
     }
 
@@ -129,14 +151,9 @@
                 }
             }
         }
-    }
-}
 
-.comment-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .75rem 1rem;
-    border-top: 1px solid rgba(var(--border), 1);
-    cursor: pointer;
+        span.icon {
+            // font-size: 1rem;
+        }
+    }
 }

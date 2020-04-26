@@ -4,10 +4,10 @@ layout: default
 
 <article class="post">
 
-    <figure class="cover image img-container">
+    <section class="cover cover:full">
         <img class="img" src="https://kenh14cdn.com/2019/11/30/e-web01-1575057268415890506822.jpg">
         <div class="img-caption">Photos: <a href="#">@onitsukatigerjp</a></div>
-    </figure>
+    </section>
 
     <section class="title">
         <h1>Câu chuyện của Onitsuka Tiger - đôi bata vượt xa quy chuẩn giày thể thao, trở thành đôi giày "bất tử" với
@@ -22,14 +22,12 @@ layout: default
 
     <section class="meta">
         <div class="author">
-            <div class="image img-container">
-                <img src="">
-            </div>
+            <div class="avatar avatar:lg"><img src=""></div>
             <div class="content">
-                <div class="main"><a class="author-name">Danielle R. Gallegos</a></div>
-                <div class="sub">
+                <div class="author-name"><a href="/user-profile">Danielle R. Gallegos</a></div>
+                <div class="meta">
                     <div class="item date">2 ngày trước</div>
-                    <div class="item readtime">8 phút trước</div>
+                    <div class="item readtime">8 phút đọc</div>
                 </div>
             </div>
         </div>
@@ -40,7 +38,7 @@ layout: default
         </div>
     </section>
 
-    <section class="section content paragraphs">
+    <section class="content paragraphs">
         {{ content }}
     </section>
 
@@ -48,17 +46,61 @@ layout: default
     <section class="tags">
         <a class="tag">Huyền trang</a>
         <a class="tag">Lịch sử</a>
-        <a class="tag">Huyền thoại</Huyền>
+        <a class="tag">Huyền thoại</a>
+    </section>
+
+
+    <section class="actions">
+        <div class="item vote">
+            <a class="upvote"><span class="icon"><i class="far fa-arrow-alt-up"></i></span></a>
+            <span class="value text-sm">187</span>
+            <a class="downvote"><span class="icon"><i class="far fa-arrow-alt-down"></i></span></a>
+        </div>
+        <div class="item view">
+            <span class="icon"><i class="far fa-eye"></i></span>
+            <span class="text text-sm">831 lượt xem</span>
+        </div>
+        <div class="item separator"></div>
+        <a class="item copyright"><span class="icon"><i class="far fa-lock-alt"></i></span></a>
+        <a class="item facebook"><span class="icon"><i class="fab fa-facebook"></i></span></a>
+        <a class="item twitter"><span class="icon"><i class="fab fa-twitter"></i></span></a>
+        <a class="item bookmark"><span class="icon"><i class="far fa-bookmark"></i></span></a>
+    </section>
+
+
+    <section class="follows">
+        <div class="author author:top author:md">
+            <div class="avatar avatar:lg"><img src=""></div>
+            <div class="content">
+                <div class="author-name"><a href="/user-profile">Danielle R. Gallegos</a></div>
+                <div class="username"><a href="/user-profile">@author</a></div>
+                <div class="bio">The of window a said craven human nights then. From grim is or ancient, name shaven i
+                    form and remember.</div>
+                <div class="follow"></div>
+            </div>
+        </div>
+        <div class="author author:category author:top author:md">
+            <div class="avatar avatar:lg"><img src=""></div>
+            <div class="content">
+                <div class="category-name"><a href="/category">Category Name</a></div>
+                <div class="category-id"><a href="/category">/category</a></div>
+                <div class="description">Lordly balm curious quaint i is all if velvet and burned. Shaven thereis get
+                    prophet it this i grew so.</div>
+            </div>
+        </div>
     </section>
 
 </article>
 
-<div class="container:sm mx-auto">
+<div class="container:sm mx-4 sm:mx-auto">
     <div class="qcao h-32"></div>
 </div>
 
-<section class="post:comments container:sm sm:mx-auto mt-6">
+<section class="post:comments container:sm mx-4 sm:mx-auto mt-6">
     <div class="comment-form">
+        <div class="avatar img-container">
+            <img src="">
+        </div>
         <span class="editor" contenteditable></span>
         <div class="actions">
             <div class="action emoji">
@@ -75,7 +117,6 @@ layout: default
         {%- include components/comment.html -%}
     </div>
     <a class="comment-more text-smallcaps">
-        <span class="icon"><i class="far fa-spinner fa-spin"></i></span>
         <span class="text">Tải thêm bình luận (5)</span>
     </a>
 </section>

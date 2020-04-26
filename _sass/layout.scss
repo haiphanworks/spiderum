@@ -87,6 +87,7 @@ img[src=''] {
 
 .img-caption {
     margin-top: .5rem;
+    font-family: 'Noto Sans', sans-serif;
     font-size: .835rem;
     color: rgba(var(--gray-500), 1);
 
@@ -142,7 +143,7 @@ img[src=''] {
 // ICON + TEXT
 
 span.icon {
-    font-size: 0.75em;
+    font-size: 0.835em;
 
     +span.text {
         margin-left: 0.325em;
@@ -349,7 +350,7 @@ span.text {
 
                 margin-top: 0.5rem;
 
-                .image {
+                .avatar {
                     display: block;
                     flex-shrink: 0;
                     width: 2rem;
@@ -426,6 +427,7 @@ span.text {
             justify-content: center;
             padding: 0 .75rem;
             height: 2.25rem;
+            border: 1px solid transparent;
             border-radius: var(--border-radius);
             text-transform: uppercase;
             font-size: .835rem;
@@ -433,7 +435,7 @@ span.text {
             cursor: pointer;
 
             &.is-active {
-                border: 1px solid rgba(var(--border), 1);
+                border-color: rgba(var(--border), 1);
                 background-color: rgba(var(--white), 1);
                 @include shadow;
             }
@@ -460,7 +462,8 @@ span.text {
 .top-announcement {
     position: relative;
     padding: 1rem;
-    background-color: rgba(var(--gray-300), 1);
+    background-color: rgba(var(--border), 1);
+    border-bottom: 1px solid rgba(var(--blue-200), 1);
     @include shadow;
 
     .container\:lg {
@@ -524,5 +527,20 @@ span.text {
         border-top: 1px solid rgba(var(--border), 1);
         padding-top: 1rem;
         margin-top: 1.5rem;
+    }
+}
+
+
+
+
+.toggle {
+    ~.dropdown {
+        display: none;
+    }
+
+    &.is-active {
+        ~.dropdown {
+            display: flex;
+        }
     }
 }

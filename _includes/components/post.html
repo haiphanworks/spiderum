@@ -23,7 +23,7 @@
         <div class="author">
             {%- if include.authorImage=="No" -%}
             {%- else -%}
-            <div class="image">
+            <div class="avatar img-container">
                 <img src="">
             </div>
             {%- endif -%}
@@ -38,11 +38,8 @@
                     {%- if include.created -%}
                     <span class="item created">{{ include.created }}</span>
                     {%- endif -%}
-                    {%- if include.upvote -%}
-                    <span class="item upvote">{{ include.upvote }}</span>
-                    {%- endif -%}
-                    {%- if include.downvote -%}
-                    <span class="item downvote">{{ include.downvote }}</span>
+                    {%- if include.vote -%}
+                    <span class="item vote">{{ include.vote }}</span>
                     {%- endif -%}
                     {%- if include.subseparator -%}
                     <span class="item separator"></span>
