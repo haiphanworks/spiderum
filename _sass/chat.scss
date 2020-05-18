@@ -21,7 +21,7 @@
             font-size: 1rem;
         }
 
-        +.chat-lists {
+        +.chat-list {
             margin-bottom: .5rem;
         }
 
@@ -116,6 +116,18 @@
                     display: flex;
                 }
             }
+
+            &.is\:active {
+                display: none;
+            }
+
+            &.is\:closed {
+                display: none;
+            }
+
+            &.is\:hidden {
+                display: block;
+            }
         }
 
         .avatar {
@@ -143,12 +155,29 @@
         border-radius: var(--border-radius) var(--border-radius) 0 0;
         @include shadow;
 
+        &.is\:focus {
+            .chat-box-head {
+                background-color: rgba(var(--blue-500), 1);
+                color: rgba(var(--white), 1);
+            }
+        }
+
+        &.is\:active {
+            display: flex;
+        }
+
+        &.is\:hidden,
+        &.is\:closed {
+            display: none;
+        }
+
         .chat-box-head {
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             padding: .75rem 1rem;
             border-bottom: 1px solid rgba(var(--border), 1);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
 
             .recipient {
                 display: flex;
@@ -175,6 +204,7 @@
 
                 .status {
                     font-size: .75rem;
+                    opacity: .75;
                 }
             }
 
