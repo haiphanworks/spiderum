@@ -1,17 +1,17 @@
 {% assign whitespace = " " %}
 <div class="{{ include.class }} card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
-    <div class="image img-container">
+    <a class="image" href="/single">
         <img src="{{ include.image }}">
-    </div>
+    </a>
     <div class="content">
         {%- if include.category -%}
         <div class="category">
             <h5>{{ include.category }}</h5>
         </div>
         {%- endif -%}
-        <div class="title">
+        <a class="title" href="/single">
             <h1>{{ include.title }}</h1>
-        </div>
+        </a>
         {%- if include.description -%}
         <div class="description">
             {{ include.description }}
@@ -23,15 +23,15 @@
         <div class="author">
             {%- if include.authorImage=="No" -%}
             {%- else -%}
-            <div class="avatar img-container">
+            <a class="avatar" href="/user-profile">
                 <img src="">
-            </div>
+            </a>
             {%- endif -%}
             <div class="content">
                 <div class="main">
-                    <a class="author-name">{{ include.author }}</a>
+                    <a class="author-name" href="/user-profile">{{ include.author }}</a>
                     {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
-                    <a class="category-name">{{ include.authorCategory }}</a>
+                    <a class="category-name" href="/category">{{ include.authorCategory }}</a>
                     {%- endif -%}
                 </div>
                 <div class="sub">

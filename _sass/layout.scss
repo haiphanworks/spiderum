@@ -2,6 +2,7 @@
 
 .container {
     &\:xl {
+        width: 100%;
         max-width: 100%;
 
         @include breakpoint(sm) {
@@ -22,6 +23,7 @@
     }
 
     &\:lg {
+        width: 100%;
         max-width: 100%;
 
         @include breakpoint(sm) {
@@ -38,6 +40,7 @@
     }
 
     &\:md {
+        width: 100%;
         max-width: 100%;
 
         @include breakpoint(sm) {
@@ -50,6 +53,7 @@
     }
 
     &\:sm {
+        width: 100%;
         max-width: 100%;
 
         @include breakpoint(sm) {
