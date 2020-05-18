@@ -14,18 +14,18 @@ window.onscroll = function () {
 
 $('.toggle').click(function (e) {
 	e.preventDefault();
-	if ($(this).hasClass('is-active')) {
-		$(this).removeClass('is-active');
+	if ($(this).hasClass('is:active')) {
+		$(this).removeClass('is:active');
 		if ($(this).parents('.navbar-search').length) {
-			$('.navbar-search-form').removeClass('is-active');
+			$('.navbar-search-form').removeClass('is:active');
 		}
 	} else {
-		$('.navbar-toggle').removeClass('is-active');
-		$(this).addClass('is-active');
+		$('.navbar-toggle').removeClass('is:active');
+		$(this).addClass('is:active');
 		if ($(this).parents('.navbar-search').length) {
-			$('.navbar-search-form').addClass('is-active');
+			$('.navbar-search-form').addClass('is:active');
 		} else {
-			$('.navbar-search-form').removeClass('is-active');
+			$('.navbar-search-form').removeClass('is:active');
 		}
 	}
 });
@@ -56,28 +56,28 @@ $(document).ready(function () {
 
 	function hideNav() {
 		$('.navbar')
-			.removeClass('is-scrollup')
-			.removeClass('is-scrolltop')
-			.addClass('is-scrolldown')
-			.addClass('is-scrolling');
-		$('.navbar-toggle').removeClass('is-active');
-		$('.navbar-search-form').removeClass('is-active');
+			.removeClass('is:scrollup')
+			.removeClass('is:scrolltop')
+			.addClass('is:scrolldown')
+			.addClass('is:scrolling');
+		$('.navbar-toggle').removeClass('is:active');
+		$('.navbar-search-form').removeClass('is:active');
 	}
 
 	function showNav() {
 		$('.navbar')
-			.removeClass('is-scrolldown')
-			.removeClass('is-scrolltop')
-			.addClass('is-scrollup')
-			.addClass('is-scrolling');
+			.removeClass('is:scrolldown')
+			.removeClass('is:scrolltop')
+			.addClass('is:scrollup')
+			.addClass('is:scrolling');
 	}
 
 	function showTopNav() {
 		$('.navbar')
-			.removeClass('is-scrolldown')
-			.removeClass('is-scrollup')
-			.removeClass('is-scrolling')
-			.addClass('is-scrolltop');
+			.removeClass('is:scrolldown')
+			.removeClass('is:scrollup')
+			.removeClass('is:scrolling')
+			.addClass('is:scrolltop');
 	}
 });
 
@@ -94,8 +94,8 @@ $('.filter\\:view .item').click(function (e) {
 	e.preventDefault();
 	view = $(this).data('view');
 	console.log(view);
-	$(this).parent().children().removeClass('is-active');
-	$(this).addClass('is-active');
+	$(this).parent().children().removeClass('is:active');
+	$(this).addClass('is:active');
 	$('.feed-wrapper')
 		.removeClass('is-small')
 		.removeClass('is-medium')
@@ -107,6 +107,6 @@ $('.filter\\:sort .item').click(function (e) {
 	e.preventDefault();
 	view = $(this).data('view');
 	console.log(view);
-	$(this).parent().children().removeClass('is-active');
-	$(this).addClass('is-active');
+	$(this).parent().children().removeClass('is:active');
+	$(this).addClass('is:active');
 });

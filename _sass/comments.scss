@@ -146,7 +146,7 @@
             >* {
 
                 &:hover,
-                &.is-active {
+                &.is\:active {
                     color: rgba(var(--blue-500), 1);
                 }
             }

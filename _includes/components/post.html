@@ -29,9 +29,9 @@
             {%- endif -%}
             <div class="content">
                 <div class="main">
-                    <span class="author-name">{{ include.author }}</span>
+                    <a class="author-name">{{ include.author }}</a>
                     {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
-                    <span class="category">{{ include.authorCategory }}</span>
+                    <a class="category-name">{{ include.authorCategory }}</a>
                     {%- endif -%}
                 </div>
                 <div class="sub">

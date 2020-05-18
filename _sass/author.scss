@@ -22,7 +22,7 @@
         flex-direction: column;
 
         font-size: .835rem;
-        color: rgba(var(--gray-500), 1);
+        // color: rgba(var(--gray-600), 1);
 
         .author-name a,
         .category-name a,
@@ -124,7 +124,7 @@
                     }
 
                     &:hover,
-                    &.is-active {
+                    &.is\:active {
                         &:after {
                             font-weight: 900;
                         }
@@ -143,7 +143,7 @@
                     }
 
                     &:hover,
-                    &.is-active {
+                    &.is\:active {
                         &:after {
                             font-weight: 900;
                         }

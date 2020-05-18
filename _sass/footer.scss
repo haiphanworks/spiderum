@@ -1,15 +1,19 @@
 .footer {
-    background-color: white;
+    margin-top: auto;
 
-    border-top: 1px solid rgba(var(--border), 1);
-    @include shadow;
+    &-wrapper {
+        border-top: 1px solid rgba(var(--border), 1);
+        @include shadow;
 
-    margin-top: 1.5rem;
-    padding: 1.5rem 1rem;
+        background-color: white;
 
-    @include breakpoint(lg) {
-        margin-top: 3rem;
-        padding: 2rem 1rem;
+        margin-top: 1.5rem;
+        padding: 1.5rem 1rem;
+
+        @include breakpoint(lg) {
+            margin-top: 3rem;
+            padding: 2rem 1rem;
+        }
     }
 
     &-top {

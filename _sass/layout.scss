@@ -160,7 +160,7 @@ span.text {
 // TOGGLE
 
 .toggle\:content {
-    &.is-active {
+    &.is\:active {
         .toggle\:block {
             display: block;
         }
@@ -416,8 +416,6 @@ span.text {
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 1.5rem;
-
     .filter {
         display: flex;
 
@@ -434,14 +432,14 @@ span.text {
             font-weight: bold;
             cursor: pointer;
 
-            &.is-active {
+            &.is\:active {
                 border-color: rgba(var(--border), 1);
                 background-color: rgba(var(--white), 1);
                 @include shadow;
             }
 
             &:hover,
-            &.is-active {
+            &.is\:active {
                 color: rgba(var(--blue-500), 1);
             }
         }
@@ -463,7 +461,7 @@ span.text {
     position: relative;
     padding: 1rem;
     background-color: rgba(var(--border), 1);
-    border-bottom: 1px solid rgba(var(--blue-200), 1);
+    border-bottom: 1px solid rgba(var(--blue-300), .25);
     @include shadow;
 
     .container\:lg {
@@ -538,9 +536,63 @@ span.text {
         display: none;
     }
 
-    &.is-active {
+    &.is\:active {
         ~.dropdown {
             display: flex;
+        }
+    }
+}
+
+
+
+.tabs {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(var(--border), 1);
+
+    &.tabs\:centered {
+        justify-content: space-evenly;
+
+        @include breakpoint(md) {
+            justify-content: center;
+        }
+    }
+
+    .tab {
+        display: flex;
+        height: 3.5rem;
+
+        border-style: solid;
+        border-width: .325em 0 .325em 0;
+        border-color: transparent;
+
+        @include breakpoint(md) {
+            width: auto;
+        }
+
+        &:hover {
+            border-bottom-color: rgba(var(--border), 1);
+        }
+
+        &.is\:active {
+            border-bottom-color: rgba(var(--blue-500), 1);
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            padding: 0 1rem;
+
+            span.text {
+                white-space: nowrap;
+            }
+
+            @include breakpoint(md) {
+                padding: 0 2rem;
+            }
         }
     }
 }

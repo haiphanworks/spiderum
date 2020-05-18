@@ -2,7 +2,7 @@
     align-items: center;
     justify-content: center;
 
-    height: 2.5rem;
+    // height: 2.5rem;
 
     padding-left: 1rem;
     padding-right: 1rem;
@@ -16,7 +16,7 @@
     }
 
     &.rounded-full {
-        border-radius: 1.25rem;
+        border-radius: 9999px;
     }
 
     span.text {

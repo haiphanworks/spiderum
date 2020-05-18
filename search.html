@@ -1,0 +1,64 @@
+---
+layout: default
+title: Search Results
+slug: search
+---
+
+
+
+
+
+<div class="container:md mx-4 md:mx-auto mt-10">
+    <div class="text-center mb-6">
+        <h3 class="uppercase text-sm">Kết quả tìm kiếm của</h3>
+        <h1 class="text-2xl text-gray-700"><q><strong>Chào em, anh đứng đây từ chiều</strong></q></h1>
+    </div>
+
+    <div class="search-results widget widget:boxed">
+        <div class="widget-tabs">
+            <div class="tabs tabs:centered">
+                <div class="tab is:active text-smallcaps">
+                    <a href="#post">
+                        <span class="icon"><i class="fas fa-file-alt"></i></span>
+                        <span class="text">Bài viết</span>
+                    </a>
+                </div>
+                <div class="tab text-smallcaps">
+                    <a href="#user">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="text">Người dùng</span>
+                    </a>
+                </div>
+                <div class="tab text-smallcaps">
+                    <a href="#post">
+                        <span class="icon"><i class="fas fas fa-hashtag"></i></span>
+                        <span class="text">Tags</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="widget-body px-4">
+            <div class="card-gallery is-medium has-separator feed-wrapper">
+                {% for i in (1..5) %}{%- include components/post.html
+                title="Et sadipscing diam dolore
+                voluptua kasd. Dolor labore labore ipsum elitr
+                sadipscing" description="Diam ipsum sanctus et voluptua
+                sit et tempor at diam sanctus, invidunt labore rebum
+                dolores voluptua rebum sanctus justo ipsum, sea lorem
+                voluptua tempor dolore et nonumy accusam sed, amet."
+                author="Peter Parker" authorCategory="Sadipscing clita"
+                created="3 giờ trước" vote="187" views="201"
+                comments="6" bookmark="yes"
+                subseparator="yes" -%}{% endfor %}
+            </div>
+            <a class="button flex h-10 bg-white bg-blue-500 hover:blue-600 text-white
+                        shadow:sp text-smallcaps mt-6">
+                <span class="icon">
+                    <i class="far fa-spinner fa-spin"></i>
+                </span>
+                <span class="text">Tải thêm</span>
+            </a>
+        </div>
+    </div>
+
+</div>

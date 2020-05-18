@@ -7,7 +7,7 @@
 :root {
     --font-size: 14px;
     --background: 249, 251, 253;
-    --border: 227, 235, 246;
+    --border: 226, 232, 240;
     --border-radius: .5rem;
     --navbar-height: 4.5rem;
 }
@@ -17,6 +17,12 @@ html {
 }
 
 body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+
     background-color: rgba(var(--background), 1);
 
     font-size: 1rem;
@@ -32,6 +38,7 @@ body {
 
 // COMPONENTS
 @import 'navbar';
+@import 'chat';
 @import 'qcao';
 @import 'author';
 @import 'card';

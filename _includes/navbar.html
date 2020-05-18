@@ -23,7 +23,7 @@
             </div>
 
             <!-- Navbar Separator -->
-            <div class="navbar-separator ml-auto"></div>
+            <div class="navbar-spacer ml-auto"></div>
 
             <!-- Navbar Search -->
             <div class="is-logged-in navbar-item navbar-search">
@@ -32,6 +32,8 @@
                 </div>
                 <div class="navbar-dropdown"></div>
             </div>
+
+            <div class="navbar-seperator mx-2 text-gray-300">|</div>
 
             <!-- Navbar Messages -->
             <div class="is-logged-in navbar-item navbar-messages">
@@ -48,9 +50,39 @@
                             </div>
                         </div>
                         <div class="dropdown-content">
-                            <div class="empty">
+                            <a class="item is:unread" href="/single">
+                                <div class="image avatar avatar:sm"><img src=""></div>
+                                <div class="content">
+                                    <div class="sender text-sm font-bold text-gray-700">Việt
+                                        Anh Trần</div>
+                                    <div class="message text-sm">
+                                        The throws it tapping door but. Perched fiend from
+                                        air thee tinkled quaff this
+                                        is tapping. Some a than gileadtell fancy eyes at
+                                        ominous.
+                                    </div>
+                                    <div class="time">1 giờ trước</div>
+                                </div>
+                            </a>
+                            {% for i in (1..10) %}
+                            <a class="item" href="/single">
+                                <div class="image avatar avatar:sm"><img src=""></div>
+                                <div class="content">
+                                    <div class="sender text-sm font-bold text-gray-700">Việt Anh Trần</div>
+                                    <div class="message text-sm">
+                                        The throws it tapping door but. Perched fiend from air thee tinkled quaff this
+                                        is tapping. Some a than gileadtell fancy eyes at ominous.
+                                    </div>
+                                    <div class="time">1 giờ trước</div>
+                                </div>
+                            </a>
+                            {% endfor %}
+                            <a class="more">
+                                Hiển thị thêm
+                            </a>
+                            <!-- <div class="empty">
                                 <p>Không có tin nhắn nào.</p>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -75,9 +107,9 @@
                         <div class="dropdown-content">
                             {% for i in (1..10) %}
                             <a class="item" href="/single">
-                                <div class="image"><img src=""></div>
+                                <div class="image border border-1"><img src=""></div>
                                 <div class="content">
-                                    <div class="notification notification:upvote">
+                                    <div class="notification notification:upvote text-sm">
                                         <span class="font-bold text-gray-700">Việt Anh Trần</span>, <span
                                             class="font-bold text-gray-700">Hùng Vũ</span> và 18 người khác đã upvote
                                         bình luận của bạn <q class="font-bold text-gray-700">Ôi bạn ơi! Bạn sức đề kháng
@@ -178,8 +210,8 @@
 
             <!-- Navbar New -->
             <div class="is-logged-in navbar-item navbar-new hidden lg:flex">
-                <a class="flex items-center justify-center bg-blue-500 hover:bg-blue-600
-                h-10 w-10 lg:w-auto lg:px-6 text-white rounded-full shadow:sp">
+                <a class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 active:bg-blue-700
+                h-10 w-10 lg:w-auto lg:px-6 text-white rounded-full shadow:sp cursor-pointer">
                     <span class="icon block lg:hidden"><i class="far fa-plus"></i></span>
                     <span class="text hidden lg:block">Bài viết mới</span>
                 </a>
@@ -206,12 +238,18 @@
 
     <div class="navbar-section navbar-bottom">
         <div class="navbar-container">
+
+            <!-- Navbar Search Form -->
             <div class="navbar-search-form">
                 <form>
-                    <span class="icon ml-1 mr-4"><i class="far fa-search"></i></span>
+                    <span class="icon ml-1 mr-4 text-blue-500"><i class="far fa-search"></i></span>
                     <input type="text" placeholder="Tìm kiếm theo tiêu đề, tác giả hoặc tag">
+                    <a href="/search" class="button flex h-10 w-10 rounded-full
+                        bg-blue-100 hover:bg-blue-200 text-blue-500"><i class="far fa-arrow-right"></i></a>
                 </form>
             </div>
+
+            <!-- Navbar Following -->
             <div class="navbar-following">
                 <div class="toggle">
                     <div class="icon block md:hidden pl-4"><i class="fas fa-star"></i></div>
@@ -240,6 +278,7 @@
                 </div>
             </div>
 
+            <!-- Navbar Categories -->
             <div class="navbar-categories">
                 <div class="navbar-categories--nav left">
                     <span class="icon"><i class="far fa-angle-left"></i></span>
