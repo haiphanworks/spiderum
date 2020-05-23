@@ -3,32 +3,54 @@
     grid-template-columns: 1fr;
     min-width: 0;
     grid-gap: 1rem;
+    width: 100%;
 }
 
 .widget\:boxed {
-    background-color: rgba(var(--white), 1);
     @include shadow;
     border: 1px solid rgba(var(--border), 1);
     border-radius: var(--border-radius);
-    @include shadow;
+
+    &:not(.bg) {
+        background-color: rgba(var(--white), 1);
+    }
 
     .widget-head {
         padding: .75rem 1rem;
         border-bottom: 1px solid rgba(var(--border), 1);
 
+        &.is\:xl {
+            padding: .75rem 0;
+            margin: 0 1rem;
+
+            .title {
+                text-transform: initial;
+                font-size: 1.25rem;
+            }
+        }
+
         .title {
             text-transform: uppercase;
-            font-size: 0.835rem;
+            font-size: 0.875rem;
             font-weight: bold;
             color: rgba(var(--gray-700), 1);
             margin: 0;
+
+            +.description {
+                margin-top: .25rem;
+            }
+        }
+
+        .description {
+            font-size: .875rem;
+            color: rgba(var(--gray-500), 1);
         }
     }
 
     .widget-body {
-        padding: 1rem;
+        // padding: 1rem;
 
-        ul {
+        ul.list {
             display: flex;
             flex-direction: column;
 

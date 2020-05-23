@@ -92,7 +92,7 @@ img[src=''] {
 .img-caption {
     margin-top: .5rem;
     font-family: 'Noto Sans', sans-serif;
-    font-size: .835rem;
+    font-size: .875rem;
     color: rgba(var(--gray-500), 1);
 
     a {
@@ -104,36 +104,41 @@ img[src=''] {
 
 .columns {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     min-width: 0;
     grid-gap: 1.5rem;
     height: min-content;
 
     @include breakpoint(lg) {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .column {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         width: 100%;
         min-width: 0;
         height: min-content;
     }
 
     .column\:spacer {
-        grid-template-columns: 1fr;
-        min-width: 0;
-        grid-gap: 1.5rem;
-    }
-
-    .column\:sidebar {
-        grid-template-columns: 1fr;
-        min-width: 0;
         grid-gap: 1.5rem;
 
         @include breakpoint(lg) {
-            grid-gap: 1rem;
-
+            grid-gap: 1.2rem;
         }
+    }
+
+    .column\:sidebar {
+        grid-column: span 2;
+
+        @include breakpoint(lg) {
+            grid-column: span 1;
+        }
+    }
+
+    .column\:main {
+        grid-column: span 2;
     }
 
 }
@@ -147,7 +152,7 @@ img[src=''] {
 // ICON + TEXT
 
 span.icon {
-    font-size: 0.835em;
+    // font-size: 0.875em;
 
     +span.text {
         margin-left: 0.325em;
@@ -194,14 +199,14 @@ span.text {
 .text-smallcaps {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 0.835rem;
+    font-size: 0.875rem;
 }
 
 // PARAGRAPHS
 
 .paragraphs {
     >*+* {
-        margin-top: 1rem;
+        margin-top: 1em;
     }
 
     ul {
@@ -218,6 +223,27 @@ span.text {
     }
 }
 
+.line-clamp {
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    >*:not(:first-child) {
+        display: none;
+    }
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        content: '\00a0... Đọc thêm';
+        font-weight: bold;
+        background-color: white;
+    }
+}
+
 // SECTION
 
 .section {
@@ -227,7 +253,7 @@ span.text {
         margin-bottom: 1rem;
 
         text-transform: uppercase;
-        font-size: 0.835rem;
+        font-size: 0.875rem;
         font-weight: bold;
 
         color: rgba(var(--gray-700), 1);
@@ -432,7 +458,7 @@ span.text {
             border: 1px solid transparent;
             border-radius: var(--border-radius);
             text-transform: uppercase;
-            font-size: .835rem;
+            font-size: .875rem;
             font-weight: bold;
             cursor: pointer;
 
@@ -479,7 +505,7 @@ span.text {
         align-items: center;
         margin-bottom: .5rem;
         text-transform: uppercase;
-        font-size: 0.835rem;
+        font-size: 0.875rem;
         font-weight: bold;
         color: rgba(var(--gray-700), 1);
 
@@ -496,7 +522,7 @@ span.text {
         justify-content: center;
         width: 1.5rem;
         height: 1.5rem;
-        font-size: .835rem;
+        font-size: .875rem;
 
         &:hover {
             color: rgba(var(--gray-700), 1);
@@ -580,6 +606,7 @@ span.text {
 
         &.is\:active {
             border-bottom-color: rgba(var(--blue-500), 1);
+            color: rgba(var(--gray-700), 1);
         }
 
         a {
@@ -588,15 +615,33 @@ span.text {
             justify-content: center;
             height: 100%;
             width: 100%;
-            padding: 0 1rem;
 
             span.text {
                 white-space: nowrap;
             }
-
-            @include breakpoint(md) {
-                padding: 0 2rem;
-            }
         }
+    }
+}
+
+
+
+
+.stats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: center;
+
+    .label {
+        font-weight: bold;
+        font-size: .875rem;
+        text-transform: uppercase;
+        color: rgba(var(--gray-500), 1);
+    }
+
+    .value {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: rgba(var(--gray-700), 1);
     }
 }

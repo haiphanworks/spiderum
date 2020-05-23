@@ -25,7 +25,7 @@ slug: home
     <!-- CURATED SECTION -->
     <div class="section mt-6" id="homepage-curated">
         <div class="columns">
-            <div class="column column:main">
+            <div class="column column:main column:spacer">
                 <!-- TRENDING TODAY -->
                 <div class="section trending-today" id="trending-today">
                     <div class="title">
@@ -116,7 +116,7 @@ slug: home
     <!-- MOBILE: DONATE -->
     <div class="section donate:mobile mt-6 block lg:hidden">
         <div class="widget widget:boxed">
-            <div class="widget-body">
+            <div class="widget-body p-4">
                 <p>Bạn yêu thích cộng đồng Spiderum và muốn nó trở nên lớn mạnh hơn?</p>
                 <button class="button flex h-10 bg-blue-500 hover:bg-blue-600
                 w-full text-white text-smallcaps mt-3 shadow:sp">
@@ -130,7 +130,7 @@ slug: home
 
     <div class="columns mt-6">
 
-        <div class="column column:main">
+        <div class="column column:main column:spacer">
             <div class="section feed" id="feed">
                 <div class="title">
                     <span>Dành cho bạn</span>
@@ -178,7 +178,7 @@ slug: home
                         subseparator="yes" -%}{% endfor %}
 
                         <div class="widget widget:boxed my-3 lg:-ml-4">
-                            <div class="widget-body">
+                            <div class="widget-body p-4">
                                 <div class="section">
                                     <div class="title">
                                         Nổi bật gần đây
@@ -227,7 +227,7 @@ slug: home
 
         <div class="column column:sidebar hidden lg:grid">
             <div class="widget widget:boxed">
-                <div class="widget-body">
+                <div class="widget-body p-4">
                     <p>Bạn yêu thích cộng đồng Spiderum và muốn nó trở nên lớn mạnh hơn?</p>
                     <button class="button flex h-10 bg-blue-500 hover:bg-blue-600
                             w-full text-white text-smallcaps mt-3 shadow:sp">
@@ -242,7 +242,7 @@ slug: home
                         <span>Chuyên mục nổi bật</span>
                     </div>
                 </div>
-                <div class="widget-body">
+                <div class="widget-body p-4">
                     .suggested-category
                 </div>
             </div>
@@ -252,7 +252,7 @@ slug: home
                         <span>Bài viết của tháng</span>
                     </div>
                 </div>
-                <div class="widget-body">
+                <div class="widget-body p-4">
                     <div class="card-gallery">
                         {% for i in (1..5) %}
                         {%- include components/post.html size="is-small"
@@ -275,7 +275,7 @@ slug: home
                         <span>Liên kết</span>
                     </div>
                 </div>
-                <div class="widget-body">
+                <div class="widget-body p-4">
                     <ul class="sidebar-links">
                         {% for i in (1..5) %}
                         <li>
