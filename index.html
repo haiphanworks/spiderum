@@ -121,7 +121,7 @@ slug: home
                 <button class="button flex h-10 bg-blue-500 hover:bg-blue-600
                 w-full text-white text-smallcaps mt-3 shadow:sp">
                     <span class="icon"><i class="fas fa-sparkles"></i></span>
-                    <span class="text">Ủng hộ</span>
+                    <span class="text ml-2">Ủng hộ</span>
                 </button>
             </div>
         </div>
@@ -136,19 +136,19 @@ slug: home
                     <span>Dành cho bạn</span>
                 </div>
                 <div class="content">
-                    <div class="feed-filter mb-6">
+                    <div class="filters flex justify-between items-center mb-6">
                         <div class="filter filter:sort">
                             <a class="item hot is:active">
                                 <span class="icon"><i class="fas fa-fire"></i></span>
-                                <span class="text">Thịnh hành</span>
+                                <span class="text ml-2">Thịnh hành</span>
                             </a>
                             <a class="item new">
                                 <span class="icon"><i class="fas fa-star"></i></span>
-                                <span class="text">Mới</span>
+                                <span class="text ml-2">Mới</span>
                             </a>
                             <a class="item active">
                                 <span class="icon"><i class="fas fa-heart-rate"></i></span>
-                                <span class="text">Sôi nổi</span>
+                                <span class="text ml-2">Sôi nổi</span>
                             </a>
                         </div>
                         <div class="filter filter:view">
@@ -216,10 +216,8 @@ slug: home
                     </div>
                     <a class="button flex h-10 bg-white border border-gray-300 hover:border-gray-400
                         shadow:sp text-smallcaps mt-6">
-                        <span class="icon">
-                            <i class="far fa-spinner fa-spin"></i>
-                        </span>
-                        <span class="text">Tải thêm</span>
+                        <span class="icon"><i class="far fa-spinner fa-spin"></i></span>
+                        <span class="text ml-2">Tải thêm</span>
                     </a>
                 </div>
             </div>
@@ -232,7 +230,7 @@ slug: home
                     <button class="button flex h-10 bg-blue-500 hover:bg-blue-600
                             w-full text-white text-smallcaps mt-3 shadow:sp">
                         <span class="icon"><i class="fas fa-sparkles"></i></span>
-                        <span class="text">Ủng hộ</span>
+                        <span class="text ml-2">Ủng hộ</span>
                     </button>
                 </div>
             </div>
@@ -275,15 +273,16 @@ slug: home
                         <span>Liên kết</span>
                     </div>
                 </div>
-                <div class="widget-body p-4">
-                    <ul class="sidebar-links">
+                <div class="widget-body px-4 py-1">
+                    <ul>
                         {% for i in (1..5) %}
-                        <li>
-                            <a href="#">
-                                <span class="icon">
+                        {%- assign nbsp = ' ' -%}
+                        <li class="py-2{{nbsp}}{%- if i == 5 -%}{%- else -%}border-b{%- endif -%}">
+                            <a href="#" class="flex">
+                                <span class="icon text-xs">
                                     <i class="far fa-link"></i>
                                 </span>
-                                Liên kết
+                                <span class="text ml-2">Liên kết</span>
                             </a>
                         </li>
                         {% endfor %}

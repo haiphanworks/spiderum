@@ -23,7 +23,7 @@ slug: category
                     </div>
                     <div class="hidden toggle:block">
                         <span class="icon"><i class="fa far fa-check-circle"></i></span>
-                        <span class="text">Đang theo dõi</span>
+                        <span class="text ml-2">Đang theo dõi</span>
                     </div>
                 </a>
                 <div class="follow-counter text-sm ml-2 text-body-light">100 người theo dõi</div>
@@ -65,34 +65,6 @@ slug: category
             <div class="column grid">
                 <div class="category-posts">
                     <div class="title">Bài viết trong chuyên mục</div>
-                    <div class="feed-filter">
-                        <div class="feed-filter-sort">
-                            <a href="#" class="feed-filter-item feed-filter-sort-item is:active hot">
-                                <span class="icon"><i class="fas fa-fire"></i></span>
-                                <span>Thịnh hành</span>
-                            </a>
-                            <a href="#" class="feed-filter-item feed-filter-sort-item new">
-                                <span class="icon"><i class="fas fa-star"></i></span>
-                                <span>Mới</span>
-                            </a>
-                            <a href="#" class="feed-filter-item feed-filter-sort-item active">
-                                <span class="icon"><i class="fas fa-heart-rate"></i></span>
-                                <span>Sôi nổi</span>
-                            </a>
-                        </div>
-                        <div class="feed-filter-view">
-                            <div class="feed-filter-item feed-filter-view-item feed-filter-view-large">
-                                <span class="icon"><i class="fas fa-square"></i></span>
-                            </div>
-                            <div class="feed-filter-item feed-filter-view-item feed-filter-view-medium">
-                                <span class="icon"><i class="fas fa-bars"></i></span>
-                            </div>
-                            <div class="feed-filter-item feed-filter-view-item feed-filter-view-small
-                                        is:active">
-                                <span class="icon"><i class="fas fa-align-justify"></i></span>
-                            </div>
-                        </div>
-                    </div>
                     <div class="card-gallery is-medium has-separator">
                         {% for i in (1..5) %} {%- include components/post.html
                         title="Et sadipscing diam dolore
