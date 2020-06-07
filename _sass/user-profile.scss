@@ -1,15 +1,16 @@
 .user-profile {
     .cover {
         display: flex;
-        width: 100%;
+        // width: 100%;
         padding-top: calc(3 / 4 * 100%);
         @include shadow;
         border: 1px solid rgba(var(--border), 1);
-        border-radius: var(--border-radius);
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
         background-color: rgba(var(--gray-200), 1);
 
         @include breakpoint(md) {
             padding-top: calc(9 / 16 * 100%);
+            border-radius: var(--border-radius);
         }
 
         @include breakpoint(lg) {
@@ -29,11 +30,11 @@
         }
     }
 
-    #basic {
+    .widget\:sidebar-basic {
+        margin-top: -1px;
 
         &.widget {
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            border-radius: 0;
 
             @include breakpoint(md) {
                 border-top-left-radius: var(--border-radius);
@@ -45,7 +46,6 @@
             .avatar {
                 position: relative;
                 display: block;
-                width: 5rem;
                 height: unset;
 
                 &:before {
@@ -61,10 +61,6 @@
                     left: 0;
                     right: 0;
                     bottom: 0;
-                }
-
-                @include breakpoint(md) {
-                    width: 7.5rem;
                 }
             }
         }
@@ -150,6 +146,28 @@
             object-fit: cover;
         }
     }
+
+    .widget {
+        &.widget\:sidebar-badge {
+            @include shadow;
+            border: 1px solid rgba(var(--border), 1);
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            background-color: rgba(var(--white), 1);
+            padding: 1rem;
+            margin-top: calc(-1.5rem - 1px);
+
+            @include breakpoint(md) {
+                background-color: transparent;
+                padding: 0;
+                margin-top: 0;
+                box-shadow: none;
+                border: none;
+                position: absolute;
+                right: 0;
+                top: -5.5rem;
+            }
+        }
+    }
 }
 
 .badge-gallery {
@@ -185,6 +203,38 @@
             >*+* {
                 margin-top: .5em;
             }
+        }
+    }
+}
+
+.badges {
+    .badge {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-left: .25rem;
+        }
+
+        &:nth-child(6) {
+            &:not(:last-child) {
+                &:before {
+                    content: '+5';
+                    position: absolute;
+                    color: white;
+                    z-index: 2;
+                    font-size: .75rem;
+                    text-shadow: 0 0 10px black;
+                }
+
+                img {
+                    filter: grayscale(100%) brightness(25%);
+                    opacity: .75;
+                }
+            }
+        }
+
+        &:nth-child(n+7) {
+            display: none;
         }
     }
 }

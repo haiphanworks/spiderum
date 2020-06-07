@@ -109,12 +109,12 @@ img[src=''] {
     grid-gap: 1.5rem;
     height: min-content;
 
+
     @include breakpoint(lg) {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     .column {
-        display: grid;
         grid-template-columns: minmax(0, 1fr);
         width: 100%;
         min-width: 0;
@@ -141,6 +141,11 @@ img[src=''] {
         grid-column: span 2;
     }
 
+    .column\:sticky {
+        position: sticky;
+        top: calc(var(--navbar-height) + var(--navbar-bottom-height) + 1rem);
+    }
+
 }
 
 .content-body {
@@ -151,19 +156,19 @@ img[src=''] {
 
 // ICON + TEXT
 
-span.icon {
-    // font-size: 0.875em;
+// span.icon {
+//     // font-size: 0.875em;
 
-    +span.text {
-        margin-left: 0.325em;
-    }
-}
+//     +span.text {
+//         margin-left: 0.325em;
+//     }
+// }
 
-span.text {
-    +span.icon {
-        margin-left: 0.325em;
-    }
-}
+// span.text {
+//     +span.icon {
+//         margin-left: 0.325em;
+//     }
+// }
 
 
 // TOGGLE
@@ -439,13 +444,9 @@ span.text {
 }
 
 
-// FEED: FILTER
+// FILTERS
 
-.feed-filter {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+.filters {
     .filter {
         display: flex;
 
@@ -454,19 +455,11 @@ span.text {
             align-items: center;
             justify-content: center;
             padding: 0 .75rem;
-            height: 2.25rem;
-            border: 1px solid transparent;
             border-radius: var(--border-radius);
             text-transform: uppercase;
             font-size: .875rem;
             font-weight: bold;
             cursor: pointer;
-
-            &.is\:active {
-                border-color: rgba(var(--border), 1);
-                background-color: rgba(var(--white), 1);
-                @include shadow;
-            }
 
             &:hover,
             &.is\:active {
@@ -476,9 +469,30 @@ span.text {
 
         &.filter\:view {
             .item {
-                width: 2.25rem;
+                width: 1.5rem;
                 padding: 0;
             }
+        }
+
+        &:not(.filter\:naked) {
+            .item {
+                border: 1px solid transparent;
+                height: 2.25rem;
+
+                &.is\:active {
+                    border-color: rgba(var(--border), 1);
+                    background-color: rgba(var(--white), 1);
+                    @include shadow;
+                }
+            }
+
+            &.filter\:view {
+                .item {
+                    width: 2.25rem;
+                    padding: 0;
+                }
+            }
+
         }
     }
 }
@@ -579,6 +593,7 @@ span.text {
     display: flex;
     align-items: center;
     border-bottom: 1px solid rgba(var(--border), 1);
+    overflow: auto;
 
     &.tabs\:centered {
         justify-content: space-evenly;
@@ -595,10 +610,6 @@ span.text {
         border-style: solid;
         border-width: .325em 0 .325em 0;
         border-color: transparent;
-
-        @include breakpoint(md) {
-            width: auto;
-        }
 
         &:hover {
             border-bottom-color: rgba(var(--border), 1);

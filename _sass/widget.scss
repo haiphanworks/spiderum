@@ -86,3 +86,22 @@
         }
     }
 }
+
+
+
+.link {
+    &.link\:thumbnail {
+        a {
+            display: block;
+            padding-top: .25rem;
+            margin-left: -.125rem;
+        }
+
+        &:not(:last-child) {
+            a {
+                padding-bottom: .25rem;
+
+            }
+        }
+    }
+}
