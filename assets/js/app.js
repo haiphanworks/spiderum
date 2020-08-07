@@ -14,18 +14,18 @@ window.onscroll = function () {
 
 $('.toggle').click(function (e) {
 	e.preventDefault();
-	if ($(this).hasClass('is:active')) {
-		$(this).removeClass('is:active');
+	if ($(this).hasClass('is-active')) {
+		$(this).removeClass('is-active');
 		if ($(this).parents('.navbar-search').length) {
-			$('.navbar-search-form').removeClass('is:active');
+			$('.navbar-search-form').removeClass('is-active');
 		}
 	} else {
-		$('.navbar-toggle').removeClass('is:active');
-		$(this).addClass('is:active');
+		$('.navbar-toggle').removeClass('is-active');
+		$(this).addClass('is-active');
 		if ($(this).parents('.navbar-search').length) {
-			$('.navbar-search-form').addClass('is:active');
+			$('.navbar-search-form').addClass('is-active');
 		} else {
-			$('.navbar-search-form').removeClass('is:active');
+			$('.navbar-search-form').removeClass('is-active');
 		}
 	}
 });
@@ -60,8 +60,8 @@ $(document).ready(function () {
 			.removeClass('is:scrolltop')
 			.addClass('is:scrolldown')
 			.addClass('is:scrolling');
-		$('.navbar-toggle').removeClass('is:active');
-		$('.navbar-search-form').removeClass('is:active');
+		$('.navbar-toggle').removeClass('is-active');
+		$('.navbar-search-form').removeClass('is-active');
 	}
 
 	function showNav() {
@@ -94,8 +94,8 @@ $('.filter\\:view .item').click(function (e) {
 	e.preventDefault();
 	view = $(this).data('view');
 	console.log(view);
-	$(this).parent().children().removeClass('is:active');
-	$(this).addClass('is:active');
+	$(this).parent().children().removeClass('is-active');
+	$(this).addClass('is-active');
 	$('.feed-wrapper')
 		.removeClass('is-small')
 		.removeClass('is-medium')
@@ -107,8 +107,8 @@ $('.filter\\:sort .item').click(function (e) {
 	e.preventDefault();
 	view = $(this).data('view');
 	console.log(view);
-	$(this).parent().children().removeClass('is:active');
-	$(this).addClass('is:active');
+	$(this).parent().children().removeClass('is-active');
+	$(this).addClass('is-active');
 });
 
 // Chat Active Switch
@@ -142,22 +142,22 @@ $('.global-chat .chat-active .chat-1 .actions .hide').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-1')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 	$('.global-chat .chat-inactive .chat-1')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 });
 $('.global-chat .chat-active .chat-1 .actions .close').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-1')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 	$('.global-chat .chat-inactive .chat-1')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 });
 // CHAT 2
@@ -165,22 +165,22 @@ $('.global-chat .chat-active .chat-2 .actions .hide').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-2')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 	$('.global-chat .chat-inactive .chat-2')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 });
 $('.global-chat .chat-active .chat-2 .actions .close').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-2')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 	$('.global-chat .chat-inactive .chat-2')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 });
 // CHAT 3
@@ -188,22 +188,22 @@ $('.global-chat .chat-active .chat-3 .actions .hide').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-3')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 	$('.global-chat .chat-inactive .chat-3')
 		.addClass('is:hidden')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:closed');
 });
 $('.global-chat .chat-active .chat-3 .actions .close').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-active .chat-3')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 	$('.global-chat .chat-inactive .chat-3')
 		.addClass('is:closed')
-		.removeClass('is:active')
+		.removeClass('is-active')
 		.removeClass('is:hidden');
 });
 
@@ -212,11 +212,11 @@ $('.global-chat .chat-active .chat-3 .actions .close').click(function (e) {
 $('.global-chat .chat-inactive .chat-1 .avatar').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-inactive .chat-1')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 	$('.global-chat .chat-active .chat-1')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 });
@@ -225,17 +225,17 @@ $('.global-chat .chat-inactive .chat-1 .close').click(function (e) {
 	$('.global-chat .chat-inactive .chat-1')
 		.addClass('is:closed')
 		.removeClass('is:hidden')
-		.removeClass('is:active');
+		.removeClass('is-active');
 });
 // CHAT 2
 $('.global-chat .chat-inactive .chat-2 .avatar').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-inactive .chat-2')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 	$('.global-chat .chat-active .chat-2')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 });
@@ -244,17 +244,17 @@ $('.global-chat .chat-inactive .chat-2 .close').click(function (e) {
 	$('.global-chat .chat-inactive .chat-2')
 		.addClass('is:closed')
 		.removeClass('is:hidden')
-		.removeClass('is:active');
+		.removeClass('is-active');
 });
 // CHAT 3
 $('.global-chat .chat-inactive .chat-3 .avatar').click(function (e) {
 	e.preventDefault();
 	$('.global-chat .chat-inactive .chat-3')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 	$('.global-chat .chat-active .chat-3')
-		.addClass('is:active')
+		.addClass('is-active')
 		.removeClass('is:hidden')
 		.removeClass('is:closed');
 });
@@ -263,5 +263,5 @@ $('.global-chat .chat-inactive .chat-3 .close').click(function (e) {
 	$('.global-chat .chat-inactive .chat-3')
 		.addClass('is:closed')
 		.removeClass('is:hidden')
-		.removeClass('is:active');
+		.removeClass('is-active');
 });
