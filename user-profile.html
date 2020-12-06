@@ -4,509 +4,705 @@ title: User Profile
 slug: user-profile
 ---
 
-
 <div class="user-profile">
+	<div class="relative container-lg px-4 md:px-0 mx-auto mt-6">
+		<div class="cover md:-mx-6">
+			<img src="" />
+		</div>
+	</div>
 
-    <div class="relative container-lg px-4 md:px-0 mx-auto mt-6">
-        <div class="cover md:-mx-6">
-            <img src="">
-        </div>
-    </div>
+	<div class="relative container-lg px-4 md:px-0 mx-auto mt-6">
+		<div class="columns grid">
+			<div class="column grid column-sidebar column-spacer" id="sidebar">
+				<div
+					class="widget widget:boxed widget:sidebar-basic"
+					id="basic"
+				>
+					<div class="widget-body py-4 md:p-4">
+						<div class="basic text-center">
+							<div class="avatar w-20 md:w-32 mx-auto">
+								<img src="" />
+							</div>
+							<h1
+								class="display-name mt-3 font-bold text-lg text-gray-700"
+							>
+								<a href="#">Việt Anh Trần</a>
+							</h1>
+							<p class="username text-sm text-gray-500">
+								<a href="#">@username</a>
+							</p>
+							<div class="bio mt-3">
+								Before there is the was soul be that.
+							</div>
+						</div>
+						<div class="stats mt-4 px-4 md:px-0 pt-4 border-t">
+							<div class="item">
+								<div class="label">Followers</div>
+								<div class="value">123</div>
+							</div>
+							<div class="item">
+								<div class="label">Following</div>
+								<div class="value">123</div>
+							</div>
+							<div class="item">
+								<div class="label">Spiders</div>
+								<div class="value">123</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    <div class="relative container-lg px-4 md:px-0 mx-auto mt-6">
-        <div class="columns grid">
+				<div class="widget widget:sidebar-badge">
+					<div
+						class="badges flex justify-center md:justify-center lg:justify-end"
+					>
+						{% for i in (1..14) %}
+						<div
+							class="badge flex items-center justify-center w-10 h-10"
+						>
+							<img src="/assets/images/badge/{{i}}.png" />
+						</div>
+						{% endfor %}
+					</div>
+				</div>
 
-            <div class="column grid column-sidebar column-spacer" id="sidebar">
+				<div class="widget widget:boxed" id="intro">
+					<div class="widget-head">
+						<div class="title">
+							<span>Về tôi</span>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="bio paragraphs">
+							<p>
+								The floor not mien only obeisance of lenore,
+								within one chamber the sat that and
+								liftednevermore.
+							</p>
+						</div>
+						<div class="about">
+							<ul>
+								<li class="item occupation">
+									<div class="icon">
+										<i class="fas fa-briefcase"></i>
+									</div>
+									<div class="content">
+										Co-Founder tại <strong>Spiderum</strong>
+									</div>
+								</li>
+								<li class="item education">
+									<div class="icon">
+										<i class="fas fa-graduation-cap"></i>
+									</div>
+									<div class="content">
+										Nghiên cứu sinh Tiến sĩ (Tâm Thần Học)
+										tại
+										<strong>Đại học Bôn Ba</strong>
+									</div>
+								</li>
+								<li class="item education">
+									<div class="icon">
+										<i class="fas fa-graduation-cap"></i>
+									</div>
+									<div class="content">
+										Cơ trưởng tại
+										<strong
+											>Học viên Hàng Không (Ăn Hàng - Ở
+											Không)</strong
+										>
+									</div>
+								</li>
+								<li class="item location">
+									<div class="icon">
+										<i class="fas fa-graduation-cap"></i>
+									</div>
+									<div class="content">
+										Đang sinh sống tại
+										<strong>Sao Hỏa</strong>
+									</div>
+								</li>
+								<li class="item origin">
+									<div class="icon">
+										<i class="fas fa-graduation-cap"></i>
+									</div>
+									<div class="content">
+										Sinh ra tại <strong>Hà Nội</strong>,
+										<strong>Việt Nam</strong>
+									</div>
+								</li>
+								<li class="item interests">
+									<div class="icon">
+										<i class="fas fa-star"></i>
+									</div>
+									<div class="content">
+										Quan tâm đến
+										<a href="/category"
+											><strong>Khởi nghiệp</strong></a
+										>,
+										<a href="/category"
+											><strong>Kinh tế</strong></a
+										>,
+										<a href="/category"
+											><strong>Chính trị</strong></a
+										>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed widget:sidebar-basic" id="basic">
-                    <div class="widget-body py-4 md:p-4">
-                        <div class="basic text-center">
-                            <div class="avatar w-20 md:w-32 mx-auto"><img src=""></div>
-                            <h1 class="display-name mt-3 font-bold text-lg text-gray-700">
-                                <a href="#">Việt Anh Trần</a>
-                            </h1>
-                            <p class="username text-sm text-gray-500"><a href="#">@username</a></p>
-                            <div class="bio mt-3">Before there is the was soul be that.</div>
-                        </div>
-                        <div class="stats mt-4 px-4 md:px-0 pt-4 border-t">
-                            <div class=" item">
-                                <div class="label">Followers</div>
-                                <div class="value">123</div>
-                            </div>
-                            <div class="item">
-                                <div class="label">Following</div>
-                                <div class="value">123</div>
-                            </div>
-                            <div class="item">
-                                <div class="label">Spiders</div>
-                                <div class="value">123</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<div class="widget widget:boxed">
+					<div class="widget-head">
+						<div class="title">
+							<span>Donate</span>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<p>
+							Nếu thấy nội dung của tôi hữu ích, hãy ủng hộ để
+							giúp tôi có thể liên tục ra nhiều nội dung hơn nhé.
+						</p>
+						<button
+							class="button flex h-10 bg-blue-500 hover:bg-blue-600 w-full text-white text-smallcaps mt-3 shadow:sp"
+						>
+							<div class="svgi">
+								{% svg /assets/icons/user.svg class="w-5" %}
+							</div>
+							<span class="text ml-2">Ủng hộ</span>
+						</button>
+					</div>
+				</div>
 
-                <div class="widget widget:sidebar-badge">
-                    <div class="badges flex justify-center md:justify-center lg:justify-end">
-                        {% for i in (1..14) %}
-                        <div class="badge flex items-center justify-center w-10 h-10">
-                            <img src="/assets/images/badge/{{i}}.png">
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
+				<div class="widget widget:boxed">
+					<div class="widget-head">
+						<div class="title">
+							<span>Liên kết</span>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<ul class="list">
+							<li
+								class="link link:social text-gray-700 hover:text-gray-800"
+							>
+								<a href="#">
+									<span class="icon"
+										><i class="fab fa-facebook"></i
+									></span>
+									<span class="text ml-2">Facebook</span>
+								</a>
+							</li>
+							<li
+								class="link link:social text-gray-700 hover:text-gray-800"
+							>
+								<a href="#">
+									<span class="icon"
+										><i class="fab fab fa-linkedin"></i
+									></span>
+									<span class="text ml-2">LinkedIn</span>
+								</a>
+							</li>
+							{% for i in (1..2) %}
+							<li class="link link:thumbnail">
+								<a href="#">
+									<div class="flex items-center group">
+										<div
+											class="w-16 h-16 rounded border border-gray-300 bg-gray-100 mr-3"
+										></div>
+										<div>
+											<h3
+												class="font-bold text-gray-700 hover:text-gray-800"
+											>
+												You still ever thing
+											</h3>
+											<div
+												class="flex items-center text-sm text-gray-500 hover:text-gray-600"
+											>
+												<span class="icon"
+													><i class="far fa-link"></i
+												></span>
+												<span
+													class="text ml-2 link w-56 truncate"
+													>https://hai.haiphan.design/about/lorem-ipsum/</span
+												>
+											</div>
+										</div>
+									</div>
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
 
-                <div class="widget widget:boxed" id="intro">
-                    <div class="widget-head">
-                        <div class="title">
-                            <span>Về tôi</span>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="bio paragraphs">
-                            <p>The floor not mien only obeisance of lenore, within one chamber the sat
-                                that and liftednevermore.
-                            </p>
-                        </div>
-                        <div class="about">
-                            <ul>
-                                <li class="item occupation">
-                                    <div class="icon">
-                                        <i class="fas fa-briefcase"></i>
-                                    </div>
-                                    <div class="content">Co-Founder tại <strong>Spiderum</strong></div>
-                                </li>
-                                <li class="item education">
-                                    <div class="icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="content">Nghiên cứu sinh Tiến sĩ (Tâm Thần Học) tại
-                                        <strong>Đại học Bôn
-                                            Ba</strong>
-                                    </div>
-                                </li>
-                                <li class="item education">
-                                    <div class="icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="content">Cơ trưởng tại <strong>Học viên Hàng Không (Ăn
-                                            Hàng - Ở
-                                            Không)</strong></div>
-                                </li>
-                                <li class="item location">
-                                    <div class="icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="content">Đang sinh sống tại <strong>Sao Hỏa</strong>
-                                    </div>
-                                </li>
-                                <li class="item origin">
-                                    <div class="icon">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div class="content">Sinh ra tại <strong>Hà Nội</strong>,
-                                        <strong>Việt Nam</strong>
-                                    </div>
-                                </li>
-                                <li class="item interests">
-                                    <div class="icon">
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div class="content">Quan tâm đến
-                                        <a href="/category"><strong>Khởi nghiệp</strong></a>,
-                                        <a href="/category"><strong>Kinh tế</strong></a>,
-                                        <a href="/category"><strong>Chính trị</strong></a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+			<div class="column grid column-main column-spacer" id="main">
+				<div class="widget widget:boxed" id="tabs">
+					<div class="widget-body px-4">
+						<div class="tabs">
+							<div class="tab text-smallcaps">
+								<a href="#post" class="px-2 md:px-6">
+									<!-- <span class="icon"><i class="fas fa-user"></i></span> -->
+									<span class="text">Trang chủ</span>
+								</a>
+							</div>
+							<div class="tab is-active text-smallcaps">
+								<a href="#user" class="px-2 md:px-6">
+									<!-- <span class="icon"><i class="fas fa-sticky-note"></i></span> -->
+									<span class="text">Bài viết</span>
+								</a>
+							</div>
+							<div class="tab text-smallcaps">
+								<a href="#post" class="px-2 md:px-6">
+									<!-- <span class="icon"><i class="fas fa-ribbon"></i></span> -->
+									<span class="text">Huy hiệu</span>
+								</a>
+							</div>
+							<div class="ml-auto"></div>
+							<div class="tab text-smallcaps">
+								<a href="#post" class="px-4">
+									<span class="icon"
+										><i class="fas fa-envelope"></i
+									></span>
+								</a>
+							</div>
+							<div class="tab text-smallcaps">
+								<a href="#post" class="px-4">
+									<span class="icon"
+										><i class="fas fa-bookmark"></i
+									></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed">
-                    <div class="widget-head">
-                        <div class="title">
-                            <span>Donate</span>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <p>Nếu thấy nội dung của tôi hữu ích, hãy ủng hộ để giúp tôi có thể liên tục ra nhiều nội dung
-                            hơn nhé.</p>
-                        <button class="button flex h-10 bg-blue-500 hover:bg-blue-600
-                            w-full text-white text-smallcaps mt-3 shadow:sp">
-                            <span class="icon"><i class="fas fa-sparkles"></i></span>
-                            <span class="text ml-2">Ủng hộ</span>
-                        </button>
-                    </div>
-                </div>
+				<div class="widget widget:boxed" id="posts">
+					<div class="widget-body">
+						<div class="post-list">
+							{% for i in (1..10) %}
+							<div
+								class="post flex md:items-center px-4 py-4 border-b hover:bg-gray-100"
+							>
+								<div
+									class="image flex flex-shrink-0 justify-center items-center w-20 h-20 border rounded bg-blue-100"
+								>
+									<img src="" />
+								</div>
+								<div class="info ml-4">
+									<div
+										class="title md:truncate text-gray-700 font-bold"
+									>
+										Whether stronger front at clasp said
+										into word minute once.
+									</div>
+									<div class="author mt-1">
+										<div class="info text-sm flex flex-col">
+											<div class="main">
+												<span
+													class="displayname font-bold text-gray-700"
+													>Display Name</span
+												>
+												trong
+												<span
+													class="category font-bold text-gray-700"
+													>Category</span
+												>
+											</div>
+											<ul class="meta flex">
+												<li class="time">
+													3 giờ trước
+												</li>
+												<li class="upvote flex ml-2">
+													<span class="icon"
+														><i
+															class="fas fa-arrow-alt-up"
+														></i
+													></span>
+													<span class="text ml-1"
+														>10</span
+													>
+												</li>
+												<li class="downvote flex ml-2">
+													<span class="icon"
+														><i
+															class="fas fa-arrow-alt-down"
+														></i
+													></span>
+													<span class="text ml-1"
+														>10</span
+													>
+												</li>
+												<li class="view flex ml-2">
+													<span class="icon"
+														><i
+															class="fas fa-eye"
+														></i
+													></span>
+													<span class="text ml-1"
+														>10</span
+													>
+												</li>
+												<li class="view flex ml-2">
+													<span class="icon"
+														><i
+															class="fas fa-comment"
+														></i
+													></span>
+													<span class="text ml-1"
+														>10</span
+													>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed">
-                    <div class="widget-head">
-                        <div class="title">
-                            <span>Liên kết</span>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <ul class="list">
-                            <li class="link link:social text-gray-700 hover:text-gray-800"><a href="#">
-                                    <span class="icon"><i class="fab fa-facebook"></i></span>
-                                    <span class="text ml-2">Facebook</span>
-                                </a></li>
-                            <li class="link link:social text-gray-700 hover:text-gray-800"><a href="#">
-                                    <span class="icon"><i class="fab fab fa-linkedin"></i></span>
-                                    <span class="text ml-2">LinkedIn</span>
-                                </a></li>
-                            {% for i in (1..2) %}
-                            <li class="link link:thumbnail"><a href="#">
-                                    <div class="flex items-center group">
-                                        <div class="w-16 h-16 rounded border border-gray-300 bg-gray-100 mr-3"></div>
-                                        <div>
-                                            <h3 class="font-bold text-gray-700 hover:text-gray-800">You still ever thing
-                                            </h3>
-                                            <div class="flex items-center text-sm text-gray-500 hover:text-gray-600">
-                                                <span class="icon"><i class="far fa-link"></i></span>
-                                                <span class="text ml-2 link
-                                                    w-56 truncate">https://hai.haiphan.design/about/lorem-ipsum/</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a></li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+				<div class="widget widget:boxed" id="badge">
+					<div class="widget-body">
+						<ul class="badge-list">
+							{% for i in (1..14) %}
+							<li
+								class="badge flex md:items-center px-4 py-4 border-b hover:bg-gray-100"
+							>
+								<div
+									class="image flex flex-shrink-0 w-16 h-16 justify-center items-center"
+								>
+									<img src="/assets/images/badge/{{i}}.png" />
+								</div>
+								<div
+									class="info flex md:items-center flex-col md:flex-row ml-4 w-full"
+								>
+									<div class="meta flex flex-col md:w-1/2">
+										<a
+											class="displayname text-gray-700 font-bold"
+											>Badge Name</a
+										>
+										<a class="username text-sm"
+											>This section is the description for
+											the badge, it tells what the badge
+											is how can you achive it.</a
+										>
+									</div>
+									<div
+										class="achieved mt-2 md:mt-0 md:ml-auto"
+									>
+										<div class="flex text-sm text-gray-500">
+											<span class="icon mr-1"
+												><i class="far fa-check"></i
+											></span>
+											<span class="text"
+												>Nhận được ngày 10/04/2020</span
+											>
+										</div>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
 
-            </div>
+				<div class="widget widget:boxed" id="top-posts">
+					<div class="widget-head is:xl">
+						<div class="title"><span>Bài viết nổi bật</span></div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="card-gallery is-medium">
+							{% for i in (1..5) %} {%- include
+							components/post.html imageRatio="is-1by1"
+							title="Above till and radiant this once, be
+							perfumed" author="Peter Parker"
+							authorCategory="Science2Vn" authorImage="No"
+							created="1 ngày trước" vote="187" -%} {% endfor %}
+						</div>
+					</div>
+				</div>
 
-            <div class="column grid column-main column-spacer" id="main">
+				<div class="widget widget:boxed" id="featured-topic">
+					<div class="widget-head is:xl flex justify-between">
+						<div class="meta">
+							<div class="title"><span>Startup 2020</span></div>
+							<div class="description">
+								Các bài viết về chủ đề startup tôi dành cho các
+								bạn trẻ trong năm 2020.
+							</div>
+						</div>
+						<div class="actions">
+							<a
+								href="#"
+								class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500 text-smallcaps text-blue-500 bg-transparent hover:bg-blue-100"
+							>
+								<span class="icon mr-2"
+									><i class="far fa-plus-circle"></i
+								></span>
+								<span class="text hidden md:block"
+									>Theo dõi</span
+								>
+							</a>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="feed-carousel">
+							<div class="nav">
+								<div class="right"></div>
+							</div>
+							<div
+								class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4"
+							>
+								{% for i in (1..5) %}{%- include
+								components/post.html category="Category"
+								class="is-large card:border" title="Et
+								sadipscing diam dolore voluptua kasd"
+								author="Peter Parker" created="3 giờ trước"
+								views="201" -%}{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed" id="tabs">
-                    <div class="widget-body px-4">
-                        <div class="tabs">
-                            <div class="tab text-smallcaps">
-                                <a href="#post" class="px-2 md:px-6">
-                                    <!-- <span class="icon"><i class="fas fa-user"></i></span> -->
-                                    <span class="text">Trang chủ</span>
-                                </a>
-                            </div>
-                            <div class="tab is-active text-smallcaps">
-                                <a href="#user" class="px-2 md:px-6">
-                                    <!-- <span class="icon"><i class="fas fa-sticky-note"></i></span> -->
-                                    <span class="text">Bài viết</span>
-                                </a>
-                            </div>
-                            <div class="tab text-smallcaps">
-                                <a href="#post" class="px-2 md:px-6">
-                                    <!-- <span class="icon"><i class="fas fa-ribbon"></i></span> -->
-                                    <span class="text">Huy hiệu</span>
-                                </a>
-                            </div>
-                            <div class="ml-auto"></div>
-                            <div class="tab text-smallcaps">
-                                <a href="#post" class="px-4">
-                                    <span class="icon"><i class="fas fa-envelope"></i></span>
-                                </a>
-                            </div>
-                            <div class="tab text-smallcaps">
-                                <a href="#post" class="px-4">
-                                    <span class="icon"><i class="fas fa-bookmark"></i></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+				<div class="widget widget:boxed" id="testimonials">
+					<div class="widget-head is:xl">
+						<div class="title"><span>Giới thiệu cá nhân</span></div>
+						<div class="description">
+							Những người khác nói gì về Việt Anh Trần?
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="testimonials">
+							{% for i in (1..2) %}
+							<div class="item">
+								<div class="author flex">
+									<div class="avatar avatar:md">
+										<img src="" />
+									</div>
+									<div class="content ml-3">
+										<div
+											class="author-name font-bold text-gray-700 text-base"
+										>
+											<a href="/user-profile">Hùng Vũ</a>
+										</div>
+										<div
+											class="username text-sm text-gray-500"
+										>
+											<a href="/user-profile">@alexvu</a>
+										</div>
+										<div
+											class="points flex text-sm font-bold mt-1"
+										>
+											<span class="icon mr-2"
+												><i class="fas fa-spider"></i
+											></span>
+											<span class="text"
+												><span>1000</span> Spider</span
+											>
+										</div>
+										<div class="joindate flex text-sm mt-1">
+											<span class="icon mr-2"
+												><i
+													class="fas fa-birthday-cake"
+												></i
+											></span>
+											<span class="text"
+												>Tháng 4, 2020</span
+											>
+										</div>
+									</div>
+								</div>
+								<div class="body">
+									<div class="title font-bold mb-2">
+										From i soul still startled implore still
+										much, is is.
+									</div>
+									<div
+										class="content paragraphs {% if i == 2 %}line-clamp{% endif %}"
+									>
+										<p>
+											Soul the said sought for doubtless
+											raven scarce quoth door nevermore.
+											Nothing flown sir my fantastic an me
+											no here, for sitting bust terrors
+											wrought. Into doubting of many a.
+											Said demons other loneliness a its
+											lining stood. He tell of lonely
+											door, volume yore on name of maiden
+											forget.
+										</p>
+										<p>
+											Dreary his sent sure i but answer
+											out, on nothing i implore till
+											dreams tapping to its my, clasp its.
+										</p>
+									</div>
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+						<div
+							class="load-more pt-3 mt-4 -mb-1 flex items-center justify-center text-smallcaps border-t border-gray-300 cursor-pointer"
+						>
+							<span class="icon mr-2"
+								><i class="far fa-spinner fa-spin"></i
+							></span>
+							<span class="text">Tải thêm</span>
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed" id="posts">
-                    <div class="widget-body">
-                        <div class="post-list">
-                            {% for i in (1..10) %}
-                            <div class="post flex md:items-center px-4 py-4 border-b hover:bg-gray-100">
-                                <div class="image flex flex-shrink-0 justify-center items-center w-20 h-20 
-                                border rounded bg-blue-100">
-                                    <img src="">
-                                </div>
-                                <div class="info ml-4">
-                                    <div class="title md:truncate text-gray-700 font-bold">
-                                        Whether stronger front at clasp said into word minute once.
-                                    </div>
-                                    <div class="author mt-1">
-                                        <div class="info text-sm flex flex-col">
-                                            <div class="main">
-                                                <span class="displayname font-bold text-gray-700">Display Name</span>
-                                                trong
-                                                <span class="category font-bold text-gray-700">Category</span>
-                                            </div>
-                                            <ul class="meta flex">
-                                                <li class="time">3 giờ trước</li>
-                                                <li class="upvote flex ml-2">
-                                                    <span class="icon"><i class="fas fa-arrow-alt-up"></i></span>
-                                                    <span class="text ml-1">10</span>
-                                                </li>
-                                                <li class="downvote flex ml-2">
-                                                    <span class="icon"><i class="fas fa-arrow-alt-down"></i></span>
-                                                    <span class="text ml-1">10</span>
-                                                </li>
-                                                <li class="view flex ml-2">
-                                                    <span class="icon"><i class="fas fa-eye"></i></span>
-                                                    <span class="text ml-1">10</span>
-                                                </li>
-                                                <li class="view flex ml-2">
-                                                    <span class="icon"><i class="fas fa-comment"></i></span>
-                                                    <span class="text ml-1">10</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+				<div class="widget widget:boxed" id="featured-topic">
+					<div class="widget-head is:xl flex justify-between">
+						<div class="meta">
+							<div class="title"><span>Startup 2020</span></div>
+							<div class="description">
+								Các bài viết về chủ đề startup tôi dành cho các
+								bạn trẻ trong năm 2020.
+							</div>
+						</div>
+						<div class="actions">
+							<a
+								href="#"
+								class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500 text-smallcaps text-blue-500 bg-transparent hover:bg-blue-100"
+							>
+								<span class="icon mr-2"
+									><i class="far fa-plus-circle"></i
+								></span>
+								<span class="text hidden md:block"
+									>Theo dõi</span
+								>
+							</a>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="feed-carousel">
+							<div class="nav">
+								<div class="right"></div>
+							</div>
+							<div
+								class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4"
+							>
+								{% for i in (1..5) %}{%- include
+								components/post.html category="Category"
+								class="is-large card:border" title="Et
+								sadipscing diam dolore voluptua kasd"
+								author="Peter Parker" created="3 giờ trước"
+								views="201" -%}{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
 
-                <div class="widget widget:boxed" id="badge">
-                    <div class="widget-body">
-                        <ul class="badge-list">
-                            {% for i in (1..14) %}
-                            <li class="badge flex md:items-center px-4 py-4 border-b hover:bg-gray-100">
-                                <div class="image flex flex-shrink-0 w-16 h-16 justify-center items-center">
-                                    <img src="/assets/images/badge/{{i}}.png">
-                                </div>
-                                <div class="info flex md:items-center flex-col md:flex-row ml-4 w-full">
-                                    <div class="meta flex flex-col md:w-1/2">
-                                        <a class="displayname text-gray-700 font-bold">Badge Name</a>
-                                        <a class="username text-sm ">This
-                                            section is the description for the
-                                            badge, it tells what the badge is how
-                                            can you achive it.</a>
-                                    </div>
-                                    <div class="achieved mt-2 md:mt-0 md:ml-auto">
-                                        <div class="flex text-sm text-gray-500">
-                                            <span class="icon mr-1"><i class="far fa-check"></i></span>
-                                            <span class="text">Nhận được ngày
-                                                10/04/2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
+				<div class="widget widget:boxed" id="featured-topic">
+					<div class="widget-head is:xl flex justify-between">
+						<div class="meta">
+							<div class="title"><span>Startup 2020</span></div>
+							<div class="description">
+								Các bài viết về chủ đề startup tôi dành cho các
+								bạn trẻ trong năm 2020.
+							</div>
+						</div>
+						<div class="actions">
+							<a
+								href="#"
+								class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500 bg-blue-500 hover:bg-blue-600 text-smallcaps text-white"
+							>
+								<span class="icon mr-2"
+									><i class="far fa-check-circle"></i
+								></span>
+								<span class="text hidden md:block"
+									>Đang theo dõi</span
+								>
+							</a>
+						</div>
+					</div>
+					<div class="widget-body p-4">
+						<div class="feed-carousel">
+							<div class="nav">
+								<div class="right"></div>
+							</div>
+							<div
+								class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4"
+							>
+								{% for i in (1..5) %}{%- include
+								components/post.html category="Category"
+								class="is-large card:border" title="Et
+								sadipscing diam dolore voluptua kasd"
+								author="Peter Parker" created="3 giờ trước"
+								views="201" -%}{% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                <div class="widget widget:boxed" id="top-posts">
-                    <div class="widget-head is:xl">
-                        <div class="title"><span>Bài viết nổi bật</span></div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="card-gallery is-medium">
-                            {% for i in (1..5) %}
-                            {%- include components/post.html
-						imageRatio="is-1by1" title="Above till and radiant this once, be perfumed" author="Peter Parker"
-						authorCategory="Science2Vn" authorImage="No" created="1
-                        ngày trước" vote="187" -%}
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget widget:boxed" id="featured-topic">
-                    <div class="widget-head is:xl flex justify-between">
-                        <div class="meta">
-                            <div class="title"><span>Startup 2020</span></div>
-                            <div class="description">Các bài viết về chủ đề startup tôi dành cho các
-                                bạn trẻ trong năm 2020.</div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500
-                            text-smallcaps text-blue-500 bg-transparent hover:bg-blue-100">
-                                <span class="icon mr-2"><i class="far fa-plus-circle"></i></span>
-                                <span class="text hidden md:block">Theo dõi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="feed-carousel">
-                            <div class="nav">
-                                <div class="right"></div>
-                            </div>
-                            <div class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4">
-                                {% for i in (1..5) %}{%- include components/post.html
-                                category="Category" class="is-large card:border"
-                                title="Et sadipscing diam dolore voluptua kasd"
-                                author="Peter Parker" created="3 giờ trước"
-                                views="201" -%}{% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget widget:boxed" id="testimonials">
-                    <div class="widget-head is:xl">
-                        <div class="title"><span>Giới thiệu cá nhân</span></div>
-                        <div class="description">Những người khác nói gì về Việt Anh Trần?</div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="testimonials">
-                            {% for i in (1..2) %}
-                            <div class="item">
-                                <div class="author flex">
-                                    <div class="avatar avatar:md">
-                                        <img src="">
-                                    </div>
-                                    <div class="content ml-3">
-                                        <div class="author-name font-bold text-gray-700 text-base">
-                                            <a href="/user-profile">Hùng Vũ</a></div>
-                                        <div class="username text-sm text-gray-500">
-                                            <a href="/user-profile">@alexvu</a>
-                                        </div>
-                                        <div class="points flex text-sm font-bold mt-1">
-                                            <span class="icon mr-2"><i class="fas fa-spider"></i></span>
-                                            <span class="text"><span>1000</span> Spider</span>
-                                        </div>
-                                        <div class="joindate flex text-sm mt-1">
-                                            <span class="icon mr-2"><i class="fas fa-birthday-cake"></i></span>
-                                            <span class="text">Tháng 4, 2020</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="body">
-                                    <div class="title font-bold mb-2">From i soul still startled implore still much, is
-                                        is.
-                                    </div>
-                                    <div class="content paragraphs {% if i == 2 %}line-clamp{% endif %}">
-                                        <p>Soul the said sought for doubtless raven scarce quoth door nevermore. Nothing
-                                            flown sir my fantastic an me no here, for sitting bust terrors wrought. Into
-                                            doubting of many a. Said demons other loneliness a its lining stood. He tell
-                                            of lonely door, volume yore on name of maiden forget.</p>
-                                        <p>Dreary his sent sure i but answer out, on nothing i implore till dreams
-                                            tapping to its my, clasp its.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
-                        </div>
-                        <div class="load-more pt-3 mt-4 -mb-1 flex items-center justify-center text-smallcaps border-t
-                            border-gray-300 cursor-pointer">
-                            <span class="icon mr-2"><i class="far fa-spinner fa-spin"></i></span>
-                            <span class="text">Tải thêm</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget widget:boxed" id="featured-topic">
-                    <div class="widget-head is:xl flex justify-between">
-                        <div class="meta">
-                            <div class="title"><span>Startup 2020</span></div>
-                            <div class="description">Các bài viết về chủ đề startup tôi dành cho các
-                                bạn trẻ trong năm 2020.</div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500
-                            text-smallcaps text-blue-500 bg-transparent hover:bg-blue-100">
-                                <span class="icon mr-2"><i class="far fa-plus-circle"></i></span>
-                                <span class="text hidden md:block">Theo dõi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="feed-carousel">
-                            <div class="nav">
-                                <div class="right"></div>
-                            </div>
-                            <div class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4">
-                                {% for i in (1..5) %}{%- include components/post.html
-                                category="Category" class="is-large card:border"
-                                title="Et sadipscing diam dolore voluptua kasd"
-                                author="Peter Parker" created="3 giờ trước"
-                                views="201" -%}{% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="widget widget:boxed" id="featured-topic">
-                    <div class="widget-head is:xl flex justify-between">
-                        <div class="meta">
-                            <div class="title"><span>Startup 2020</span></div>
-                            <div class="description">Các bài viết về chủ đề startup tôi dành cho các
-                                bạn trẻ trong năm 2020.</div>
-                        </div>
-                        <div class="actions">
-                            <a href="#" class="mt-1 md:mt-2 button inline-flex h-10 border border-blue-500
-                            bg-blue-500 hover:bg-blue-600
-                            text-smallcaps text-white">
-                                <span class="icon mr-2"><i class="far fa-check-circle"></i></span>
-                                <span class="text hidden md:block">Đang theo dõi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="widget-body p-4">
-                        <div class="feed-carousel">
-                            <div class="nav">
-                                <div class="right"></div>
-                            </div>
-                            <div class="card-carousel -mr-4 -ml-4 -mb-4 pl-4 pb-4">
-                                {% for i in (1..5) %}{%- include components/post.html
-                                category="Category" class="is-large card:border"
-                                title="Et sadipscing diam dolore voluptua kasd"
-                                author="Peter Parker" created="3 giờ trước"
-                                views="201" -%}{% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="column hidden column-main column-spacer" id="follow-section">
-                <div class="widget widget:boxed" id="follow">
-                    <div class="tabs">
-                        <div class="tab text-smallcaps w-auto">
-                            <a href="#post" class="px-6">
-                                <span class="icon"><i class="fas fa-arrow-left"></i></span>
-                            </a>
-                        </div>
-                        <div class="tab is-active w-full text-smallcaps">
-                            <a href="#user" class="px-6">
-                                <span class="text">Được theo dõi</span>
-                            </a>
-                        </div>
-                        <div class="tab w-full text-smallcaps">
-                            <a href="#post" class="px-6">
-                                <span class="text">Đang theo dõi</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="tab-section" id="followers">
-                        <ul class="follow-list">
-                            {% for i in (1..20) %}
-                            <li class="flex items-center px-4 py-4 border-b hover:bg-gray-100">
-                                <div class="avatar w-12 md:w-16 h-12 md:h-16 mr-3">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="info flex flex-col">
-                                    <a class="displayname font-bold">Display Name</a>
-                                    <a class="username text-sm text-gray-500">@username</a>
-                                    <!-- <div class="bio mt-1">Said my myself then never out door friends of silence. No
+			<div
+				class="column hidden column-main column-spacer"
+				id="follow-section"
+			>
+				<div class="widget widget:boxed" id="follow">
+					<div class="tabs">
+						<div class="tab text-smallcaps w-auto">
+							<a href="#post" class="px-6">
+								<span class="icon"
+									><i class="fas fa-arrow-left"></i
+								></span>
+							</a>
+						</div>
+						<div class="tab is-active w-full text-smallcaps">
+							<a href="#user" class="px-6">
+								<span class="text">Được theo dõi</span>
+							</a>
+						</div>
+						<div class="tab w-full text-smallcaps">
+							<a href="#post" class="px-6">
+								<span class="text">Đang theo dõi</span>
+							</a>
+						</div>
+					</div>
+					<div class="tab-section" id="followers">
+						<ul class="follow-list">
+							{% for i in (1..20) %}
+							<li
+								class="flex items-center px-4 py-4 border-b hover:bg-gray-100"
+							>
+								<div
+									class="avatar w-12 md:w-16 h-12 md:h-16 mr-3"
+								>
+									<img src="" alt="" />
+								</div>
+								<div class="info flex flex-col">
+									<a class="displayname font-bold"
+										>Display Name</a
+									>
+									<a class="username text-sm text-gray-500"
+										>@username</a
+									>
+									<!-- <div class="bio mt-1">Said my myself then never out door friends of silence. No
                                         chamber.</div> -->
-                                </div>
-                                <div class="actions ml-auto">
-                                    <a href="" class="button h-8 text-sm text-blue-500 hover:text-white
-                                        border border-blue-500 hover:bg-blue-500 rounded-full">
-                                        <!-- <span class="icon"><i class="far fa-check"></i></span> -->
-                                        <span class="icon"><i class="far fa-plus"></i></span>
-                                        <!-- <span class="text">Đang theo dõi</span> -->
-                                        <span class="text">Theo dõi</span>
-                                    </a>
-                                </div>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
+								</div>
+								<div class="actions ml-auto">
+									<a
+										href=""
+										class="button h-8 text-sm text-blue-500 hover:text-white border border-blue-500 hover:bg-blue-500 rounded-full"
+									>
+										<!-- <span class="icon"><i class="far fa-check"></i></span> -->
+										<span class="icon"
+											><i class="far fa-plus"></i
+										></span>
+										<!-- <span class="text">Đang theo dõi</span> -->
+										<span class="text">Theo dõi</span>
+									</a>
+								</div>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

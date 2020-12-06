@@ -1,312 +1,453 @@
 <nav class="navbar bg-white">
+	<div class="navbar-section navbar-top">
+		<div class="navbar-container">
+			<!-- Navbar Brand -->
+			<a href="/" class="navbar-item navbar-brand">
+				<div class="navbar-logo">
+					<img
+						src="/assets/images/logo.png"
+						alt="Spiderum"
+						class="h-12"
+					/>
+				</div>
+				<h1 class="navbar-title hidden sm:block ml-2">
+					<img
+						src="/assets/images/logo-title.png"
+						alt="Spiderum"
+						class="h-12"
+					/>
+				</h1>
+			</a>
 
-    <div class="navbar-section navbar-top">
-        <div class="navbar-container">
+			<!-- Navbar Trending -->
+			<div class="navbar-item navbar-trending hidden lg:flex">
+				<div class="icon">
+					{% svg /assets/icons/trend.svg class="w-4" %}
+				</div>
+				<a class="item">Đại dịch COVID-19</a>
+				<a class="item">Animal Crossing: New Horizons</a>
+			</div>
 
-            <!-- Navbar Brand -->
-            <a href="/" class="navbar-item navbar-brand">
-                <div class="navbar-logo">
-                    <img src="/assets/images/logo.png" alt="Spiderum" class="h-12">
-                </div>
-                <h1 class="navbar-title hidden sm:block ml-2">
-                    <img src="/assets/images/logo-title.png" alt="Spiderum" class="h-12">
-                </h1>
-            </a>
+			<!-- Navbar Separator -->
+			<div class="navbar-spacer ml-auto"></div>
 
-            <!-- Navbar Trending -->
-            <div class="navbar-item navbar-trending hidden lg:flex">
-                <div class="icon">
-                    <img src="/assets/icons/navbar-trending.svg" class="block w-4">
-                </div>
-                <a class="item">Đại dịch COVID-19</a>
-                <a class="item">Animal Crossing: New Horizons</a>
-            </div>
+			<!-- Navbar Search -->
+			<div class="is-logged-in navbar-item navbar-search">
+				<div class="navbar-toggle toggle">
+					<div class="svgi">
+						{% svg /assets/icons/search.svg class="w-5" %}
+					</div>
+				</div>
+				<div class="navbar-dropdown"></div>
+			</div>
 
-            <!-- Navbar Separator -->
-            <div class="navbar-spacer ml-auto"></div>
+			<div class="navbar-seperator mx-2 text-gray-300">|</div>
 
-            <!-- Navbar Search -->
-            <div class="is-logged-in navbar-item navbar-search">
-                <div class="navbar-toggle toggle">
-                    <i class="far fa-search"></i>
-                </div>
-                <div class="navbar-dropdown"></div>
-            </div>
-
-            <div class="navbar-seperator mx-2 text-gray-300">|</div>
-
-            <!-- Navbar Messages -->
-            <div class="is-logged-in navbar-item navbar-messages">
-                <div class="navbar-toggle toggle">
-                    <i class="far fa-envelope"></i>
-                    <span class="notifications">2</span>
-                </div>
-                <div class="navbar-dropdown dropdown">
-                    <div class="dropdown-inner">
-                        <div class="dropdown-head">
-                            <div class="title">Tin nhắn</div>
-                            <div class="actions">
-                                <div class="item"><span class="icon"><i class="fa far fa-edit"></i></span></div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content">
-                            <a class="item is:unread" href="/single">
-                                <div class="image avatar avatar:sm"><img src=""></div>
-                                <div class="content">
-                                    <div class="sender text-sm font-bold text-gray-700">Việt
-                                        Anh Trần</div>
-                                    <div class="message text-sm">
-                                        The throws it tapping door but. Perched fiend from
-                                        air thee tinkled quaff this
-                                        is tapping. Some a than gileadtell fancy eyes at
-                                        ominous.
-                                    </div>
-                                    <div class="time">1 giờ trước</div>
-                                </div>
-                            </a>
-                            {% for i in (1..10) %}
-                            <a class="item" href="/single">
-                                <div class="image avatar avatar:sm"><img src=""></div>
-                                <div class="content">
-                                    <div class="sender text-sm font-bold text-gray-700">Việt Anh Trần</div>
-                                    <div class="message text-sm">
-                                        The throws it tapping door but. Perched fiend from air thee tinkled quaff this
-                                        is tapping. Some a than gileadtell fancy eyes at ominous.
-                                    </div>
-                                    <div class="time">1 giờ trước</div>
-                                </div>
-                            </a>
-                            {% endfor %}
-                            <a class="more">
-                                Hiển thị thêm
-                            </a>
-                            <!-- <div class="empty">
+			<!-- Navbar Messages -->
+			<div class="is-logged-in navbar-item navbar-messages">
+				<div class="navbar-toggle toggle">
+					<div class="svgi">
+						{% svg /assets/icons/envelope.svg class="w-5" %}
+					</div>
+					<span class="notifications">2</span>
+				</div>
+				<div class="navbar-dropdown dropdown">
+					<div class="dropdown-inner">
+						<div class="dropdown-head">
+							<div class="title">Tin nhắn</div>
+							<div class="actions">
+								<div class="item">
+									<div class="icon">
+										<div class="svgi">
+											{% svg /assets/icons/quill.svg %}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-content">
+							<a class="item is:unread" href="/single">
+								<div class="image avatar avatar:sm">
+									<img src="" />
+								</div>
+								<div class="content">
+									<div
+										class="sender text-sm font-bold text-gray-700"
+									>
+										Việt Anh Trần
+									</div>
+									<div class="message text-sm">
+										The throws it tapping door but. Perched
+										fiend from air thee tinkled quaff this
+										is tapping. Some a than gileadtell fancy
+										eyes at ominous.
+									</div>
+									<div class="time">1 giờ trước</div>
+								</div>
+							</a>
+							{% for i in (1..10) %}
+							<a class="item" href="/single">
+								<div class="image avatar avatar:sm">
+									<img src="" />
+								</div>
+								<div class="content">
+									<div
+										class="sender text-sm font-bold text-gray-700"
+									>
+										Việt Anh Trần
+									</div>
+									<div class="message text-sm">
+										The throws it tapping door but. Perched
+										fiend from air thee tinkled quaff this
+										is tapping. Some a than gileadtell fancy
+										eyes at ominous.
+									</div>
+									<div class="time">1 giờ trước</div>
+								</div>
+							</a>
+							{% endfor %}
+							<a class="more"> Hiển thị thêm </a>
+							<!-- <div class="empty">
                                 <p>Không có tin nhắn nào.</p>
                             </div> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Navbar Notifications -->
-            <div class="is-logged-in navbar-item navbar-notifications">
-                <div class="navbar-toggle toggle is-toggle">
-                    <i class="far fa-bell"></i>
-                    <span class="notifications">5</span>
-                </div>
-                <div class="navbar-dropdown dropdown">
-                    <div class="dropdown-inner">
-                        <div class="dropdown-head">
-                            <div class="title">Thông báo</div>
-                            <div class="actions">
-                                <div class="item">
-                                    <span class="icon"><i class="fa far fas fa-ellipsis-h"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content">
-                            {% for i in (1..10) %}
-                            <a class="item" href="/single">
-                                <div class="image border border-1"><img src=""></div>
-                                <div class="content">
-                                    <div class="notification notification:upvote text-sm">
-                                        <span class="font-bold text-gray-700">Việt Anh Trần</span>, <span
-                                            class="font-bold text-gray-700">Hùng Vũ</span> và 18 người khác đã upvote
-                                        bình luận của bạn <q class="font-bold text-gray-700">Ôi bạn ơi! Bạn sức đề kháng
-                                            kém là do bạn không chơi đồ đấy bạn ạ, nếu bạn chơi đồ vào thì là đề kháng
-                                            nó khỏe nó không bao giờ bị ốm đâu bạn ạ, chơi đồ là thuốc bổ mà bạn!</q>.
-                                    </div>
-                                    <div class="type"></div>
-                                    <div class="time">1 giờ trước</div>
-                                </div>
-                            </a>
-                            {% endfor %}
-                            <a class="more">
-                                Hiển thị thêm
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- Navbar Notifications -->
+			<div class="is-logged-in navbar-item navbar-notifications">
+				<div class="navbar-toggle toggle is-toggle">
+					<div class="svgi">
+						{% svg /assets/icons/bell.svg class="w-5" %}
+					</div>
+					<span class="notifications">5</span>
+				</div>
+				<div class="navbar-dropdown dropdown">
+					<div class="dropdown-inner">
+						<div class="dropdown-head">
+							<div class="title">Thông báo</div>
+							<div class="actions">
+								<div class="item">
+									<span class="icon"
+										><i class="fa far fas fa-ellipsis-h"></i
+									></span>
+								</div>
+							</div>
+						</div>
+						<div class="dropdown-content">
+							{% for i in (1..10) %}
+							<a class="item" href="/single">
+								<div class="image border border-1">
+									<img src="" />
+								</div>
+								<div class="content">
+									<div
+										class="notification notification:upvote text-sm"
+									>
+										<span class="font-bold text-gray-700"
+											>Việt Anh Trần</span
+										>,
+										<span class="font-bold text-gray-700"
+											>Hùng Vũ</span
+										>
+										và 18 người khác đã upvote bình luận của
+										bạn
+										<q class="font-bold text-gray-700"
+											>Ôi bạn ơi! Bạn sức đề kháng kém là
+											do bạn không chơi đồ đấy bạn ạ, nếu
+											bạn chơi đồ vào thì là đề kháng nó
+											khỏe nó không bao giờ bị ốm đâu bạn
+											ạ, chơi đồ là thuốc bổ mà bạn!</q
+										>.
+									</div>
+									<div class="type">
+										<div class="icon">
+											<div class="svgi">
+												{% svg
+												/assets/icons/arrow-up.svg %}
+											</div>
+										</div>
+									</div>
+									<div class="time">1 giờ trước</div>
+								</div>
+							</a>
+							{% endfor %}
+							<a class="more"> Hiển thị thêm </a>
+						</div>
+					</div>
+				</div>
+			</div>
 
-            <!-- Navbar User -->
-            <div class="is-logged-in navbar-item navbar-user">
-                <div class="navbar-toggle toggle">
-                    <i class="far fa-user"></i>
-                </div>
-                <div class="navbar-dropdown dropdown">
-                    <div class="dropdown-inner">
-                        <div class="dropdown-content py-2">
-                            <div class="item navbar-user-detail">
-                                <div class="avatar w-16 md:w-24 h-16 md:h-24"><img src=""></div>
-                                <div class="navbar-user-info ml-4">
-                                    <a href="/user-profile">
-                                        <div class="displayname">Phan Thanh Hải</div>
-                                        <div class="username">@hai-phan</div>
-                                    </a>
-                                    <a href="/personal" class="profile">
-                                        <span class="text">spiderum.me/hai-phan</span>
-                                        <span class="icon"><i class="fa far fa-external-link-alt"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-sticky-note"></i></span>
-                                    <span class="text">Bài viết của bạn</span>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-comments-alt fa-flip-horizontal"></i></span>
-                                    <span class="text">Bình luận của bạn</span>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-pen-alt"></i></span>
-                                    <span class="text">Nháp của bạn</span>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-copy"></i></span>
-                                    <span class="text">Yêu cầu sao chép</span>
-                                </a>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-comment-alt fa-flip-horizontal"></i></span>
-                                    <span class="text">Tùy chỉnh thông báo</span>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-cog"></i></span>
-                                    <span class="text">Tùy chỉnh tài khoản</span>
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-lock-alt"></i></span>
-                                    <span class="text">Mật khẩu & Liên hệ</span>
-                                </a>
-                            </div>
-                            <div class="separator"></div>
-                            <div class="item">
-                                <a href="/user-profile">
-                                    <span class="icon"><i class="far fa-sign-out"></i></span>
-                                    <span class="text">Đăng xuất</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- Navbar User -->
+			<div class="is-logged-in navbar-item navbar-user">
+				<div class="navbar-toggle toggle">
+					<div class="svgi">
+						{% svg /assets/icons/user.svg class="w-5" %}
+					</div>
+				</div>
+				<div class="navbar-dropdown dropdown">
+					<div class="dropdown-inner">
+						<div class="dropdown-content py-2">
+							<div class="item navbar-user-detail">
+								<div class="avatar w-16 md:w-24 h-16 md:h-24">
+									<img src="" />
+								</div>
+								<div class="navbar-user-info ml-4">
+									<a href="/user-profile">
+										<div class="displayname">
+											Phan Thanh Hải
+										</div>
+										<div class="username">@hai-phan</div>
+									</a>
+									<a
+										href="/personal"
+										class="profile flex items-center"
+									>
+										<span class="text"
+											>spiderum.me/hai-phan</span
+										>
+										<span class="icon ml-1">
+											<div class="svgi">
+												{% svg
+												/assets/icons/link-external.svg
+												%}
+											</div>
+										</span>
+									</a>
+								</div>
+							</div>
+							<div class="separator"></div>
 
-            <!-- Navbar New -->
-            <div class="is-logged-in navbar-item navbar-new hidden lg:flex">
-                <a class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 active:bg-blue-700
-                h-10 w-10 lg:w-auto lg:px-6 text-white rounded-full shadow:sp cursor-pointer">
-                    <span class="icon block lg:hidden"><i class="far fa-plus"></i></span>
-                    <span class="text hidden lg:block">Bài viết mới</span>
-                </a>
-            </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/note.svg %}
+										</div>
+									</div>
+									<div class="text">Bài viết của bạn</div>
+								</div>
+							</a>
 
-            <!-- Navbar Logged Out -->
-            <div class="is-logged-out navbar-item navbar-signin">
-                <div class="flex align-center justify-center">
-                    <a href="modal/global/navbar-signin.html" rel="modal:open" id="navbar-signin"
-                        class="button flex
-                     items-center justify-center bg-gray-200 hover:bg-blue-100 lg:bg-transparent lg:hover:bg-gray-200 text-primary lg:text-gray-600 rounded-full h-10 w-10 lg:w-auto px-4">
-                        <span class="icon inline-block lg:hidden"><i class="far fa-sign-in"></i></span>
-                        <span class="text hidden lg:inline">Đăng nhập</span>
-                    </a>
-                    <a href="/register" id="navbar-signup"
-                        class="button hidden lg:flex  items-center bg-ui hover:bg-ui-hover text-white rounded-full">
-                        <span class="text">Đăng ký</span>
-                    </a>
-                </div>
-            </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/comments.svg %}
+										</div>
+									</div>
+									<span class="text">Bình luận của bạn</span>
+								</div>
+							</a>
 
-        </div>
-    </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/quill.svg %}
+										</div>
+									</div>
+									<span class="text">Nháp của bạn</span>
+								</div>
+							</a>
 
-    <div class="navbar-section navbar-bottom">
-        <div class="navbar-container">
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/copy.svg %}
+										</div>
+									</div>
+									<span class="text">Yêu cầu sao chép</span>
+								</div>
+							</a>
 
-            <!-- Navbar Search Form -->
-            <div class="navbar-search-form">
-                <form>
-                    <span class="icon ml-1 mr-4 text-blue-500"><i class="far fa-search"></i></span>
-                    <input type="text" placeholder="Tìm kiếm theo tiêu đề, tác giả hoặc tag">
-                    <a href="/search" class="button flex h-10 w-10 rounded-full
-                        bg-blue-100 hover:bg-blue-200 text-blue-500"><i class="far fa-arrow-right"></i></a>
-                </form>
-            </div>
+							<div class="separator"></div>
 
-            <!-- Navbar Following -->
-            <div class="navbar-following">
-                <div class="toggle">
-                    <div class="icon block md:hidden pl-4"><i class="fas fa-star"></i></div>
-                    <span class="text hidden md:block">Đang theo dõi</span>
-                    <span class="icon block pl-4"><i class="far fa-angle-down"></i></span>
-                </div>
-                <div class="dropdown">
-                    <div class="item is-new">
-                        <a href="/category">
-                            <span class="image img-container">
-                                <img src="" class="img">
-                            </span>
-                            <span class="text category-name">Category Name</span>
-                        </a>
-                    </div>
-                    {% for i in (1..5) %}
-                    <div class="item">
-                        <a href="/category">
-                            <span class="image img-container">
-                                <img src="" class="img">
-                            </span>
-                            <span class="text category-name">Category Name</span>
-                        </a>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/bell-alarm.svg
+											%}
+										</div>
+									</div>
+									<span class="text"
+										>Tùy chỉnh thông báo</span
+									>
+								</div>
+							</a>
 
-            <!-- Navbar Categories -->
-            <div class="navbar-categories">
-                <div class="navbar-categories--nav left">
-                    <span class="icon"><i class="far fa-angle-left"></i></span>
-                </div>
-                <ul class="navbar-categories--menu">
-                    {% for item in site.data.settings.categories %}
-                    <li><a href="/category">{{ item.title }}</a></li>
-                    {% endfor %}
-                </ul>
-                <div class="navbar-categories--nav right">
-                    <span class="icon"><i class="far fa-angle-right"></i></span>
-                </div>
-            </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/cog.svg %}
+										</div>
+									</div>
+									<span class="text"
+										>Tùy chỉnh tài khoản</span
+									>
+								</div>
+							</a>
 
-        </div>
-    </div>
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/lock-locked.svg
+											%}
+										</div>
+									</div>
+									<span class="text">Mật khẩu & Liên hệ</span>
+								</div>
+							</a>
 
+							<div class="separator"></div>
+
+							<a href="/user-profile">
+								<div class="item">
+									<div class="icon mr-2">
+										<div class="svgi h-6">
+											{% svg /assets/icons/exit.svg %}
+										</div>
+									</div>
+									<span class="text">Đăng xuất</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Navbar New -->
+			<div class="is-logged-in navbar-item navbar-new hidden lg:flex">
+				<a
+					class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 active:bg-blue-700 h-10 w-10 lg:w-auto lg:px-6 text-white rounded-full shadow:sp cursor-pointer"
+				>
+					<span class="icon block lg:hidden"
+						><i class="far fa-plus"></i
+					></span>
+					<span class="text hidden lg:block">Bài viết mới</span>
+				</a>
+			</div>
+
+			<!-- Navbar Logged Out -->
+			<div class="is-logged-out navbar-item navbar-signin">
+				<div class="flex align-center justify-center">
+					<a
+						href="modal/global/navbar-signin.html"
+						rel="modal:open"
+						id="navbar-signin"
+						class="button flex items-center justify-center bg-gray-200 hover:bg-blue-100 lg:bg-transparent lg:hover:bg-gray-200 text-primary lg:text-gray-600 rounded-full h-10 w-10 lg:w-auto px-4"
+					>
+						<span class="icon inline-block lg:hidden"
+							><i class="far fa-sign-in"></i
+						></span>
+						<span class="text hidden lg:inline">Đăng nhập</span>
+					</a>
+					<a
+						href="/register"
+						id="navbar-signup"
+						class="button hidden lg:flex items-center bg-ui hover:bg-ui-hover text-white rounded-full"
+					>
+						<span class="text">Đăng ký</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="navbar-section navbar-bottom">
+		<div class="navbar-container">
+			<!-- Navbar Search Form -->
+			<div class="navbar-search-form">
+				<form>
+					<span class="icon ml-1 mr-4 text-blue-500"
+						><i class="far fa-search"></i
+					></span>
+					<input
+						type="text"
+						placeholder="Tìm kiếm theo tiêu đề, tác giả hoặc tag"
+					/>
+					<a
+						href="/search"
+						class="button flex h-10 w-10 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-500"
+						><i class="far fa-arrow-right"></i
+					></a>
+				</form>
+			</div>
+
+			<!-- Navbar Following -->
+			<div class="navbar-following">
+				<div class="toggle">
+					<div class="icon block md:hidden pl-4">
+						<i class="fas fa-star"></i>
+					</div>
+					<span class="text hidden md:block">Đang theo dõi</span>
+					<span class="icon block pl-4"
+						><i class="far fa-angle-down"></i
+					></span>
+				</div>
+				<div class="dropdown">
+					<div class="item is-new">
+						<a href="/category">
+							<span class="image img-container">
+								<img src="" class="img" />
+							</span>
+							<span class="text category-name"
+								>Category Name</span
+							>
+						</a>
+					</div>
+					{% for i in (1..5) %}
+					<div class="item">
+						<a href="/category">
+							<span class="image img-container">
+								<img src="" class="img" />
+							</span>
+							<span class="text category-name"
+								>Category Name</span
+							>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+
+			<!-- Navbar Categories -->
+			<div class="navbar-categories">
+				<div class="navbar-categories--nav left">
+					<span class="icon"><i class="far fa-angle-left"></i></span>
+				</div>
+				<ul class="navbar-categories--menu">
+					{% for item in site.data.settings.categories %}
+					<li><a href="/category">{{ item.title }}</a></li>
+					{% endfor %}
+				</ul>
+				<div class="navbar-categories--nav right">
+					<span class="icon"><i class="far fa-angle-right"></i></span>
+				</div>
+			</div>
+		</div>
+	</div>
 </nav>
 
 <div class="navbar-placeholder"></div>
 
 <div class="top-announcement">
-    <div class="container-lg mx-auto">
-        <div class="title">Thông báo</div>
-        <div class="content">Thử nghiệm ứng dụng di động Spiderum 2.0 trên nền tảng Android và iOS.</div>
-        <!-- <div class="cta">
+	<div class="container-lg mx-auto">
+		<div class="title">Thông báo</div>
+		<div class="content">
+			Thử nghiệm ứng dụng di động Spiderum 2.0 trên nền tảng Android và
+			iOS.
+		</div>
+		<!-- <div class="cta">
             <a href="#">Tham gia ngay</a>
         </div> -->
-        <a href="#" class="close">
-            <i class="far fa-times"></i>
-        </a>
-    </div>
+		<a href="#" class="close">
+			<div class="svgi">{% svg /assets/icons/multiply.svg %}</div>
+		</a>
+	</div>
 </div>

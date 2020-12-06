@@ -1,273 +1,267 @@
 .card-gallery {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-gap: 1rem;
-    min-width: 0;
-    height: min-content;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	grid-gap: 1rem;
+	min-width: 0;
+	height: min-content;
 
-    &.has-separator {
-        >.card {
-            +.card {
-                padding-top: 1rem;
-                border-top: 1px solid rgba(var(--border), 1);
-            }
-        }
-    }
+	&.has-separator {
+		> .card {
+			+ .card {
+				padding-top: 1rem;
+				border-top: 1px solid rgba(var(--border), 1);
+			}
+		}
+	}
 
-    &.is-xlarge,
-    &.is-large {
-        grid-gap: 1.5rem;
+	&.is-xlarge,
+	&.is-large {
+		grid-gap: 1.5rem;
 
-        &.has-separator {
-            >.card {
-                &:not(:first-child) {
-                    padding-top: 1.5rem;
-                    border-top: 1px solid rgba(var(--border), 1);
-                }
-            }
-        }
-    }
+		&.has-separator {
+			> .card {
+				&:not(:first-child) {
+					padding-top: 1.5rem;
+					border-top: 1px solid rgba(var(--border), 1);
+				}
+			}
+		}
+	}
 
-    &.is-horizontal {
-        grid-template-columns: repeat(4, 1fr);
-    }
+	&.is-horizontal {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
-.card-gallery.is-xlarge>.card,
+.card-gallery.is-xlarge > .card,
 .card.is-xlarge {
-    grid-gap: 1.5rem;
+	grid-gap: 1.5rem;
 
-    >.image {
-        padding-top: 75%;
+	> .image {
+		padding-top: 75%;
 
-        @include breakpoint(lg) {
-            padding-top: 50%;
-        }
-    }
+		@include breakpoint(lg) {
+			padding-top: 50%;
+		}
+	}
 
-    >.content {
-        >.title {
-            font-size: 2rem;
-        }
-    }
+	> .content {
+		> .title {
+			font-size: 2rem;
+		}
+	}
 
-    .author {
-        margin-top: .5rem;
-    }
+	.author {
+		margin-top: 0.5rem;
+	}
 
-    &.card\:horizontal {
-        @include breakpoint(lg) {
-            grid-template-columns: 2fr 1fr;
-        }
-    }
-
+	&.card\:horizontal {
+		@include breakpoint(lg) {
+			grid-template-columns: 2fr 1fr;
+		}
+	}
 }
 
-.card-gallery.is-large>.card,
+.card-gallery.is-large > .card,
 .card.is-large {
-    >.image {
-        padding-top: 60%;
-    }
+	> .image {
+		padding-top: 60%;
+	}
 
-    >.content {
-        >.title {
-            font-size: 1.25rem;
-        }
-    }
+	> .content {
+		> .title {
+			font-size: 1.25rem;
+		}
+	}
 }
 
-.card-gallery.is-medium>.card,
+.card-gallery.is-medium > .card,
 .card.is-medium {
-    grid-template-columns: 6rem auto;
+	grid-template-columns: 6rem auto;
 
-    @include breakpoint(lg) {
-        grid-template-columns: 10rem auto;
-    }
+	@include breakpoint(lg) {
+		grid-template-columns: 10rem auto;
+	}
 
-    >.image {
-        padding-top: 100%;
+	> .image {
+		padding-top: 100%;
 
-        @include breakpoint(lg) {
-            padding-top: 75%;
-        }
-    }
+		@include breakpoint(lg) {
+			padding-top: 75%;
+		}
+	}
 
-    >.content {
-        >.title {
-            font-size: 1.125rem;
+	> .content {
+		> .title {
+			font-size: 1.125rem;
 
-            * {
-                font-size: inherit;
-            }
+			* {
+				font-size: inherit;
+			}
 
-            @include breakpoint(lg) {
-                font-size: 1.2rem;
-            }
-        }
-    }
+			@include breakpoint(lg) {
+				font-size: 1.2rem;
+			}
+		}
+	}
 }
 
-.card-gallery.is-small>.card,
+.card-gallery.is-small > .card,
 .card.is-small {
-    grid-template-columns: 6rem auto;
+	grid-template-columns: 6rem auto;
 
-    >.image {
-        padding-top: 100%;
-    }
+	> .image {
+		padding-top: 100%;
+	}
 
-    >.content {
-        >.title {
-            font-size: 1.125rem;
-        }
+	> .content {
+		> .title {
+			font-size: 1.125rem;
+		}
 
-        .description {
-            display: none;
-        }
-    }
+		.description {
+			display: none;
+		}
+	}
 
-    .author {
-        margin-top: 0;
-    }
+	.author {
+		margin-top: 0;
+	}
 }
-
-
 
 .card-carousel {
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    overflow-x: scroll;
-    // width: 100%;
-    min-width: 0;
-    min-height: 0;
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	overflow-x: scroll;
+	// width: 100%;
+	min-width: 0;
+	min-height: 0;
 
-    &:after {
-        content: '\00a0';
-        display: block;
-        width: 1rem;
-        height: 100%;
-        flex-shrink: 0;
-    }
+	&:after {
+		content: '\00a0';
+		display: block;
+		width: 1rem;
+		height: 100%;
+		flex-shrink: 0;
+	}
 
-    .card {
-        width: 17.5rem;
+	.card {
+		width: 17.5rem;
 
-        >.content {
-            .category {
-                font-size: .875rem;
-            }
+		> .content {
+			.category {
+				font-size: 0.875rem;
+			}
 
-            .title {
-                font-size: 1.125rem;
-            }
-        }
+			.title {
+				font-size: 1.125rem;
+			}
+		}
 
-        +.card {
-            margin-left: 1rem;
-        }
-    }
+		+ .card {
+			margin-left: 1rem;
+		}
+	}
 }
 
-
-
 .card {
-    position: relative;
-    display: grid;
-    grid-gap: 1rem;
-    min-width: 0;
-    height: min-content;
-    flex-shrink: 0;
+	position: relative;
+	display: grid;
+	grid-gap: 1rem;
+	min-width: 0;
+	height: min-content;
+	flex-shrink: 0;
 
-    >.image {
-        position: relative;
-        display: block;
+	> .image {
+		position: relative;
+		display: block;
 
-        width: 100%;
-        height: min-content;
+		width: 100%;
+		height: min-content;
 
-        background-color: rgba(var(--gray-200), 1);
-        border: 1px solid rgba(var(--border), 1);
-        border-radius: var(--border-radius);
+		background-color: rgba(var(--gray-200), 1);
+		border: 1px solid rgba(var(--border), 1);
+		border-radius: var(--border-radius);
 
-        @include shadow;
+		@include shadow;
 
-        img {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: inherit;
-        }
-    }
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: inherit;
+		}
+	}
 
-    >.content {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr);
-        grid-gap: .5rem;
-        width: 100%;
-        min-width: 0;
-        height: min-content;
+	> .content {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		grid-gap: 0.5rem;
+		width: 100%;
+		min-width: 0;
+		height: min-content;
 
-        >.category {
-            color: rgba(var(--gray-500), 1);
-            text-transform: uppercase;
-            line-height: 1;
-        }
+		> .category {
+			color: rgba(var(--gray-500), 1);
+			text-transform: uppercase;
+			line-height: 1;
+		}
 
-        >.title {
-            color: rgba(var(--gray-700), 1);
-            font-weight: bold;
-            line-height: 1.25;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
+		> .title {
+			color: rgba(var(--gray-700), 1);
+			font-weight: bold;
+			line-height: 1.25;
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
 
-        .read-time {
-            margin-left: .5em;
-            color: rgba(var(--gray-500), 1);
+		.read-time {
+			margin-left: 0.5em;
+			color: rgba(var(--gray-500), 1);
 
-            &:before {
-                content: '— ';
-            }
+			&:before {
+				content: '— ';
+			}
 
-            &:after {
-                content: ' phút đọc';
-            }
-        }
-    }
+			&:after {
+				content: ' phút đọc';
+			}
+		}
+	}
 
-    &.card\:border {
-        border: 1px solid rgba(var(--border), 1);
-        border-radius: var(--border-radius);
-        @include shadow;
+	&.card\:border {
+		border: 1px solid rgba(var(--border), 1);
+		border-radius: var(--border-radius);
+		@include shadow;
 
-        >.image {
-            border-width: 0 0 1px 0;
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
+		> .image {
+			border-width: 0 0 1px 0;
+			border-radius: var(--border-radius) var(--border-radius) 0 0;
 
-            img {
-                border-radius: inherit;
-            }
-        }
+			img {
+				border-radius: inherit;
+			}
+		}
 
-        >.content {
-            padding: 0 1rem 1rem;
-        }
-    }
+		> .content {
+			padding: 0 1rem 1rem;
+		}
+	}
 
-    &:hover {
-        >.content {
-            >.title {
-                color: rgba(var(--gray-800), 1);
-            }
-        }
-    }
-
+	&:hover {
+		> .content {
+			> .title {
+				color: rgba(var(--gray-800), 1);
+			}
+		}
+	}
 }

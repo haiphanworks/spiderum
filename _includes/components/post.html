@@ -1,63 +1,128 @@
 {% assign whitespace = " " %}
-<div class="{{ include.class }} card {{ include.size }}" {%- if include.id -%}id="{{ include.id }}" {%- endif -%}>
-    <a class="image" href="/single">
-        <img src="{{ include.image }}">
-    </a>
-    <div class="content">
-        {%- if include.category -%}
-        <div class="category">
-            <h5>{{ include.category }}</h5>
-        </div>
-        {%- endif -%}
-        <a class="title" href="/single">
-            <h1>{{ include.title }}</h1>
-        </a>
-        {%- if include.description -%}
-        <div class="description">
-            {{ include.description }}
-            {%- if include.readtime -%}
-            <span class="read-time">{{ include.readtime }}</span>
-            {%- endif -%}
-        </div>
-        {%- endif -%}
-        <div class="author">
-            {%- if include.authorImage=="No" -%}
-            {%- else -%}
-            <a class="avatar w-10 md:w-12 h-10 md:h-12" href="/user-profile">
-                <img src="">
-            </a>
-            {%- endif -%}
-            <div class="content">
-                <div class="main">
-                    <a class="author-name" href="/user-profile">{{ include.author }}</a>
-                    {%- if include.authorCategory -%}{{ whitespace }}trong{{ whitespace }}
-                    <a class="category-name" href="/category">{{ include.authorCategory }}</a>
-                    {%- endif -%}
-                </div>
-                <div class="sub">
-                    {%- if include.created -%}
-                    <span class="item created">{{ include.created }}</span>
-                    {%- endif -%}
-                    {%- if include.vote -%}
-                    <span class="item vote">{{ include.vote }}</span>
-                    {%- endif -%}
-                    {%- if include.subseparator -%}
-                    <span class="item separator"></span>
-                    {%- endif -%}
-                    {%- if include.views -%}
-                    <span class="item views">{{ include.views }}</span>
-                    {%- endif -%}
-                    {%- if include.comments -%}
-                    <span class="item comments">{{ include.comments }}</span>
-                    {%- endif -%}
-                    {%- if include.bookmark -%}
-                    <span class="item bookmark"></span>
-                    {%- endif -%}
-                    {%- if include.share -%}
-                    <span class="item share"></span>
-                    {%- endif -%}
-                </div>
-            </div>
-        </div>
-    </div>
+<div
+	class="{{ include.class }} card {{ include.size }}"
+	{%-
+	if
+	include.id
+	-%}id="{{ include.id }}"
+	{%-
+	endif
+	-%}
+>
+	<a class="image" href="/single">
+		<img src="{{ include.image }}" />
+	</a>
+	<div class="content">
+		{%- if include.category -%}
+		<div class="category">
+			<h5>{{ include.category }}</h5>
+		</div>
+		{%- endif -%}
+		<a class="title" href="/single">
+			<h1>{{ include.title }}</h1>
+		</a>
+		{%- if include.description -%}
+		<div class="description">
+			{{ include.description }} {%- if include.readtime -%}
+			<span class="read-time">{{ include.readtime }}</span>
+			{%- endif -%}
+		</div>
+		<div class="topics">
+			<ul class="flex items-center">
+				<li
+					class="topic bg-gray-300 rounded-full px-4 py-1 text-sm font-semibold text-gray-600 hover:text-gray-700 mr-2"
+				>
+					Topic 1
+				</li>
+				<li
+					class="topic bg-gray-300 rounded-full px-4 py-1 text-sm font-semibold text-gray-600 hover:text-gray-700 mr-2"
+				>
+					Topic 2
+				</li>
+				<li
+					class="topic bg-gray-300 rounded-full px-4 py-1 text-sm font-semibold text-gray-600 hover:text-gray-700 mr-2"
+				>
+					Topic 3
+				</li>
+				<li
+					class="topic bg-gray-300 rounded-full px-4 py-1 text-sm font-semibold text-gray-600 hover:text-gray-700 mr-2"
+				>
+					Topic 4
+				</li>
+			</ul>
+		</div>
+		{%- endif -%}
+		<div class="author">
+			{%- if include.authorImage=="No" -%} {%- else -%}
+			<a class="avatar w-10 md:w-12 h-10 md:h-12" href="/user-profile">
+				<img src="" />
+			</a>
+			{%- endif -%}
+			<div class="content">
+				<div class="main">
+					<a class="author-name" href="/user-profile"
+						>{{ include.author }}</a
+					>
+					{%- if include.authorCategory -%}{{ whitespace }}trong{{
+					whitespace }}
+					<a class="category-name" href="/category"
+						>{{ include.authorCategory }}</a
+					>
+					{%- endif -%}
+				</div>
+				<div class="sub">
+					{%- if include.created -%}
+					<div class="item created">
+						<span class="value">{{ include.created }}</span>
+					</div>
+					{%- endif -%} {%- if include.vote -%}
+					<div class="item vote">
+						<span class="icon"
+							><div class="svgi">
+								{% svg /assets/icons/arrow-up.svg class="w-4" %}
+							</div></span
+						>
+						<span class="value">{{ include.vote }}</span>
+					</div>
+					{%- endif -%} {%- if include.subseparator -%}
+					<div class="item separator"></div>
+					{%- endif -%} {%- if include.views -%}
+					<div class="item views">
+						<span class="icon"
+							><div class="svgi">
+								{% svg /assets/icons/eye-filled.svg class="w-4"
+								%}
+							</div></span
+						>
+						<span class="value">{{ include.views }}</span>
+					</div>
+					{%- endif -%} {%- if include.comments -%}
+					<div class="item comments">
+						<span class="icon"
+							><div class="svgi">
+								{% svg /assets/icons/comment.svg class="w-4" %}
+							</div></span
+						>
+						<span class="value">{{ include.comments }}</span>
+					</div>
+					{%- endif -%} {%- if include.bookmark -%}
+					<div class="item bookmark">
+						<span class="icon"
+							><div class="svgi is-not-active">
+								{% svg /assets/icons/bookmark.svg class=" w-4"
+								%}
+							</div>
+							<div class="svgi is-active">
+								{% svg /assets/icons/bookmark-filled.svg
+								class="block w-4" %}
+							</div></span
+						>
+					</div>
+					{%- endif -%} {%- if include.share -%}
+					<div class="item share"></div>
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

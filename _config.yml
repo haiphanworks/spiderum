@@ -9,6 +9,10 @@ url: '' # the base hostname & protocol for your site, e.g. http://example.com
 plugins:
     # - jekyll-feed
     - jekyll-seo-tag
+    - jekyll-inline-svg
 
 sass:
     style: compressed
+
+svg:
+    optimize: true

@@ -5,36 +5,36 @@
 @import 'colors';
 
 :root {
-    --font-size: 14px;
-    --background: 249, 251, 253;
-    --border: 226, 232, 240;
-    --border-radius: .5rem;
-    --navbar-height: 4.5rem;
-    --navbar-bottom-height: 3.5rem;
+	--font-size: 14px;
+	--background: 249, 251, 253;
+	--border: 226, 232, 240;
+	--border-radius: 0.5rem;
+	--navbar-height: 4.5rem;
+	--navbar-bottom-height: 3.5rem;
 }
 
 html {
-    font-size: var(--font-size);
+	font-size: var(--font-size);
 }
 
 body {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
-    min-height: 100vh;
+	min-height: 100vh;
 
-    background-color: rgba(var(--background), 1);
+	background-color: rgba(var(--background), 1);
 
-    font-size: 1rem;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: normal;
-    line-height: 1.5;
-    color: rgba(var(--gray-600), 1);
+	font-size: 1rem;
+	font-family: 'Noto Sans', sans-serif;
+	font-weight: normal;
+	line-height: 1.5;
+	color: rgba(var(--gray-600), 1);
 }
 
 * {
-    outline: none;
+	outline: none;
 }
 
 // COMPONENTS
@@ -50,9 +50,23 @@ body {
 @import 'comments';
 @import 'footer';
 
-
 // PAGE
 @import 'category-gallery';
 @import 'category-single';
 @import 'user-profile';
 // @import 'single';
+
+svg {
+	fill: currentColor;
+}
+
+.svgi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		display: block;
+		min-width: 1em;
+	}
+}
