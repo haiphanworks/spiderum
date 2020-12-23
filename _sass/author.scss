@@ -82,11 +82,11 @@
 					justify-content: center;
 					width: 1em;
 					height: 1.5em;
-					margin-right: 0.25em;
+					margin-right: 0.375em;
 
 					.svgi {
-						width: 1em;
-						height: 1em;
+						// width: 1em;
+						// height: 1em;
 					}
 				}
 
@@ -158,8 +158,6 @@
 							display: flex;
 							align-items: center;
 							justify-content: center;
-							height: 1.5em;
-							width: 1em;
 						}
 
 						.is-active {
